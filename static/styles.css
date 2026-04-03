@@ -227,13 +227,20 @@ tbody tr:hover, tbody tr.selected { background: #f1f5f9; }
 }
 
 .map-workspace {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 20px;
-  align-items: start;
+  position: relative;
+  display: block;
 }
 
-.map-layers-panel { display: grid; gap: 12px; align-self: stretch; z-index: 1000; }
+.map-layers-panel { 
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  z-index: 1000; 
+}
 .map-layers-toggle {
   border: 1px solid rgba(14, 165, 233, 0.2);
   background: white;
@@ -272,8 +279,7 @@ tbody tr:hover, tbody tr.selected { background: #f1f5f9; }
   .sidebar > .brand { margin-right: auto; }
   .nav { display: flex; flex-direction: row; }
   .two-columns, .filters-grid { grid-template-columns: 1fr; }
-  .map-workspace { grid-template-columns: 1fr; }
-  .map-layers-drawer.open { width: 100%; }
+  .map-layers-drawer.open { width: 100%; max-width: 280px; }
 }
 
 @media (max-width: 700px) {

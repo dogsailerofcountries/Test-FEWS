@@ -112,7 +112,7 @@
     "altitude": 177.417,
     "longitude": -72.93633,
     "latitude": 4.10302,
-    "currentLevelSensor": 5.95,
+    "currentLevelSensor": 5.98,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 5.318,
@@ -607,7 +607,7 @@
     "altitude": 96.0,
     "longitude": -75.679444,
     "latitude": 8.027778,
-    "currentLevelSensor": 3.07,
+    "currentLevelSensor": 3.03,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 3.0,
@@ -1128,7 +1128,7 @@
     "altitude": 64.0,
     "longitude": -73.759278,
     "latitude": 7.692806,
-    "currentLevelSensor": 1.03,
+    "currentLevelSensor": 1.02,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -1326,7 +1326,7 @@
     "altitude": 650.0,
     "longitude": -76.149583,
     "latitude": 6.873889,
-    "currentLevelSensor": 1.37,
+    "currentLevelSensor": 1.4,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -2019,7 +2019,7 @@
     "altitude": 160.0,
     "longitude": -74.811938,
     "latitude": 7.603299,
-    "currentLevelSensor": 4.51,
+    "currentLevelSensor": 4.5,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -2217,7 +2217,7 @@
     "altitude": 403.0,
     "longitude": -74.93825,
     "latitude": 5.998417,
-    "currentLevelSensor": 2.38,
+    "currentLevelSensor": 2.22,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -2316,7 +2316,7 @@
     "altitude": 52.55,
     "longitude": -75.196,
     "latitude": 7.962139,
-    "currentLevelSensor": 3.47,
+    "currentLevelSensor": 3.5,
     "currentLevelObserved": 3.58,
     "thresholds": {
       "yellow": 3.74,
@@ -2415,7 +2415,7 @@
     "altitude": 37.364,
     "longitude": -74.785556,
     "latitude": 8.030111,
-    "currentLevelSensor": 2.96,
+    "currentLevelSensor": 2.94,
     "currentLevelObserved": 2.98,
     "thresholds": {
       "yellow": 4.59,
@@ -2811,7 +2811,7 @@
     "altitude": 45.0,
     "longitude": -74.952417,
     "latitude": 8.036417,
-    "currentLevelSensor": 5.05,
+    "currentLevelSensor": 5.04,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 6.55,
@@ -3009,7 +3009,7 @@
     "altitude": 175.0,
     "longitude": -75.826167,
     "latitude": 6.644944,
-    "currentLevelSensor": 0.96,
+    "currentLevelSensor": 0.95,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -3108,7 +3108,7 @@
     "altitude": 80.0,
     "longitude": -75.372917,
     "latitude": 7.796861,
-    "currentLevelSensor": 2.54,
+    "currentLevelSensor": 2.61,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -3702,7 +3702,7 @@
     "altitude": 130.74,
     "longitude": -75.396306,
     "latitude": 7.287083,
-    "currentLevelSensor": 3.45,
+    "currentLevelSensor": 3.44,
     "currentLevelObserved": 3.73,
     "thresholds": {
       "yellow": null,
@@ -4593,7 +4593,7 @@
     "altitude": 178.0,
     "longitude": -71.614722,
     "latitude": 6.2275,
-    "currentLevelSensor": 2.08,
+    "currentLevelSensor": 2.06,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -5114,7 +5114,7 @@
     "altitude": 9.0,
     "longitude": -74.940667,
     "latitude": 10.164528,
-    "currentLevelSensor": 7.99,
+    "currentLevelSensor": 8.02,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -5411,7 +5411,7 @@
     "altitude": 30.014,
     "longitude": -74.561222,
     "latitude": 8.344556,
-    "currentLevelSensor": 3.92,
+    "currentLevelSensor": 3.91,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 6.45,
@@ -5708,7 +5708,7 @@
     "altitude": 17.0,
     "longitude": -74.77,
     "latitude": 9.04,
-    "currentLevelSensor": 4.62,
+    "currentLevelSensor": 4.61,
     "currentLevelObserved": 4.48,
     "thresholds": {
       "yellow": 5.43,
@@ -6427,7 +6427,7 @@
     "altitude": 3020.0,
     "longitude": -72.8985,
     "latitude": 5.585833,
-    "currentLevelSensor": 0.66,
+    "currentLevelSensor": 0.65,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -7516,7 +7516,7 @@
     "altitude": 2130.0,
     "longitude": -73.542194,
     "latitude": 5.678131,
-    "currentLevelSensor": 0.74,
+    "currentLevelSensor": 0.72,
     "currentLevelObserved": 1.05,
     "thresholds": {
       "yellow": 1.232019,
@@ -7912,7 +7912,7 @@
     "altitude": 1200.0,
     "longitude": -72.63794,
     "latitude": 6.43781,
-    "currentLevelSensor": 0.97,
+    "currentLevelSensor": 0.95,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -8532,7 +8532,7 @@
     "altitude": 745.0,
     "longitude": -75.66586,
     "latitude": 5.26811,
-    "currentLevelSensor": 3.19,
+    "currentLevelSensor": null,
     "currentLevelObserved": 3.18,
     "thresholds": {
       "yellow": null,
@@ -8631,7 +8631,7 @@
     "altitude": 920.0,
     "longitude": -75.858833,
     "latitude": 4.988028,
-    "currentLevelSensor": 2.57,
+    "currentLevelSensor": 2.56,
     "currentLevelObserved": 2.6,
     "thresholds": {
       "yellow": null,
@@ -8730,7 +8730,7 @@
     "altitude": 2712.0,
     "longitude": -75.451086,
     "latitude": 4.901022,
-    "currentLevelSensor": 1.39,
+    "currentLevelSensor": 1.28,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -9027,7 +9027,7 @@
     "altitude": 520.19,
     "longitude": -75.529306,
     "latitude": 1.563111,
-    "currentLevelSensor": 3.7,
+    "currentLevelSensor": 3.68,
     "currentLevelObserved": 3.65,
     "thresholds": {
       "yellow": 5.55,
@@ -9126,7 +9126,7 @@
     "altitude": null,
     "longitude": -77.848469,
     "latitude": 0.497047,
-    "currentLevelSensor": 0.33,
+    "currentLevelSensor": 0.32,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -9944,7 +9944,7 @@
     "altitude": 178.0,
     "longitude": -71.668361,
     "latitude": 5.414389,
-    "currentLevelSensor": 0.88,
+    "currentLevelSensor": 0.9,
     "currentLevelObserved": 0.96,
     "thresholds": {
       "yellow": 2.0,
@@ -10241,7 +10241,7 @@
     "altitude": 700.0,
     "longitude": -77.046667,
     "latitude": 2.147778,
-    "currentLevelSensor": 1.57,
+    "currentLevelSensor": 1.54,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -11033,7 +11033,7 @@
     "altitude": 20.579,
     "longitude": -76.669667,
     "latitude": 5.764833,
-    "currentLevelSensor": 6.54,
+    "currentLevelSensor": 6.48,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -11158,7 +11158,7 @@
     "altitude": 8.0,
     "longitude": -76.964783,
     "latitude": 7.159725,
-    "currentLevelSensor": 1.92,
+    "currentLevelSensor": 5.75,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -11356,7 +11356,7 @@
     "altitude": 20.83,
     "longitude": -76.66205,
     "latitude": 5.697972,
-    "currentLevelSensor": 3.38,
+    "currentLevelSensor": 3.32,
     "currentLevelObserved": 4.0,
     "thresholds": {
       "yellow": 4.746074,
@@ -11653,7 +11653,7 @@
     "altitude": 24.0,
     "longitude": -74.960439,
     "latitude": 8.235847,
-    "currentLevelSensor": 1.01,
+    "currentLevelSensor": 0.98,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 3.45,
@@ -11752,7 +11752,7 @@
     "altitude": null,
     "longitude": -75.031667,
     "latitude": 8.463611,
-    "currentLevelSensor": 6.29,
+    "currentLevelSensor": 6.31,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -12346,7 +12346,7 @@
     "altitude": 50.0,
     "longitude": -75.70625,
     "latitude": 7.851,
-    "currentLevelSensor": 2.74,
+    "currentLevelSensor": 2.75,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 4.75,
@@ -12643,7 +12643,7 @@
     "altitude": 1520.0,
     "longitude": -74.364,
     "latitude": 4.399869,
-    "currentLevelSensor": 2.88,
+    "currentLevelSensor": 2.85,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -13039,7 +13039,7 @@
     "altitude": 1860.0,
     "longitude": -74.504361,
     "latitude": 4.011639,
-    "currentLevelSensor": 2.54,
+    "currentLevelSensor": 2.5,
     "currentLevelObserved": 2.9,
     "thresholds": {
       "yellow": 3.5,
@@ -13435,7 +13435,7 @@
     "altitude": 750.0,
     "longitude": -74.500722,
     "latitude": 4.19225,
-    "currentLevelSensor": 3.24,
+    "currentLevelSensor": 3.19,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 3.398348,
@@ -13633,7 +13633,7 @@
     "altitude": 172.17,
     "longitude": -74.662167,
     "latitude": 5.469667,
-    "currentLevelSensor": 3.54,
+    "currentLevelSensor": 3.58,
     "currentLevelObserved": 3.57,
     "thresholds": {
       "yellow": 5.18,
@@ -15144,7 +15144,7 @@
     "altitude": 420.0,
     "longitude": -75.114167,
     "latitude": 3.3705,
-    "currentLevelSensor": 2.0,
+    "currentLevelSensor": 1.95,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -16332,7 +16332,7 @@
     "altitude": 29.49,
     "longitude": -73.969444,
     "latitude": 8.992528,
-    "currentLevelSensor": 6.52,
+    "currentLevelSensor": 6.54,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 8.65,
@@ -18635,7 +18635,7 @@
     "altitude": 1650.0,
     "longitude": -77.30675,
     "latitude": 0.800833,
-    "currentLevelSensor": 0.78,
+    "currentLevelSensor": 0.77,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 5.3791,
@@ -19427,7 +19427,7 @@
     "altitude": 0.0,
     "longitude": -78.730278,
     "latitude": 1.819306,
-    "currentLevelSensor": 3.19,
+    "currentLevelSensor": 3.17,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -19922,7 +19922,7 @@
     "altitude": 1862.0,
     "longitude": -72.635889,
     "latitude": 7.207,
-    "currentLevelSensor": 1.69,
+    "currentLevelSensor": 1.68,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 2.5,
@@ -20417,7 +20417,7 @@
     "altitude": 250.0,
     "longitude": -76.576944,
     "latitude": 0.582694,
-    "currentLevelSensor": 3.57,
+    "currentLevelSensor": 3.86,
     "currentLevelObserved": 2.65,
     "thresholds": {
       "yellow": null,
@@ -20740,7 +20740,7 @@
     "altitude": 914.0,
     "longitude": -75.89925,
     "latitude": 4.757611,
-    "currentLevelSensor": 1.42,
+    "currentLevelSensor": 1.4,
     "currentLevelObserved": 2.58,
     "thresholds": {
       "yellow": 8.0,
@@ -21433,7 +21433,7 @@
     "altitude": 900.0,
     "longitude": -73.307194,
     "latitude": 6.44925,
-    "currentLevelSensor": 1.72,
+    "currentLevelSensor": 1.68,
     "currentLevelObserved": 3.78,
     "thresholds": {
       "yellow": null,
@@ -21730,7 +21730,7 @@
     "altitude": 90.0,
     "longitude": -73.935,
     "latitude": 6.773611,
-    "currentLevelSensor": 5.4,
+    "currentLevelSensor": 5.3,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -22027,7 +22027,7 @@
     "altitude": 1057.0,
     "longitude": -73.493281,
     "latitude": 6.118139,
-    "currentLevelSensor": 2.76,
+    "currentLevelSensor": 2.71,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -22621,7 +22621,7 @@
     "altitude": 475.0,
     "longitude": -74.908568,
     "latitude": 5.203746,
-    "currentLevelSensor": 3.71,
+    "currentLevelSensor": 3.72,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -23314,7 +23314,7 @@
     "altitude": 640.0,
     "longitude": -74.656806,
     "latitude": 3.926639,
-    "currentLevelSensor": 2.55,
+    "currentLevelSensor": 2.51,
     "currentLevelObserved": 2.97,
     "thresholds": {
       "yellow": 6.5,
@@ -23413,7 +23413,7 @@
     "altitude": 1190.0,
     "longitude": -75.686583,
     "latitude": 3.438472,
-    "currentLevelSensor": 0.7,
+    "currentLevelSensor": 0.69,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -23710,7 +23710,7 @@
     "altitude": 931.0,
     "longitude": -76.100752,
     "latitude": 4.405279,
-    "currentLevelSensor": 2.89,
+    "currentLevelSensor": 2.87,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -23908,7 +23908,7 @@
     "altitude": 10.0,
     "longitude": -77.34908,
     "latitude": 3.92518,
-    "currentLevelSensor": 5.24,
+    "currentLevelSensor": 5.19,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -24205,7 +24205,7 @@
     "altitude": 1239.0,
     "longitude": -76.589333,
     "latitude": 3.346306,
-    "currentLevelSensor": 0.68,
+    "currentLevelSensor": 0.69,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -24502,7 +24502,7 @@
     "altitude": 180.0,
     "longitude": -70.239111,
     "latitude": 1.259556,
-    "currentLevelSensor": 3.62,
+    "currentLevelSensor": 3.64,
     "currentLevelObserved": 3.5,
     "thresholds": {
       "yellow": 8.931129,

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T22:25:27.161068+00:00",
+  "generatedAt": "2026-04-03T23:02:33.374952+00:00",
   "stationCounts": {
     "red": 1,
     "orange": 1,
@@ -122,7 +122,7 @@
       "altitude": 177.417,
       "longitude": -72.93633,
       "latitude": 4.10302,
-      "currentLevelSensor": 5.95,
+      "currentLevelSensor": 5.98,
       "currentLevelObserved": null,
       "thresholds": {
         "yellow": 5.318,
@@ -617,7 +617,7 @@
       "altitude": 96.0,
       "longitude": -75.679444,
       "latitude": 8.027778,
-      "currentLevelSensor": 3.07,
+      "currentLevelSensor": 3.03,
       "currentLevelObserved": null,
       "thresholds": {
         "yellow": 3.0,
@@ -24254,62 +24254,62 @@
     {
       "id": "stations",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstaciones.json",
-      "status": "degraded",
-      "lastAttemptAt": "2026-04-03T22:25:16.101506+00:00",
-      "lastSuccessAt": "2026-04-03T22:22:01.137975+00:00",
-      "latencyMs": 2023.27,
-      "snapshotAgeSeconds": 194,
-      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T23:00:50.542983+00:00",
+      "lastSuccessAt": "2026-04-03T23:00:50.542985+00:00",
+      "latencyMs": 1051.29,
+      "snapshotAgeSeconds": 0,
+      "error": null
     },
     {
       "id": "alerts_subzones",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SZH_Alertas_Pobs.json",
-      "status": "degraded",
-      "lastAttemptAt": "2026-04-03T22:25:18.124508+00:00",
-      "lastSuccessAt": "2026-04-03T22:22:24.272328+00:00",
-      "latencyMs": 2022.95,
-      "snapshotAgeSeconds": 173,
-      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T23:01:12.666394+00:00",
+      "lastSuccessAt": "2026-04-03T23:01:12.666396+00:00",
+      "latencyMs": 22123.4,
+      "snapshotAgeSeconds": 0,
+      "error": null
     },
     {
       "id": "forecast_hq",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SeriesPronosticoHQ.csv",
-      "status": "degraded",
-      "lastAttemptAt": "2026-04-03T22:25:20.147806+00:00",
-      "lastSuccessAt": "2026-04-03T22:22:25.140608+00:00",
-      "latencyMs": 2023.28,
-      "snapshotAgeSeconds": 175,
-      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T23:01:14.390570+00:00",
+      "lastSuccessAt": "2026-04-03T23:01:14.390572+00:00",
+      "latencyMs": 1724.16,
+      "snapshotAgeSeconds": 0,
+      "error": null
     },
     {
       "id": "reservoirs",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SeriesEmbalses.csv",
-      "status": "degraded",
-      "lastAttemptAt": "2026-04-03T22:25:22.168371+00:00",
-      "lastSuccessAt": "2026-04-03T22:22:25.631617+00:00",
-      "latencyMs": 2020.51,
-      "snapshotAgeSeconds": 176,
-      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T23:01:14.944277+00:00",
+      "lastSuccessAt": "2026-04-03T23:01:14.944280+00:00",
+      "latencyMs": 553.7,
+      "snapshotAgeSeconds": 0,
+      "error": null
     },
     {
       "id": "subzone_pobs",
       "name": "https://fews.ideam.gov.co/visorfews/data/SZH_Pobs.json",
-      "status": "down",
-      "lastAttemptAt": "2026-04-03T22:25:24.202801+00:00",
-      "lastSuccessAt": null,
-      "latencyMs": 2034.41,
-      "snapshotAgeSeconds": null,
-      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T23:01:37.953260+00:00",
+      "lastSuccessAt": "2026-04-03T23:01:37.953263+00:00",
+      "latencyMs": 23008.97,
+      "snapshotAgeSeconds": 0,
+      "error": null
     },
     {
       "id": "water_shortage",
       "name": "https://fews.ideam.gov.co/visorfews/data/Desabastecimiento.json",
-      "status": "down",
-      "lastAttemptAt": "2026-04-03T22:25:26.220512+00:00",
-      "lastSuccessAt": null,
-      "latencyMs": 2017.67,
-      "snapshotAgeSeconds": null,
-      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T23:02:29.167818+00:00",
+      "lastSuccessAt": "2026-04-03T23:02:29.167820+00:00",
+      "latencyMs": 51214.54,
+      "snapshotAgeSeconds": 0,
+      "error": null
     }
   ]
 }
