@@ -5,6 +5,11 @@
     "forecast": "https://fews.ideam.gov.co/visorfews/descargas/SeriesPronosticoHQ.csv",
     "reservoirs": "https://fews.ideam.gov.co/visorfews/descargas/SeriesEmbalses.csv"
   },
+  "map_layers": {
+    "subzone_pobs": "https://fews.ideam.gov.co/visorfews/data/SZH_Pobs.json",
+    "water_shortage": "https://fews.ideam.gov.co/visorfews/data/Desabastecimiento.json",
+    "runap_service": "https://mapas.parquesnacionales.gov.co/arcgis/rest/services/pnn/runap/MapServer"
+  },
   "secondary": [
     "https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesQ.json",
     "https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesHsim.json",
@@ -25,15 +30,31 @@
   "official_app": [
     "https://fews.ideam.gov.co/",
     "https://fews.ideam.gov.co/visorfews/",
+    "https://fews.ideam.gov.co/visorfews/config/nacional/config.json",
+    "https://fews.ideam.gov.co/visorfews/config/regional/config.json",
     "https://fews.ideam.gov.co/visorfews/static/js/main.d6ea32b1.js",
     "https://fews.ideam.gov.co/visorfews/static/css/main.99b87226.css",
     "https://fews.ideam.gov.co/visorfews/Bienvenida.js",
     "https://fews.ideam.gov.co/visorfews/manifest.json"
   ],
+  "official_data": [
+    "https://fews.ideam.gov.co/visorfews/data/SZH_Alertas.json",
+    "https://fews.ideam.gov.co/visorfews/data/SZH_Pobs.json",
+    "https://fews.ideam.gov.co/visorfews/data/Desabastecimiento.json",
+    "https://fews.ideam.gov.co/visorfews/data/ReporteTablaEstaciones.json",
+    "https://fews.ideam.gov.co/visorfews/data/ReporteTablaEstacionesQ.json",
+    "https://fews.ideam.gov.co/visorfews/data/ReporteTablaEstacionesHsim.json",
+    "https://fews.ideam.gov.co/visorfews/data/ReporteTablaEstacionesQsim.json",
+    "https://fews.ideam.gov.co/visorfews/data/ReporteTablaEstacionesPobs.json",
+    "https://fews.ideam.gov.co/visorfews/data/ReporteTablaEstacionesTobs.json",
+    "https://fews.ideam.gov.co/visorfews/data/ReporteTablaEstacionesCalidad.json",
+    "https://fews.ideam.gov.co/visorfews/data/ReporteTablaEmbalsesVolUtil.json"
+  ],
   "external_connections": [
     "https://js.arcgis.com/4.28/@arcgis/core/assets/esri/themes/light/main.css",
-    "https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer",
-    "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+    "https://services.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Base/MapServer",
+    "https://services.arcgisonline.com/arcgis/rest/services/Ocean/World_Ocean_Reference/MapServer",
+    "https://mapas.parquesnacionales.gov.co/arcgis/rest/services/pnn/runap/MapServer/0",
     "https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Tac+One&display=swap",
     "https://www.googletagmanager.com/gtag/js",
     "https://www.ideam.gov.co/sala-de-prensa/boletines/Bolet%C3%ADn-de-Alertas-Hidrol%C3%B3gicas-(BAH)",

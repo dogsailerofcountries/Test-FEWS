@@ -19,6 +19,9 @@ export const translations = {
     stationsTitle: "Estaciones hidrologicas",
     alertsTitle: "Alertas por subzona",
     mapTitle: "Mapa operativo",
+    mapLayersTitle: "Capas del mapa",
+    mapLayersOpen: "Mostrar capas",
+    mapLayersClose: "Ocultar capas",
     reservoirsTitle: "Embalses",
     sourcesTitle: "Estado de fuentes",
     overviewHeroEyebrow: "Monitoreo operativo publicado por FEWS",
@@ -93,6 +96,13 @@ export const translations = {
       totalStations: "estaciones",
       noMapData: "Sin datos de mapa"
     },
+    mapLayers: {
+      stations: "Estaciones",
+      alerts: "Alertas por subzona",
+      subzone_pobs: "Pobs por subzona",
+      water_shortage: "Desabastecimiento",
+      runap: "RUNAP"
+    },
     sourceHealth: {
       ok: "Operativo",
       degraded: "Degradado",
@@ -119,6 +129,9 @@ export const translations = {
     stationsTitle: "Hydrological stations",
     alertsTitle: "Subzone alerts",
     mapTitle: "Operational map",
+    mapLayersTitle: "Map layers",
+    mapLayersOpen: "Show layers",
+    mapLayersClose: "Hide layers",
     reservoirsTitle: "Reservoirs",
     sourcesTitle: "Source health",
     overviewHeroEyebrow: "Operational monitoring published by FEWS",
@@ -192,6 +205,13 @@ export const translations = {
       sourceError: "Error",
       totalStations: "stations",
       noMapData: "No map data"
+    },
+    mapLayers: {
+      stations: "Stations",
+      alerts: "Subzone alerts",
+      subzone_pobs: "Observed rain by subzone",
+      water_shortage: "Water shortage",
+      runap: "RUNAP"
     },
     sourceHealth: {
       ok: "Healthy",

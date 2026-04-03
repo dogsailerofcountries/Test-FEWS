@@ -101,6 +101,36 @@ function extractSimplifiedRings(feature) {
   return [];
 }
 
+function normalizeLayerFeature(feature, fallbackLabel) {
+  const geometry = feature?.geometry || {};
+  const properties = feature?.properties || {};
+  if (geometry.type === "Polygon" || geometry.type === "MultiPolygon") {
+    const rings = extractSimplifiedRings(feature);
+    if (!rings.length) return null;
+    return {
+      id: String(properties.id || properties.ID || properties.OBJECTID || properties.CODIGO || properties.NOM_MPIO || fallbackLabel),
+      label: properties.NOMSZH || properties.NOM_MPIO || properties.municipio || properties.nombre || fallbackLabel,
+      geometryType: "polygon",
+      geometry: { rings },
+      properties,
+    };
+  }
+  if (geometry.type === "Point") {
+    const coords = geometry.coordinates || [null, null];
+    const x = parseFloatOrNull(coords[0]);
+    const y = parseFloatOrNull(coords[1]);
+    if (x == null || y == null) return null;
+    return {
+      id: String(properties.id || properties.ID || properties.OBJECTID || properties.CODIGO || fallbackLabel),
+      label: properties.NOMSZH || properties.NOM_MPIO || properties.municipio || properties.nombre || fallbackLabel,
+      geometryType: "point",
+      geometry: { coordinates: [x, y] },
+      properties,
+    };
+  }
+  return null;
+}
+
 export class BackendProvider {
   constructor(language) { this.language = language; }
   setLanguage(language) { this.language = language; }
@@ -202,7 +232,15 @@ export class DirectSourceProvider {
     }));
   }
   async getMapSummary() {
-    const [stations, alerts] = await Promise.all([this.getStations(), this.getAlerts()]);
+    const manifest = await this.getManifest();
+    const [stations, alerts, pobsText, waterShortageText] = await Promise.all([
+      this.getStations(),
+      this.getAlerts(),
+      this.fetchText(manifest.map_layers.subzone_pobs),
+      this.fetchText(manifest.map_layers.water_shortage),
+    ]);
+    const pobsData = JSON.parse(pobsText);
+    const waterShortageData = JSON.parse(waterShortageText);
     return {
       generatedAt: new Date().toISOString(),
       stations: stations.filter((station) => station.longitude != null && station.latitude != null).map((station) => ({
@@ -239,11 +277,42 @@ export class DirectSourceProvider {
           centroid: vertexCount ? { x: sumX / vertexCount, y: sumY / vertexCount } : null,
         };
       }),
+      extraLayers: [
+        {
+          id: "subzone_pobs",
+          title: "Precipitacion observada por subzona",
+          visibleByDefault: false,
+          styleHint: "pobs",
+          featureCount: (pobsData.features || []).length,
+          features: (pobsData.features || [])
+            .map((feature) => normalizeLayerFeature(feature, "Pobs"))
+            .filter(Boolean),
+        },
+        {
+          id: "water_shortage",
+          title: "Desabastecimiento por municipio",
+          visibleByDefault: false,
+          styleHint: "water_shortage",
+          featureCount: (waterShortageData.features || []).length,
+          features: (waterShortageData.features || [])
+            .map((feature) => normalizeLayerFeature(feature, "Desabastecimiento"))
+            .filter(Boolean),
+        },
+        {
+          id: "runap",
+          title: "RUNAP",
+          visibleByDefault: false,
+          styleHint: "service",
+          featureCount: null,
+          serviceUrl: manifest.map_layers.runap_service,
+          layerId: 0,
+        }
+      ],
     };
   }
   async getSourceHealth() {
     const manifest = await this.getManifest();
-    return Object.entries(manifest.minimal).map(([id, url]) => ({
+    return [...Object.entries(manifest.minimal), ...Object.entries(manifest.map_layers || {})].map(([id, url]) => ({
       id,
       name: url,
       status: "ok",

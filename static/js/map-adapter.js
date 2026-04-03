@@ -1,318 +1,194 @@
-const arcgisState = {
-  modulesPromise: null,
-  view: null,
-  map: null,
+const mapState = {
+  mapInstance: null,
   alertsLayer: null,
   stationsLayer: null,
+  extraLayerMap: new Map(),
   target: null,
   dataSignature: null,
-  homeWidget: null
 };
 
-function colorForStatus(status) {
+function alertFillColor(status) {
   switch (status) {
-    case "red":
-      return [171, 44, 61, 0.78];
-    case "orange":
-      return [211, 109, 47, 0.72];
-    case "yellow":
-      return [230, 179, 37, 0.66];
-    case "normal":
-      return [45, 123, 95, 0.72];
-    default:
-      return [122, 132, 142, 0.2];
+    case "red": return "#ef4444";
+    case "orange": return "#f97316";
+    case "yellow": return "#eab308";
+    case "normal": return "#ffffff";
+    default: return "#94a3b8";
   }
 }
 
-function outlineForStatus(status) {
+function stationFillColor(status) {
   switch (status) {
-    case "red":
-      return [128, 28, 43, 0.95];
-    case "orange":
-      return [163, 75, 24, 0.95];
-    case "yellow":
-      return [145, 110, 12, 0.95];
-    case "normal":
-      return [27, 92, 69, 0.95];
-    default:
-      return [98, 108, 116, 0.55];
+    case "red": return "#ef4444";
+    case "orange": return "#f97316";
+    case "yellow": return "#eab308";
+    case "normal": return "#10b981";
+    default: return "#94a3b8";
   }
-}
-
-function updateBounds(bounds, x, y) {
-  if (x == null || y == null) return;
-  if (bounds.minX == null || x < bounds.minX) bounds.minX = x;
-  if (bounds.maxX == null || x > bounds.maxX) bounds.maxX = x;
-  if (bounds.minY == null || y < bounds.minY) bounds.minY = y;
-  if (bounds.maxY == null || y > bounds.maxY) bounds.maxY = y;
-}
-
-function buildProjector(mapSummary, width, height, pad) {
-  const bounds = { minX: null, maxX: null, minY: null, maxY: null };
-  for (const station of mapSummary.stations || []) updateBounds(bounds, station.longitude, station.latitude);
-  for (const alert of mapSummary.alerts || []) {
-    for (const ring of alert.rings || []) {
-      for (const point of ring) updateBounds(bounds, point[0], point[1]);
-    }
-  }
-  const dx = (bounds.maxX ?? 0) - (bounds.minX ?? 0) || 1;
-  const dy = (bounds.maxY ?? 0) - (bounds.minY ?? 0) || 1;
-  return ([x, y]) => {
-    const px = pad + ((x - (bounds.minX ?? 0)) / dx) * (width - pad * 2);
-    const py = height - pad - ((y - (bounds.minY ?? 0)) / dy) * (height - pad * 2);
-    return [px, py];
-  };
-}
-
-function renderFallbackMap({ mapSummary, target, t }) {
-  const stations = mapSummary?.stations || [];
-  const alerts = mapSummary?.alerts || [];
-  if (!stations.length && !alerts.length) {
-    target.innerHTML = `<div class="empty-state">${t("labels.noMapData")}</div>`;
-    return;
-  }
-
-  const width = 1000;
-  const height = 640;
-  const pad = 28;
-  const project = buildProjector(mapSummary, width, height, pad);
-
-  const alertShapes = alerts.map((alert) => {
-    const severity = alert.severity || "no_data";
-    const ringPaths = (alert.rings || []).map((ring) => {
-      const path = ring.map((point, index) => {
-        const [x, y] = project(point);
-        return `${index === 0 ? "M" : "L"}${x.toFixed(2)} ${y.toFixed(2)}`;
-      }).join(" ");
-      return path ? `${path} Z` : "";
-    }).filter(Boolean);
-    if (!ringPaths.length) return "";
-    return `<path d="${ringPaths.join(" ")}" class="map-alert status-${severity}" fill="currentColor"></path>`;
-  }).join("");
-
-  const stationPoints = stations.slice(0, 1200).map((station) => {
-    const [x, y] = project([station.longitude, station.latitude]);
-    return `<circle class="map-point status-${station.status}" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="4.4"><title>${station.stationName || ""}</title></circle>`;
-  }).join("");
-
-  target.innerHTML = `<svg class="map-svg" viewBox="0 0 1000 640" preserveAspectRatio="none"><rect x="0" y="0" width="1000" height="640" fill="rgba(31,84,98,0.04)"></rect><g class="map-alerts">${alertShapes}</g><g class="map-stations">${stationPoints}</g></svg>`;
-}
-
-function loadArcGISModules() {
-  if (arcgisState.modulesPromise) return arcgisState.modulesPromise;
-  arcgisState.modulesPromise = new Promise((resolve, reject) => {
-    if (!window.require) {
-      reject(new Error("ArcGIS loader unavailable"));
-      return;
-    }
-    window.require([
-      "esri/Map",
-      "esri/views/MapView",
-      "esri/layers/GraphicsLayer",
-      "esri/Graphic",
-      "esri/geometry/Polygon",
-      "esri/geometry/Point",
-      "esri/geometry/Extent",
-      "esri/widgets/Home"
-    ], (Map, MapView, GraphicsLayer, Graphic, Polygon, Point, Extent, Home) => {
-      resolve({ Map, MapView, GraphicsLayer, Graphic, Polygon, Point, Extent, Home });
-    }, reject);
-  });
-  return arcgisState.modulesPromise;
-}
-
-async function ensureArcGISMap(target) {
-  const modules = await loadArcGISModules();
-  if (arcgisState.view) {
-    if (arcgisState.target !== target) {
-      arcgisState.view.container = target;
-      arcgisState.target = target;
-    }
-    return { ...modules, ...arcgisState };
-  }
-
-  const map = new modules.Map({
-    basemap: "topo-vector"
-  });
-  const alertsLayer = new modules.GraphicsLayer({ title: "Alertas FEWS" });
-  const stationsLayer = new modules.GraphicsLayer({ title: "Estaciones FEWS" });
-  map.addMany([alertsLayer, stationsLayer]);
-
-  const view = new modules.MapView({
-    container: target,
-    map,
-    center: [-73.5, 4.5],
-    zoom: 5,
-    constraints: {
-      rotationEnabled: false,
-      snapToZoom: false,
-      minZoom: 5,
-      maxZoom: 12
-    },
-    ui: {
-      components: ["zoom", "attribution"]
-    }
-  });
-
-  view.ui.move("zoom", "bottom-right");
-  const homeWidget = new modules.Home({ view });
-  view.ui.add(homeWidget, "bottom-right");
-
-  arcgisState.map = map;
-  arcgisState.view = view;
-  arcgisState.alertsLayer = alertsLayer;
-  arcgisState.stationsLayer = stationsLayer;
-  arcgisState.target = target;
-  arcgisState.homeWidget = homeWidget;
-
-  return { ...modules, ...arcgisState };
-}
-
-function buildAlertGraphic(alert, modules) {
-  const severity = alert.severity || "no_data";
-  return new modules.Graphic({
-    geometry: new modules.Polygon({
-      rings: alert.rings || [],
-      spatialReference: { wkid: 4326 }
-    }),
-    symbol: {
-      type: "simple-fill",
-      color: colorForStatus(severity),
-      outline: {
-        color: outlineForStatus(severity),
-        width: 1.4
-      }
-    },
-    attributes: {
-      name: alert.subzoneName || "--",
-      zone: alert.zoneName || "--",
-      severity
-    },
-    popupTemplate: {
-      title: "{name}",
-      content: [
-        {
-          type: "fields",
-          fieldInfos: [
-            { fieldName: "severity", label: "Severity" },
-            { fieldName: "zone", label: "Zone" }
-          ]
-        }
-      ]
-    }
-  });
-}
-
-function buildStationGraphic(station, modules) {
-  const status = station.status || "no_data";
-  return new modules.Graphic({
-    geometry: new modules.Point({
-      longitude: station.longitude,
-      latitude: station.latitude,
-      spatialReference: { wkid: 4326 }
-    }),
-    symbol: {
-      type: "simple-marker",
-      style: "triangle",
-      color: colorForStatus(status),
-      size: 8,
-      outline: {
-        color: [255, 255, 255, 0.95],
-        width: 1.1
-      }
-    },
-    attributes: {
-      name: station.stationName || "--",
-      river: station.riverName || "--",
-      status
-    },
-    popupTemplate: {
-      title: "{name}",
-      content: [
-        {
-          type: "fields",
-          fieldInfos: [
-            { fieldName: "river", label: "River" },
-            { fieldName: "status", label: "Status" }
-          ]
-        }
-      ]
-    }
-  });
-}
-
-function buildExtent(mapSummary, modules) {
-  const bounds = { minX: null, maxX: null, minY: null, maxY: null };
-  for (const station of mapSummary.stations || []) updateBounds(bounds, station.longitude, station.latitude);
-  for (const alert of mapSummary.alerts || []) {
-    for (const ring of alert.rings || []) {
-      for (const point of ring) updateBounds(bounds, point[0], point[1]);
-    }
-  }
-  if (bounds.minX == null) return null;
-  return new modules.Extent({
-    xmin: bounds.minX,
-    ymin: bounds.minY,
-    xmax: bounds.maxX,
-    ymax: bounds.maxY,
-    spatialReference: { wkid: 4326 }
-  }).expand(1.08);
-}
-
-function buildConstraintExtent(mapSummary, modules) {
-  const extent = buildExtent(mapSummary, modules);
-  return extent ? extent.expand(1.18) : null;
 }
 
 function computeDataSignature(mapSummary) {
   const stations = mapSummary?.stations || [];
   const alerts = mapSummary?.alerts || [];
-  let vertices = 0;
-  for (const alert of alerts) {
-    for (const ring of alert.rings || []) vertices += ring.length;
-  }
-  return `${stations.length}:${alerts.length}:${vertices}`;
+  return `${stations.length}:${alerts.length}`;
 }
 
-async function renderArcGISMap({ mapSummary, target, t }) {
+function ensureMap(target) {
+  if (mapState.mapInstance && mapState.target === target) {
+    return Promise.resolve(mapState.mapInstance);
+  }
+
+  if (mapState.mapInstance) {
+    mapState.mapInstance.remove();
+  }
+
+  // Uses Leaflet from global window.L
+  const map = L.map(target, {
+    center: [4.5, -73.5],
+    zoom: 5,
+    minZoom: 4,
+    maxZoom: 12,
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+    subdomains: 'abcd',
+    maxZoom: 20
+  }).addTo(map);
+
+  mapState.alertsLayer = L.layerGroup().addTo(map);
+  mapState.stationsLayer = L.layerGroup().addTo(map);
+  mapState.mapInstance = map;
+  mapState.target = target;
+  mapState.extraLayerMap = new Map();
+
+  return Promise.resolve(map);
+}
+
+function drawAlerts(alerts, layerGroup) {
+  layerGroup.clearLayers();
+  
+  alerts.forEach(alert => {
+    if (!alert.rings || !alert.rings.length) return;
+    
+    // Leaflet uses [lat, lng]. Rings are usually [lng, lat] from GeoJSON
+    const latLngs = alert.rings.map(ring => 
+      ring.map(coord => [coord[1], coord[0]])
+    );
+
+    const color = alertFillColor(alert.severity || "no_data");
+    
+    const poly = L.polygon(latLngs, {
+      color: color,
+      weight: 1.5,
+      opacity: 0.8,
+      fillColor: color,
+      fillOpacity: 0.35,
+      className: 'map-alert'
+    });
+
+    const tooltipContent = `
+      <div style="font-family: 'Inter', sans-serif;">
+        <strong>${alert.subzoneName || '--'}</strong><br/>
+        <span style="color:#64748b; font-size:0.85em;">Zone: ${alert.zoneName || '--'}</span><br/>
+        <span style="font-weight:600; text-transform:uppercase; font-size:0.8em; color:${color}">${alert.severity || 'No Data'}</span>
+      </div>
+    `;
+    
+    poly.bindTooltip(tooltipContent);
+    poly.addTo(layerGroup);
+  });
+}
+
+function drawStations(stations, layerGroup) {
+  layerGroup.clearLayers();
+  
+  stations.forEach(station => {
+    if (station.longitude == null || station.latitude == null) return;
+    
+    const color = stationFillColor(station.status || "no_data");
+    
+    const circle = L.circleMarker([station.latitude, station.longitude], {
+      radius: station.status === "normal" ? 5 : 7,
+      fillColor: color,
+      color: '#ffffff',
+      weight: 1.5,
+      opacity: 0.9,
+      fillOpacity: 0.9,
+      className: 'map-point'
+    });
+
+    const tooltipContent = `
+      <div style="font-family: 'Inter', sans-serif;">
+        <strong>${station.stationName || '--'}</strong><br/>
+        <span style="color:#64748b; font-size:0.85em;">River: ${station.riverName || '--'}</span><br/>
+        <span style="font-weight:600; text-transform:uppercase; font-size:0.8em; color:${color}">${station.status || 'No Data'}</span>
+      </div>
+    `;
+    
+    circle.bindTooltip(tooltipContent);
+    circle.addTo(layerGroup);
+  });
+}
+
+export async function renderLightMap({ mapSummary, target, t, layerVisibility = { alerts: true, stations: true } }) {
   const stations = mapSummary?.stations || [];
   const alerts = mapSummary?.alerts || [];
+  
   if (!stations.length && !alerts.length) {
     target.innerHTML = `<div class="empty-state">${t("labels.noMapData")}</div>`;
     return;
   }
 
-  const modules = await ensureArcGISMap(target);
-  const dataSignature = computeDataSignature(mapSummary);
-  const alertGraphics = alerts
-    .filter((alert) => (alert.rings || []).length)
-    .map((alert) => buildAlertGraphic(alert, modules));
-  const stationGraphics = stations
-    .filter((station) => station.longitude != null && station.latitude != null)
-    .map((station) => buildStationGraphic(station, modules));
-
-  modules.alertsLayer.removeAll();
-  modules.stationsLayer.removeAll();
-  modules.alertsLayer.addMany(alertGraphics);
-  modules.stationsLayer.addMany(stationGraphics);
-
-  const extent = buildExtent(mapSummary, modules);
-  const constraintExtent = buildConstraintExtent(mapSummary, modules);
-  if (constraintExtent) {
-    modules.view.constraints.geometry = constraintExtent;
+  // Ensure DOM is ready for Leaflet if it wasn't
+  if (target.innerHTML.includes('empty-state')) {
+    target.innerHTML = '';
   }
 
-  if (extent && arcgisState.dataSignature !== dataSignature) {
-    arcgisState.dataSignature = dataSignature;
-    modules.view.goTo(extent, {
-      duration: 800
-    }).catch(() => {});
+  try {
+    const map = await ensureMap(target);
+    const dataSignature = computeDataSignature(mapSummary);
+
+    if (arcgisState?.dataSignature !== dataSignature) {
+      if (typeof window.arcgisState !== 'undefined') window.arcgisState.dataSignature = dataSignature;
+      drawAlerts(alerts, mapState.alertsLayer);
+      drawStations(stations, mapState.stationsLayer);
+
+      // Fit bounds
+      const bounds = L.latLngBounds();
+      stations.forEach(s => {
+        if (s.latitude && s.longitude) bounds.extend([s.latitude, s.longitude]);
+      });
+      alerts.forEach(a => {
+        if (a.rings) {
+          a.rings.forEach(ring => {
+            ring.forEach(coord => bounds.extend([coord[1], coord[0]]));
+          });
+        }
+      });
+      
+      if (bounds.isValid()) {
+        map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
+      }
+    }
+
+    // Toggle visibility based on layerVisibility proxy state
+    if (layerVisibility.alerts === false) {
+      map.removeLayer(mapState.alertsLayer);
+    } else {
+      map.addLayer(mapState.alertsLayer);
+    }
+
+    if (layerVisibility.stations === false) {
+      map.removeLayer(mapState.stationsLayer);
+    } else {
+      map.addLayer(mapState.stationsLayer);
+    }
+  } catch (error) {
+    console.warn("Leaflet error:", error);
+    target.innerHTML = `<div class="empty-state">Map Error: ${error.message}</div>`;
   }
 }
 
-export function renderLightMap({ mapSummary, target, t }) {
-  renderArcGISMap({ mapSummary, target, t }).catch((error) => {
-    console.warn("Falling back to lightweight SVG map.", error);
-    renderFallbackMap({ mapSummary, target, t });
-  });
-}
+// Dummy for arcgisState reference backwards compatibility in local scope
+const arcgisState = { dataSignature: null };

@@ -29,4 +29,14 @@ SOURCES = {
         "https://fews.ideam.gov.co/visorfews/descargas/SeriesEmbalses.csv",
         "csv",
     ),
+    "subzone_pobs": DataSource(
+        "subzone_pobs",
+        "https://fews.ideam.gov.co/visorfews/data/SZH_Pobs.json",
+        "geojson",
+    ),
+    "water_shortage": DataSource(
+        "water_shortage",
+        "https://fews.ideam.gov.co/visorfews/data/Desabastecimiento.json",
+        "geojson",
+    ),
 }

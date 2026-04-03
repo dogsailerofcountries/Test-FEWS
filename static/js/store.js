@@ -17,6 +17,11 @@ export function createStore(provider) {
     reservoirs: [],
     sources: [],
     mapSummary: null,
+    mapPanelOpen: false,
+    mapLayerVisibility: {
+      alerts: true,
+      stations: true,
+    },
     selectedStationId: null,
     search: "",
     filters: {
@@ -44,6 +49,11 @@ export function createStore(provider) {
       state.reservoirs = [];
       state.sources = [];
       state.mapSummary = null;
+      state.mapPanelOpen = false;
+      state.mapLayerVisibility = {
+        alerts: true,
+        stations: true,
+      };
       state.selectedStationId = null;
     },
     setLanguage(language) {
@@ -54,6 +64,9 @@ export function createStore(provider) {
     setSearch(search) { state.search = search; },
     setFilter(key, value) { state.filters[key] = value; },
     setSelectedStation(stationId) { state.selectedStationId = stationId; },
+    setMapPanelOpen(isOpen) { state.mapPanelOpen = isOpen; },
+    toggleMapPanel() { state.mapPanelOpen = !state.mapPanelOpen; },
+    setMapLayerVisibility(layerId, isVisible) { state.mapLayerVisibility[layerId] = isVisible; },
     async ensureOverview() {
       if (state.loaded.overview) return state.overview;
       state.overview = await activeProvider.getOverview();
@@ -88,6 +101,11 @@ export function createStore(provider) {
     async ensureMapSummary() {
       if (state.loaded.map) return state.mapSummary;
       state.mapSummary = await activeProvider.getMapSummary();
+      for (const layer of state.mapSummary?.extraLayers || []) {
+        if (!(layer.id in state.mapLayerVisibility)) {
+          state.mapLayerVisibility[layer.id] = Boolean(layer.visibleByDefault);
+        }
+      }
       state.loaded.map = true;
       return state.mapSummary;
     },

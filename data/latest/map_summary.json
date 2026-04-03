@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-03T21:41:07.509033+00:00",
+  "generatedAt": "2026-04-03T22:25:27.160921+00:00",
   "stations": [
     {
       "stationId": "0023127020",
@@ -3336,7 +3336,7 @@
       "subzoneName": "Río Fortalecillas y otros",
       "zoneName": "Alto Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 116,
       "rings": [
         [
@@ -3822,7 +3822,7 @@
       "subzoneName": "Río Sumapaz",
       "zoneName": "Alto Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 127,
       "rings": [
         [
@@ -4352,7 +4352,7 @@
       "subzoneName": "Bajo San Jorge - La Mojana",
       "zoneName": "Bajo Magdalena- Cauca -San Jorge",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 296,
       "rings": [
         [
@@ -5558,7 +5558,7 @@
       "subzoneName": "Río Ariari",
       "zoneName": "Guaviare",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 275,
       "rings": [
         [
@@ -6680,7 +6680,7 @@
       "subzoneName": "Río Guape",
       "zoneName": "Guaviare",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 176,
       "rings": [
         [
@@ -7406,7 +7406,7 @@
       "subzoneName": "Río Güejar",
       "zoneName": "Guaviare",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 146,
       "rings": [
         [
@@ -8012,7 +8012,7 @@
       "subzoneName": "Directos Magdalena entre ríos Guarinó y La Miel",
       "zoneName": "Medio Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 215,
       "rings": [
         [
@@ -8894,7 +8894,7 @@
       "subzoneName": "Directos al Magdalena Medio entre Río Negro y río Carare",
       "zoneName": "Medio Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 131,
       "rings": [
         [
@@ -9440,7 +9440,7 @@
       "subzoneName": "Directos al Magdalena entre Río Seco y Río Negro (md)",
       "zoneName": "Medio Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 166,
       "rings": [
         [
@@ -10126,7 +10126,7 @@
       "subzoneName": "Río Carare (Minero)",
       "zoneName": "Medio Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 227,
       "rings": [
         [
@@ -11056,7 +11056,7 @@
       "subzoneName": "Río Gualí",
       "zoneName": "Medio Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 91,
       "rings": [
         [
@@ -11442,7 +11442,7 @@
       "subzoneName": "Río Guarinó",
       "zoneName": "Medio Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 102,
       "rings": [
         [
@@ -11872,7 +11872,7 @@
       "subzoneName": "Río Negro",
       "zoneName": "Medio Magdalena",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 176,
       "rings": [
         [
@@ -12598,7 +12598,7 @@
       "subzoneName": "Directos al río Meta entre ríos Guatiquía y Upía (mi)",
       "zoneName": "Meta",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 283,
       "rings": [
         [
@@ -13752,7 +13752,7 @@
       "subzoneName": "Río Guacavía",
       "zoneName": "Meta",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 214,
       "rings": [
         [
@@ -14630,7 +14630,7 @@
       "subzoneName": "Río Humea",
       "zoneName": "Meta",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 307,
       "rings": [
         [
@@ -15880,7 +15880,7 @@
       "subzoneName": "Río Metica (Guamal - Humadea)",
       "zoneName": "Meta",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 125,
       "rings": [
         [
@@ -16402,7 +16402,7 @@
       "subzoneName": "Río Negro",
       "zoneName": "Meta",
       "severity": "red",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 262,
       "rings": [
         [
@@ -17472,7 +17472,7 @@
       "subzoneName": "Alto Magdalena",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 127,
       "rings": [
         [
@@ -18002,7 +18002,7 @@
       "subzoneName": "Directos Magdalena entre ríos Cabrera y Sumapaz",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 112,
       "rings": [
         [
@@ -18472,7 +18472,7 @@
       "subzoneName": "Juncal y otros ríos Directos al Magdalena",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 225,
       "rings": [
         [
@@ -19394,7 +19394,7 @@
       "subzoneName": "Río Aipe, río Chenche y otros Directos al Magdalena",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 159,
       "rings": [
         [
@@ -20052,7 +20052,7 @@
       "subzoneName": "Río Baché",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 288,
       "rings": [
         [
@@ -21226,7 +21226,7 @@
       "subzoneName": "Río Cabrera",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 140,
       "rings": [
         [
@@ -21808,7 +21808,7 @@
       "subzoneName": "Río Coello",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 106,
       "rings": [
         [
@@ -22254,7 +22254,7 @@
       "subzoneName": "Río Lagunilla y otros Directos al Magdalena",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 112,
       "rings": [
         [
@@ -22724,7 +22724,7 @@
       "subzoneName": "Río Luisa y otros Directos al Magdalena",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 303,
       "rings": [
         [
@@ -23958,7 +23958,7 @@
       "subzoneName": "Río Neiva",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 246,
       "rings": [
         [
@@ -24964,7 +24964,7 @@
       "subzoneName": "Río Opía y otros Directos al Magdalena (mi)",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 218,
       "rings": [
         [
@@ -25858,7 +25858,7 @@
       "subzoneName": "Río Prado",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 281,
       "rings": [
         [
@@ -27004,7 +27004,7 @@
       "subzoneName": "Río Páez",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 192,
       "rings": [
         [
@@ -27794,7 +27794,7 @@
       "subzoneName": "Río Seco y otros Directos al Magdalena",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 129,
       "rings": [
         [
@@ -28332,7 +28332,7 @@
       "subzoneName": "Río Suaza",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 100,
       "rings": [
         [
@@ -28754,7 +28754,7 @@
       "subzoneName": "Río Timaná y otros Directos al Magdalena",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 265,
       "rings": [
         [
@@ -29836,7 +29836,7 @@
       "subzoneName": "Río Totare",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 317,
       "rings": [
         [
@@ -31126,7 +31126,7 @@
       "subzoneName": "Río Yaguará y río Íquira",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 229,
       "rings": [
         [
@@ -32064,7 +32064,7 @@
       "subzoneName": "Ríos Directos Magdalena (md)",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 95,
       "rings": [
         [
@@ -32466,7 +32466,7 @@
       "subzoneName": "Ríos Directos al Magdalena (mi)",
       "zoneName": "Alto Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 143,
       "rings": [
         [
@@ -33060,7 +33060,7 @@
       "subzoneName": "Río Bojabá y otros Directos al Arauca (md)",
       "zoneName": "Arauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 295,
       "rings": [
         [
@@ -34262,7 +34262,7 @@
       "subzoneName": "Alto Atrato",
       "zoneName": "Atrato - Darién",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 111,
       "rings": [
         [
@@ -34728,7 +34728,7 @@
       "subzoneName": "Río Andágueda",
       "zoneName": "Atrato - Darién",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 308,
       "rings": [
         [
@@ -35982,7 +35982,7 @@
       "subzoneName": "Río Bebaramá y otros Directos Atrato (md = margen derecho)",
       "zoneName": "Atrato - Darién",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 111,
       "rings": [
         [
@@ -36448,7 +36448,7 @@
       "subzoneName": "Río Cabí y otros Directos Atrato (md)",
       "zoneName": "Atrato - Darién",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 204,
       "rings": [
         [
@@ -37286,7 +37286,7 @@
       "subzoneName": "Río Quito",
       "zoneName": "Atrato - Darién",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 128,
       "rings": [
         [
@@ -37820,7 +37820,7 @@
       "subzoneName": "Río Caguán Alto",
       "zoneName": "Caguán",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 248,
       "rings": [
         [
@@ -38834,7 +38834,7 @@
       "subzoneName": "Río Caguán Bajo",
       "zoneName": "Caguán",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 265,
       "rings": [
         [
@@ -39916,7 +39916,7 @@
       "subzoneName": "Río Guayas",
       "zoneName": "Caguán",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 201,
       "rings": [
         [
@@ -40742,7 +40742,7 @@
       "subzoneName": "Río Sunsiyá",
       "zoneName": "Caguán",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 162,
       "rings": [
         [
@@ -41412,7 +41412,7 @@
       "subzoneName": "Alto Caquetá",
       "zoneName": "Caquetá",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 170,
       "rings": [
         [
@@ -42114,7 +42114,7 @@
       "subzoneName": "Río Caquetá Medio",
       "zoneName": "Caquetá",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 247,
       "rings": [
         [
@@ -43124,7 +43124,7 @@
       "subzoneName": "Río Mecaya",
       "zoneName": "Caquetá",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 180,
       "rings": [
         [
@@ -43866,7 +43866,7 @@
       "subzoneName": "Río Orteguaza",
       "zoneName": "Caquetá",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 240,
       "rings": [
         [
@@ -44848,7 +44848,7 @@
       "subzoneName": "Río Pescado",
       "zoneName": "Caquetá",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 112,
       "rings": [
         [
@@ -45318,7 +45318,7 @@
       "subzoneName": "Río Sencella",
       "zoneName": "Caquetá",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 129,
       "rings": [
         [
@@ -45856,7 +45856,7 @@
       "subzoneName": "Alto Río Cauca",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 216,
       "rings": [
         [
@@ -46742,7 +46742,7 @@
       "subzoneName": "Río Arma",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 116,
       "rings": [
         [
@@ -47228,7 +47228,7 @@
       "subzoneName": "Río Cali",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 113,
       "rings": [
         [
@@ -47702,7 +47702,7 @@
       "subzoneName": "Río Cartama y otros Directos al Cauca",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 140,
       "rings": [
         [
@@ -48284,7 +48284,7 @@
       "subzoneName": "Río Chinchiná",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 294,
       "rings": [
         [
@@ -49482,7 +49482,7 @@
       "subzoneName": "Río La Vieja",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 120,
       "rings": [
         [
@@ -49984,7 +49984,7 @@
       "subzoneName": "Río Otún y otros Directos al Cauca",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 97,
       "rings": [
         [
@@ -50394,7 +50394,7 @@
       "subzoneName": "Río Ovejas",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 253,
       "rings": [
         [
@@ -51428,7 +51428,7 @@
       "subzoneName": "Río Palacé",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 297,
       "rings": [
         [
@@ -52638,7 +52638,7 @@
       "subzoneName": "Río Piendamó",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 88,
       "rings": [
         [
@@ -53012,7 +53012,7 @@
       "subzoneName": "Río Risaralda",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 114,
       "rings": [
         [
@@ -53490,7 +53490,7 @@
       "subzoneName": "Río Salado y otros Directos Cauca",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 94,
       "rings": [
         [
@@ -53888,7 +53888,7 @@
       "subzoneName": "Río San Juan",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 99,
       "rings": [
         [
@@ -54306,7 +54306,7 @@
       "subzoneName": "Río Tapias y otros Directos al Cauca",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 97,
       "rings": [
         [
@@ -54716,7 +54716,7 @@
       "subzoneName": "Río Timba",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 239,
       "rings": [
         [
@@ -55694,7 +55694,7 @@
       "subzoneName": "Ríos Arroyohondo - Yumbo - Mulaló - Vijes - Yotoco",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 128,
       "rings": [
         [
@@ -56228,7 +56228,7 @@
       "subzoneName": "Ríos Claro y Jamundí",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 91,
       "rings": [
         [
@@ -56614,7 +56614,7 @@
       "subzoneName": "Ríos Guabas, Sabaletas y Sonso",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 178,
       "rings": [
         [
@@ -57348,7 +57348,7 @@
       "subzoneName": "Ríos Guadalajara y San Pedro",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 274,
       "rings": [
         [
@@ -58466,7 +58466,7 @@
       "subzoneName": "Ríos Lili, Meléndez y Cañaveralejo",
       "zoneName": "Cauca",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 153,
       "rings": [
         [
@@ -59100,7 +59100,7 @@
       "subzoneName": "Río Guayabero Alto",
       "zoneName": "Guaviare",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 218,
       "rings": [
         [
@@ -59994,7 +59994,7 @@
       "subzoneName": "Río Losada",
       "zoneName": "Guaviare",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 150,
       "rings": [
         [
@@ -60616,7 +60616,7 @@
       "subzoneName": "Directos Magdalena Medio entre ríos La Miel y Nare",
       "zoneName": "Medio Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 99,
       "rings": [
         [
@@ -61034,7 +61034,7 @@
       "subzoneName": "Río La Miel (Samaná)",
       "zoneName": "Medio Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 104,
       "rings": [
         [
@@ -61472,7 +61472,7 @@
       "subzoneName": "Río Lebrija y otros Directos al Magdalena",
       "zoneName": "Medio Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 213,
       "rings": [
         [
@@ -62346,7 +62346,7 @@
       "subzoneName": "Río Nare",
       "zoneName": "Medio Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 201,
       "rings": [
         [
@@ -63172,7 +63172,7 @@
       "subzoneName": "Río Opón",
       "zoneName": "Medio Magdalena",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 141,
       "rings": [
         [
@@ -63758,7 +63758,7 @@
       "subzoneName": "Caño Cumaral",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 103,
       "rings": [
         [
@@ -64192,7 +64192,7 @@
       "subzoneName": "Directos al Meta entre ríos Guayuriba y Yucao (md)",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 196,
       "rings": [
         [
@@ -64998,7 +64998,7 @@
       "subzoneName": "Río Guatiquía",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 132,
       "rings": [
         [
@@ -65548,7 +65548,7 @@
       "subzoneName": "Río Lengupá",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 89,
       "rings": [
         [
@@ -65926,7 +65926,7 @@
       "subzoneName": "Río Manacacías y otros Directos al Meta (md)",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 114,
       "rings": [
         [
@@ -66404,7 +66404,7 @@
       "subzoneName": "Río Melúa",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 113,
       "rings": [
         [
@@ -66878,7 +66878,7 @@
       "subzoneName": "Río Túa y otros Directos al Meta (mi)",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 152,
       "rings": [
         [
@@ -67508,7 +67508,7 @@
       "subzoneName": "Río Upía",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 143,
       "rings": [
         [
@@ -68102,7 +68102,7 @@
       "subzoneName": "Río Yucao",
       "zoneName": "Meta",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 118,
       "rings": [
         [
@@ -68596,7 +68596,7 @@
       "subzoneName": "Río Mira",
       "zoneName": "Mira",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 292,
       "rings": [
         [
@@ -69788,7 +69788,7 @@
       "subzoneName": "Río Juananbú",
       "zoneName": "Patía",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 107,
       "rings": [
         [
@@ -70238,7 +70238,7 @@
       "subzoneName": "Río Mayo",
       "zoneName": "Patía",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 260,
       "rings": [
         [
@@ -71300,7 +71300,7 @@
       "subzoneName": "Río Patía Alto",
       "zoneName": "Patía",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 183,
       "rings": [
         [
@@ -72054,7 +72054,7 @@
       "subzoneName": "Río Patía Medio",
       "zoneName": "Patía",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 173,
       "rings": [
         [
@@ -72768,7 +72768,7 @@
       "subzoneName": "Río San Jorge",
       "zoneName": "Patía",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 103,
       "rings": [
         [
@@ -73202,7 +73202,7 @@
       "subzoneName": "Río Telembí",
       "zoneName": "Patía",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 151,
       "rings": [
         [
@@ -73828,7 +73828,7 @@
       "subzoneName": "Alto río Putumayo",
       "zoneName": "Putumayo",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 176,
       "rings": [
         [
@@ -74554,7 +74554,7 @@
       "subzoneName": "Río San Miguel",
       "zoneName": "Putumayo",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 141,
       "rings": [
         [
@@ -75140,7 +75140,7 @@
       "subzoneName": "Bajo Saldaña",
       "zoneName": "Saldaña",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 95,
       "rings": [
         [
@@ -75542,7 +75542,7 @@
       "subzoneName": "Medio Saldaña",
       "zoneName": "Saldaña",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 258,
       "rings": [
         [
@@ -76596,7 +76596,7 @@
       "subzoneName": "Río Atá",
       "zoneName": "Saldaña",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 108,
       "rings": [
         [
@@ -77050,7 +77050,7 @@
       "subzoneName": "Río Cucuana",
       "zoneName": "Saldaña",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 111,
       "rings": [
         [
@@ -77516,7 +77516,7 @@
       "subzoneName": "Río Tetuán, río Ortega",
       "zoneName": "Saldaña",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 304,
       "rings": [
         [
@@ -78754,7 +78754,7 @@
       "subzoneName": "Río Sogamoso",
       "zoneName": "Sogamoso",
       "severity": "orange",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 164,
       "rings": [
         [
@@ -79432,7 +79432,7 @@
       "subzoneName": "Río Tunia (Macayá)",
       "zoneName": "Apaporis",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 129,
       "rings": [
         [
@@ -79970,7 +79970,7 @@
       "subzoneName": "Alto río Apure",
       "zoneName": "Apure",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 172,
       "rings": [
         [
@@ -80680,7 +80680,7 @@
       "subzoneName": "Directos río Arauca (md)",
       "zoneName": "Arauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 133,
       "rings": [
         [
@@ -81234,7 +81234,7 @@
       "subzoneName": "Río Banadia y otros Directos al río Arauca (md)",
       "zoneName": "Arauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 123,
       "rings": [
         [
@@ -81748,7 +81748,7 @@
       "subzoneName": "Río Chitagá",
       "zoneName": "Arauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 141,
       "rings": [
         [
@@ -82334,7 +82334,7 @@
       "subzoneName": "Río Cubugón - Río Covaría",
       "zoneName": "Arauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 294,
       "rings": [
         [
@@ -83532,7 +83532,7 @@
       "subzoneName": "Río Margua",
       "zoneName": "Arauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 196,
       "rings": [
         [
@@ -84338,7 +84338,7 @@
       "subzoneName": "Directos Atrato entre ríos Bebaramá y Murrí (md)",
       "zoneName": "Atrato - Darién",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 117,
       "rings": [
         [
@@ -84828,7 +84828,7 @@
       "subzoneName": "Directos Atrato entre ríos Quito y Bojayá (mi = margen izquierdo)",
       "zoneName": "Atrato - Darién",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 166,
       "rings": [
         [
@@ -85514,7 +85514,7 @@
       "subzoneName": "Río Bojayá",
       "zoneName": "Atrato - Darién",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 121,
       "rings": [
         [
@@ -86020,7 +86020,7 @@
       "subzoneName": "Río Murindó - Directos al Atrato",
       "zoneName": "Atrato - Darién",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 122,
       "rings": [
         [
@@ -86530,7 +86530,7 @@
       "subzoneName": "Río Murrí",
       "zoneName": "Atrato - Darién",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 177,
       "rings": [
         [
@@ -87260,7 +87260,7 @@
       "subzoneName": "Río Baudó",
       "zoneName": "Baudó - Directos Pacifico",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 223,
       "rings": [
         [
@@ -88174,7 +88174,7 @@
       "subzoneName": "Río Docampadó y Directos Pacífico",
       "zoneName": "Baudó - Directos Pacifico",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 125,
       "rings": [
         [
@@ -88696,7 +88696,7 @@
       "subzoneName": "Río Agua Clara",
       "zoneName": "Casanare",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 109,
       "rings": [
         [
@@ -89154,7 +89154,7 @@
       "subzoneName": "Río Ariporo",
       "zoneName": "Casanare",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 215,
       "rings": [
         [
@@ -90036,7 +90036,7 @@
       "subzoneName": "Río Casanare",
       "zoneName": "Casanare",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 301,
       "rings": [
         [
@@ -91262,7 +91262,7 @@
       "subzoneName": "Río Cravo Norte",
       "zoneName": "Casanare",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 202,
       "rings": [
         [
@@ -92092,7 +92092,7 @@
       "subzoneName": "Río Algodonal (Alto Catatumbo)",
       "zoneName": "Catatumbo",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 147,
       "rings": [
         [
@@ -92702,7 +92702,7 @@
       "subzoneName": "Río Nuevo Presidente - Tres Bocas (Sardinata, Tibú)",
       "zoneName": "Catatumbo",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 123,
       "rings": [
         [
@@ -93216,7 +93216,7 @@
       "subzoneName": "Río Pamplonita",
       "zoneName": "Catatumbo",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 140,
       "rings": [
         [
@@ -93798,7 +93798,7 @@
       "subzoneName": "Río Tarra",
       "zoneName": "Catatumbo",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 121,
       "rings": [
         [
@@ -94304,7 +94304,7 @@
       "subzoneName": "Río Zulia",
       "zoneName": "Catatumbo",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 206,
       "rings": [
         [
@@ -95154,7 +95154,7 @@
       "subzoneName": "Directos río Cauca entre río San Juan y Pto. Valdivia, margen derecho",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 200,
       "rings": [
         [
@@ -95976,7 +95976,7 @@
       "subzoneName": "Directos río Cauca entre río San Juan y Pto. Valdivia, margen izquierdo",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 214,
       "rings": [
         [
@@ -96854,7 +96854,7 @@
       "subzoneName": "Quebradas Las Cañas - Los Micos y Obando",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 315,
       "rings": [
         [
@@ -98136,7 +98136,7 @@
       "subzoneName": "Río Bugalagrande",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 101,
       "rings": [
         [
@@ -98562,7 +98562,7 @@
       "subzoneName": "Río Desbaratado",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 126,
       "rings": [
         [
@@ -99088,7 +99088,7 @@
       "subzoneName": "Río Frío",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 202,
       "rings": [
         [
@@ -99918,7 +99918,7 @@
       "subzoneName": "Río Guachal (Bolo - Fraile y Párraga)",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 286,
       "rings": [
         [
@@ -101084,7 +101084,7 @@
       "subzoneName": "Río Paila",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 180,
       "rings": [
         [
@@ -101826,7 +101826,7 @@
       "subzoneName": "Río Palo",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 106,
       "rings": [
         [
@@ -102272,7 +102272,7 @@
       "subzoneName": "Río Quinamayó y otros Directos al Cauca",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 105,
       "rings": [
         [
@@ -102714,7 +102714,7 @@
       "subzoneName": "Río Tarazá - Río Man",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 133,
       "rings": [
         [
@@ -103268,7 +103268,7 @@
       "subzoneName": "Ríos Amaime y Cerrito",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 289,
       "rings": [
         [
@@ -104446,7 +104446,7 @@
       "subzoneName": "Ríos Pescador - RUT - Chanco - Catarina y Cañaveral",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 155,
       "rings": [
         [
@@ -105088,7 +105088,7 @@
       "subzoneName": "Ríos Tuluá y Morales",
       "zoneName": "Cauca",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 267,
       "rings": [
         [
@@ -106178,7 +106178,7 @@
       "subzoneName": "Río Guayabero Bajo",
       "zoneName": "Guaviare",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 245,
       "rings": [
         [
@@ -107180,7 +107180,7 @@
       "subzoneName": "Directos al Magdalena (Brazo Morales)",
       "zoneName": "Medio Magdalena",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 211,
       "rings": [
         [
@@ -108046,7 +108046,7 @@
       "subzoneName": "Quebrada El Carmen y otros Directos al Magdalena",
       "zoneName": "Medio Magdalena",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 96,
       "rings": [
         [
@@ -108452,7 +108452,7 @@
       "subzoneName": "Río Cimitarra y otros Directos al Magdalena",
       "zoneName": "Medio Magdalena",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 160,
       "rings": [
         [
@@ -109114,7 +109114,7 @@
       "subzoneName": "Río San Bartolo y otros Directos al Magdalena Medio",
       "zoneName": "Medio Magdalena",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 138,
       "rings": [
         [
@@ -109688,7 +109688,7 @@
       "subzoneName": "Caño Guanápalo y otros Directos al Meta (mi)",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 121,
       "rings": [
         [
@@ -110194,7 +110194,7 @@
       "subzoneName": "Directos al Meta entre ríos Cusiana y Cravo Sur (mi)",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 238,
       "rings": [
         [
@@ -111168,7 +111168,7 @@
       "subzoneName": "Directos al río Meta entre ríos Pauto y Agua Clara (mi)",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 177,
       "rings": [
         [
@@ -111898,7 +111898,7 @@
       "subzoneName": "Río Cravo Sur",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 170,
       "rings": [
         [
@@ -112600,7 +112600,7 @@
       "subzoneName": "Río Cusiana",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 187,
       "rings": [
         [
@@ -113370,7 +113370,7 @@
       "subzoneName": "Río Garagoa",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 122,
       "rings": [
         [
@@ -113880,7 +113880,7 @@
       "subzoneName": "Río Guavio",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 126,
       "rings": [
         [
@@ -114406,7 +114406,7 @@
       "subzoneName": "Río Guayuriba",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 195,
       "rings": [
         [
@@ -115208,7 +115208,7 @@
       "subzoneName": "Río Pauto y otros Directos al Meta (mi)",
       "zoneName": "Meta",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 210,
       "rings": [
         [
@@ -116070,7 +116070,7 @@
       "subzoneName": "Río San Juan (frontera Ecuador)",
       "zoneName": "Mira",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 126,
       "rings": [
         [
@@ -116596,7 +116596,7 @@
       "subzoneName": "Alto Nechí",
       "zoneName": "Nechí",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 140,
       "rings": [
         [
@@ -117178,7 +117178,7 @@
       "subzoneName": "Bajo Nechí (md)",
       "zoneName": "Nechí",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 181,
       "rings": [
         [
@@ -117924,7 +117924,7 @@
       "subzoneName": "Directos al Bajo Nechí (mi)",
       "zoneName": "Nechí",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 116,
       "rings": [
         [
@@ -118410,7 +118410,7 @@
       "subzoneName": "Río Porce",
       "zoneName": "Nechí",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 269,
       "rings": [
         [
@@ -119508,7 +119508,7 @@
       "subzoneName": "Directos Pacífico (frontera Panamá)",
       "zoneName": "Pacífico - Directos",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 164,
       "rings": [
         [
@@ -120186,7 +120186,7 @@
       "subzoneName": "Río Guáitara",
       "zoneName": "Patía",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 157,
       "rings": [
         [
@@ -120838,7 +120838,7 @@
       "subzoneName": "Río Putumayo Medio",
       "zoneName": "Putumayo",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 298,
       "rings": [
         [
@@ -122054,7 +122054,7 @@
       "subzoneName": "Alto Saldaña",
       "zoneName": "Saldaña",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 121,
       "rings": [
         [
@@ -122560,7 +122560,7 @@
       "subzoneName": "Río Amoyá",
       "zoneName": "Saldaña",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 105,
       "rings": [
         [
@@ -123002,7 +123002,7 @@
       "subzoneName": "Río Cajón",
       "zoneName": "San Juán",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 192,
       "rings": [
         [
@@ -123792,7 +123792,7 @@
       "subzoneName": "Río Capoma y otros Directos al San Juan",
       "zoneName": "San Juán",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 140,
       "rings": [
         [
@@ -124374,7 +124374,7 @@
       "subzoneName": "Río Munguidó",
       "zoneName": "San Juán",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 306,
       "rings": [
         [
@@ -125620,7 +125620,7 @@
       "subzoneName": "Río San Juan Alto",
       "zoneName": "San Juán",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 148,
       "rings": [
         [
@@ -126234,7 +126234,7 @@
       "subzoneName": "Río San Juan Medio",
       "zoneName": "San Juán",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 121,
       "rings": [
         [
@@ -126740,7 +126740,7 @@
       "subzoneName": "Río Sipí",
       "zoneName": "San Juán",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 137,
       "rings": [
         [
@@ -127310,7 +127310,7 @@
       "subzoneName": "Río Tamaná y otros Directos San Juan",
       "zoneName": "San Juán",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 141,
       "rings": [
         [
@@ -127896,7 +127896,7 @@
       "subzoneName": "Ríos Calima y  Bajo San Juan",
       "zoneName": "San Juán",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 232,
       "rings": [
         [
@@ -128846,7 +128846,7 @@
       "subzoneName": "Río Chicamocha",
       "zoneName": "Sogamoso",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 303,
       "rings": [
         [
@@ -130080,7 +130080,7 @@
       "subzoneName": "Río Fonce",
       "zoneName": "Sogamoso",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 116,
       "rings": [
         [
@@ -130566,7 +130566,7 @@
       "subzoneName": "Río Suárez",
       "zoneName": "Sogamoso",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 242,
       "rings": [
         [
@@ -131556,7 +131556,7 @@
       "subzoneName": "Río Guapi",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 125,
       "rings": [
         [
@@ -132078,7 +132078,7 @@
       "subzoneName": "Río Iscuandé",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 173,
       "rings": [
         [
@@ -132792,7 +132792,7 @@
       "subzoneName": "Río Naya - Yurumanguí",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 135,
       "rings": [
         [
@@ -133354,7 +133354,7 @@
       "subzoneName": "Río Saija",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 101,
       "rings": [
         [
@@ -133780,7 +133780,7 @@
       "subzoneName": "Río San Juan del Micay",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 209,
       "rings": [
         [
@@ -134638,7 +134638,7 @@
       "subzoneName": "Río Timbiquí",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 307,
       "rings": [
         [
@@ -135888,7 +135888,7 @@
       "subzoneName": "Alto Yarí",
       "zoneName": "Yarí",
       "severity": "yellow",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 210,
       "rings": [
         [
@@ -136750,7 +136750,7 @@
       "subzoneName": "Río Bogotá",
       "zoneName": "Alto Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 225,
       "rings": [
         [
@@ -137672,7 +137672,7 @@
       "subzoneName": "Directos río Amazonas (mi)",
       "zoneName": "Amazonas - Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 278,
       "rings": [
         [
@@ -138806,7 +138806,7 @@
       "subzoneName": "Alto río Apaporis",
       "zoneName": "Apaporis",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 121,
       "rings": [
         [
@@ -139312,7 +139312,7 @@
       "subzoneName": "Bajo río Apaporis",
       "zoneName": "Apaporis",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 126,
       "rings": [
         [
@@ -139838,7 +139838,7 @@
       "subzoneName": "Directos río Taraira",
       "zoneName": "Apaporis",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 263,
       "rings": [
         [
@@ -140912,7 +140912,7 @@
       "subzoneName": "Río Ajajú",
       "zoneName": "Apaporis",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 243,
       "rings": [
         [
@@ -141906,7 +141906,7 @@
       "subzoneName": "Río Cananarí",
       "zoneName": "Apaporis",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 160,
       "rings": [
         [
@@ -142568,7 +142568,7 @@
       "subzoneName": "Río Pira Paraná",
       "zoneName": "Apaporis",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 211,
       "rings": [
         [
@@ -143434,7 +143434,7 @@
       "subzoneName": "Directos Bajo Atrato entre Río Sucio y desembocadura",
       "zoneName": "Atrato - Darién",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 200,
       "rings": [
         [
@@ -144256,7 +144256,7 @@
       "subzoneName": "Río Napipí - Río Opogadó",
       "zoneName": "Atrato - Darién",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 102,
       "rings": [
         [
@@ -144686,7 +144686,7 @@
       "subzoneName": "Río Perancho",
       "zoneName": "Atrato - Darién",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 72,
       "rings": [
         [
@@ -144996,7 +144996,7 @@
       "subzoneName": "Río Salaquí y otros Directos Bajo Atrato",
       "zoneName": "Atrato - Darién",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 204,
       "rings": [
         [
@@ -145834,7 +145834,7 @@
       "subzoneName": "Río Sucio",
       "zoneName": "Atrato - Darién",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 236,
       "rings": [
         [
@@ -146800,7 +146800,7 @@
       "subzoneName": "Río Tanela y otros Directos al Atrato",
       "zoneName": "Atrato - Darién",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 296,
       "rings": [
         [
@@ -148006,7 +148006,7 @@
       "subzoneName": "Río Tolo y otros Directos al Caribe",
       "zoneName": "Atrato - Darién",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 96,
       "rings": [
         [
@@ -148412,7 +148412,7 @@
       "subzoneName": "Canal del Dique (md)",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 119,
       "rings": [
         [
@@ -148910,7 +148910,7 @@
       "subzoneName": "Canal del Dique (mi)",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 173,
       "rings": [
         [
@@ -149624,7 +149624,7 @@
       "subzoneName": "Cga. Grande de Santa Marta",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 156,
       "rings": [
         [
@@ -150270,7 +150270,7 @@
       "subzoneName": "Ciénaga de Mallorquín",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 108,
       "rings": [
         [
@@ -150724,7 +150724,7 @@
       "subzoneName": "Directos Bajo Magdalena entre El Banco y El Plato",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 253,
       "rings": [
         [
@@ -151758,7 +151758,7 @@
       "subzoneName": "Directos al Bajo Magdalena entre Calamar y desembocadura",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 208,
       "rings": [
         [
@@ -152612,7 +152612,7 @@
       "subzoneName": "Directos al Bajo Magdalena entre El Plato y Calamar (md)",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 104,
       "rings": [
         [
@@ -153050,7 +153050,7 @@
       "subzoneName": "Directos al Bajo Magdalena entre El Plato y Calamar (mi)",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 295,
       "rings": [
         [
@@ -154252,7 +154252,7 @@
       "subzoneName": "Ríos Chimicuica y Corozal",
       "zoneName": "Bajo Magdalena",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 132,
       "rings": [
         [
@@ -154802,7 +154802,7 @@
       "subzoneName": "Alto San Jorge",
       "zoneName": "Bajo Magdalena- Cauca -San Jorge",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 162,
       "rings": [
         [
@@ -155472,7 +155472,7 @@
       "subzoneName": "Río Cahuinarí",
       "zoneName": "Caquetá",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 311,
       "rings": [
         [
@@ -156738,7 +156738,7 @@
       "subzoneName": "Río Caquetá Bajo",
       "zoneName": "Caquetá",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 223,
       "rings": [
         [
@@ -157652,7 +157652,7 @@
       "subzoneName": "Río Cuemaní",
       "zoneName": "Caquetá",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 142,
       "rings": [
         [
@@ -158242,7 +158242,7 @@
       "subzoneName": "Río Mirití-Paraná",
       "zoneName": "Caquetá",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 117,
       "rings": [
         [
@@ -158732,7 +158732,7 @@
       "subzoneName": "Río Peneya",
       "zoneName": "Caquetá",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 96,
       "rings": [
         [
@@ -159138,7 +159138,7 @@
       "subzoneName": "Río Puré",
       "zoneName": "Caquetá",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 195,
       "rings": [
         [
@@ -159940,7 +159940,7 @@
       "subzoneName": "Río Rutuya",
       "zoneName": "Caquetá",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 259,
       "rings": [
         [
@@ -160998,7 +160998,7 @@
       "subzoneName": "Directos Caribe - Ay.Sharimahana Alta Guajira",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 266,
       "rings": [
         [
@@ -162084,7 +162084,7 @@
       "subzoneName": "Río  Piedras - Río Manzanares",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 96,
       "rings": [
         [
@@ -162490,7 +162490,7 @@
       "subzoneName": "Río Ancho y Otros Directos al Caribe",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 260,
       "rings": [
         [
@@ -163552,7 +163552,7 @@
       "subzoneName": "Río Camarones y otros Directos Caribe",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 213,
       "rings": [
         [
@@ -164426,7 +164426,7 @@
       "subzoneName": "Río Carraipía - Paraguachón, Directos al Golfo Maracaibo",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 190,
       "rings": [
         [
@@ -165208,7 +165208,7 @@
       "subzoneName": "Río Don Diego",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 196,
       "rings": [
         [
@@ -166014,7 +166014,7 @@
       "subzoneName": "Río Guachaca - Mendihuaca y Buritaca",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 171,
       "rings": [
         [
@@ -166720,7 +166720,7 @@
       "subzoneName": "Río Ranchería",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 158,
       "rings": [
         [
@@ -167374,7 +167374,7 @@
       "subzoneName": "Río Tapias",
       "zoneName": "Caribe - Guajira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 214,
       "rings": [
         [
@@ -168252,7 +168252,7 @@
       "subzoneName": "Arroyos Directos al Caribe",
       "zoneName": "Caribe - Litoral",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 149,
       "rings": [
         [
@@ -168870,7 +168870,7 @@
       "subzoneName": "Directos Caribe Golfo de Morrosquillo",
       "zoneName": "Caribe - Litoral",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 126,
       "rings": [
         [
@@ -169396,7 +169396,7 @@
       "subzoneName": "Río Canalete y otros Arroyos Directos al Caribe",
       "zoneName": "Caribe - Litoral",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 120,
       "rings": [
         [
@@ -169898,7 +169898,7 @@
       "subzoneName": "Río León",
       "zoneName": "Caribe - Litoral",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 103,
       "rings": [
         [
@@ -170332,7 +170332,7 @@
       "subzoneName": "Río Mulatos y otros Directos al Caribe",
       "zoneName": "Caribe - Litoral",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 140,
       "rings": [
         [
@@ -170914,7 +170914,7 @@
       "subzoneName": "Río San Juan",
       "zoneName": "Caribe - Litoral",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 105,
       "rings": [
         [
@@ -171356,7 +171356,7 @@
       "subzoneName": "Caño Samuco",
       "zoneName": "Casanare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 272,
       "rings": [
         [
@@ -172466,7 +172466,7 @@
       "subzoneName": "Bajo Catatumbo",
       "zoneName": "Catatumbo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 117,
       "rings": [
         [
@@ -172956,7 +172956,7 @@
       "subzoneName": "Río Socuavo del Norte y río Socuavo Sur",
       "zoneName": "Catatumbo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 149,
       "rings": [
         [
@@ -173574,7 +173574,7 @@
       "subzoneName": "Río del Suroeste y Directos Río del Oro",
       "zoneName": "Catatumbo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 395,
       "rings": [
         [
@@ -175260,7 +175260,7 @@
       "subzoneName": "Directos Bajo Cauca - Cga. La Raya entre río Nechí y Brazo de Loba",
       "zoneName": "Cauca",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 200,
       "rings": [
         [
@@ -176082,7 +176082,7 @@
       "subzoneName": "Directos al Cauca entre Pto. Valdivia y río Nechí",
       "zoneName": "Cauca",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 167,
       "rings": [
         [
@@ -176772,7 +176772,7 @@
       "subzoneName": "Alto Cesar",
       "zoneName": "Cesar",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 122,
       "rings": [
         [
@@ -177282,7 +177282,7 @@
       "subzoneName": "Bajo Cesar",
       "zoneName": "Cesar",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 159,
       "rings": [
         [
@@ -177940,7 +177940,7 @@
       "subzoneName": "Medio Cesar",
       "zoneName": "Cesar",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 173,
       "rings": [
         [
@@ -178654,7 +178654,7 @@
       "subzoneName": "Río Ariguaní",
       "zoneName": "Cesar",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 178,
       "rings": [
         [
@@ -179388,7 +179388,7 @@
       "subzoneName": "Alto río Guainía",
       "zoneName": "Guainía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 193,
       "rings": [
         [
@@ -180182,7 +180182,7 @@
       "subzoneName": "Bajo río Guainía",
       "zoneName": "Guainía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 125,
       "rings": [
         [
@@ -180704,7 +180704,7 @@
       "subzoneName": "Directos Río Negro (md)",
       "zoneName": "Guainía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 126,
       "rings": [
         [
@@ -181230,7 +181230,7 @@
       "subzoneName": "Medio río Guainía",
       "zoneName": "Guainía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 204,
       "rings": [
         [
@@ -182068,7 +182068,7 @@
       "subzoneName": "Río Aquió o Caño Aque",
       "zoneName": "Guainía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 152,
       "rings": [
         [
@@ -182698,7 +182698,7 @@
       "subzoneName": "Río Cuiarí",
       "zoneName": "Guainía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 226,
       "rings": [
         [
@@ -183624,7 +183624,7 @@
       "subzoneName": "Río Isana",
       "zoneName": "Guainía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 263,
       "rings": [
         [
@@ -184698,7 +184698,7 @@
       "subzoneName": "Río Tomo",
       "zoneName": "Guainía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 115,
       "rings": [
         [
@@ -185180,7 +185180,7 @@
       "subzoneName": "Alto río Uvá",
       "zoneName": "Guaviare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 169,
       "rings": [
         [
@@ -185878,7 +185878,7 @@
       "subzoneName": "Bajo Guaviare",
       "zoneName": "Guaviare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 152,
       "rings": [
         [
@@ -186508,7 +186508,7 @@
       "subzoneName": "Bajo río Uvá",
       "zoneName": "Guaviare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 252,
       "rings": [
         [
@@ -187538,7 +187538,7 @@
       "subzoneName": "Caño Minisiare",
       "zoneName": "Guaviare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 181,
       "rings": [
         [
@@ -188284,7 +188284,7 @@
       "subzoneName": "Medio Guaviare",
       "zoneName": "Guaviare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 135,
       "rings": [
         [
@@ -188846,7 +188846,7 @@
       "subzoneName": "Medio río Uvá",
       "zoneName": "Guaviare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 208,
       "rings": [
         [
@@ -189700,7 +189700,7 @@
       "subzoneName": "Río Iteviare",
       "zoneName": "Guaviare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 285,
       "rings": [
         [
@@ -190862,7 +190862,7 @@
       "subzoneName": "Río Siare",
       "zoneName": "Guaviare",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 239,
       "rings": [
         [
@@ -191840,7 +191840,7 @@
       "subzoneName": "Caño Bocón",
       "zoneName": "Inírida",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 231,
       "rings": [
         [
@@ -192786,7 +192786,7 @@
       "subzoneName": "Caño Nabuquén",
       "zoneName": "Inírida",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 159,
       "rings": [
         [
@@ -193444,7 +193444,7 @@
       "subzoneName": "Río Inírida (mi), hasta bocas Caño Bocón, y río Las Viñas",
       "zoneName": "Inírida",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 131,
       "rings": [
         [
@@ -193990,7 +193990,7 @@
       "subzoneName": "Río Inírida Alto",
       "zoneName": "Inírida",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 270,
       "rings": [
         [
@@ -195092,7 +195092,7 @@
       "subzoneName": "Río Inírida Medio",
       "zoneName": "Inírida",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 193,
       "rings": [
         [
@@ -195886,7 +195886,7 @@
       "subzoneName": "Río Papunaua",
       "zoneName": "Inírida",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 253,
       "rings": [
         [
@@ -196920,7 +196920,7 @@
       "subzoneName": "Providencia",
       "zoneName": "Islas Caribe",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 90,
       "rings": [
         [
@@ -197304,7 +197304,7 @@
       "subzoneName": "Roncador y Quitasueño",
       "zoneName": "Islas Caribe",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 49,
       "rings": [
         [
@@ -197526,7 +197526,7 @@
       "subzoneName": "San Andrés",
       "zoneName": "Islas Caribe",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 110,
       "rings": [
         [
@@ -197998,7 +197998,7 @@
       "subzoneName": "Gorgona",
       "zoneName": "Islas Pacífico",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 66,
       "rings": [
         [
@@ -198286,7 +198286,7 @@
       "subzoneName": "Malpelo",
       "zoneName": "Islas Pacífico",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 96,
       "rings": [
         [
@@ -198722,7 +198722,7 @@
       "subzoneName": "Directos Bajo Meta entre ríos Casanare y Orinoco",
       "zoneName": "Meta",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 281,
       "rings": [
         [
@@ -199868,7 +199868,7 @@
       "subzoneName": "Directos al río Meta entre ríos Cusiana y Casanare (md)",
       "zoneName": "Meta",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 243,
       "rings": [
         [
@@ -200862,7 +200862,7 @@
       "subzoneName": "Lago de Tota",
       "zoneName": "Meta",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 136,
       "rings": [
         [
@@ -201428,7 +201428,7 @@
       "subzoneName": "Río Chagüí",
       "zoneName": "Mira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 211,
       "rings": [
         [
@@ -202294,7 +202294,7 @@
       "subzoneName": "Río Rosario",
       "zoneName": "Mira",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 216,
       "rings": [
         [
@@ -203180,7 +203180,7 @@
       "subzoneName": "Río Chingual",
       "zoneName": "Napo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 302,
       "rings": [
         [
@@ -204410,7 +204410,7 @@
       "subzoneName": "Caño Matavén y otros Directos al Orinoco (mi)",
       "zoneName": "Orinoco Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 283,
       "rings": [
         [
@@ -205564,7 +205564,7 @@
       "subzoneName": "Directos Orinoco entre ríos Tomo y Meta (mi)",
       "zoneName": "Orinoco Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 135,
       "rings": [
         [
@@ -206126,7 +206126,7 @@
       "subzoneName": "Directos río Atabapo (mi)",
       "zoneName": "Orinoco Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 177,
       "rings": [
         [
@@ -206856,7 +206856,7 @@
       "subzoneName": "Río Cinaruco y Directos río Orinoco (mi)",
       "zoneName": "Orinoco Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 136,
       "rings": [
         [
@@ -207422,7 +207422,7 @@
       "subzoneName": "Río Tuparro y otros Directos al Orinoco (mi)",
       "zoneName": "Orinoco Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 321,
       "rings": [
         [
@@ -208728,7 +208728,7 @@
       "subzoneName": "Río Vita",
       "zoneName": "Orinoco Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 129,
       "rings": [
         [
@@ -209266,7 +209266,7 @@
       "subzoneName": "Río Patía Bajo",
       "zoneName": "Patía",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 166,
       "rings": [
         [
@@ -209952,7 +209952,7 @@
       "subzoneName": "Río Cara-Paraná",
       "zoneName": "Putumayo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 258,
       "rings": [
         [
@@ -211006,7 +211006,7 @@
       "subzoneName": "Río Cotuhé",
       "zoneName": "Putumayo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 110,
       "rings": [
         [
@@ -211468,7 +211468,7 @@
       "subzoneName": "Río Igara-Paraná",
       "zoneName": "Putumayo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 300,
       "rings": [
         [
@@ -212690,7 +212690,7 @@
       "subzoneName": "Río Purité",
       "zoneName": "Putumayo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 298,
       "rings": [
         [
@@ -213904,7 +213904,7 @@
       "subzoneName": "Río Putumayo Bajo",
       "zoneName": "Putumayo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 265,
       "rings": [
         [
@@ -214986,7 +214986,7 @@
       "subzoneName": "Río Putumayo Directos (mi)",
       "zoneName": "Putumayo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 136,
       "rings": [
         [
@@ -215552,7 +215552,7 @@
       "subzoneName": "Alto Sinú - Urrá",
       "zoneName": "Sinú",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 172,
       "rings": [
         [
@@ -216262,7 +216262,7 @@
       "subzoneName": "Bajo Sinú",
       "zoneName": "Sinú",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 230,
       "rings": [
         [
@@ -217204,7 +217204,7 @@
       "subzoneName": "Medio Sinú",
       "zoneName": "Sinú",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 159,
       "rings": [
         [
@@ -217862,7 +217862,7 @@
       "subzoneName": "Dagua - Buenaventura - Bahía Málaga",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 164,
       "rings": [
         [
@@ -218540,7 +218540,7 @@
       "subzoneName": "Río Anchicayá",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 98,
       "rings": [
         [
@@ -218954,7 +218954,7 @@
       "subzoneName": "Río Tapaje",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 95,
       "rings": [
         [
@@ -219356,7 +219356,7 @@
       "subzoneName": "Ríos Cajambre - Mayorquín - Raposo",
       "zoneName": "Tapaje - Dagua - Directos",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 123,
       "rings": [
         [
@@ -219870,7 +219870,7 @@
       "subzoneName": "Alto río Tomo",
       "zoneName": "Tomo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 244,
       "rings": [
         [
@@ -220868,7 +220868,7 @@
       "subzoneName": "Bajo río Tomo",
       "zoneName": "Tomo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 227,
       "rings": [
         [
@@ -221798,7 +221798,7 @@
       "subzoneName": "Caño Lioni Terecay",
       "zoneName": "Tomo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 156,
       "rings": [
         [
@@ -222444,7 +222444,7 @@
       "subzoneName": "Río Elvita",
       "zoneName": "Tomo",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 173,
       "rings": [
         [
@@ -223158,7 +223158,7 @@
       "subzoneName": "Alto Vaupés",
       "zoneName": "Vaupés",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 221,
       "rings": [
         [
@@ -224064,7 +224064,7 @@
       "subzoneName": "Bajo Vaupés",
       "zoneName": "Vaupés",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 180,
       "rings": [
         [
@@ -224808,7 +224808,7 @@
       "subzoneName": "Río Itilla",
       "zoneName": "Vaupés",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 143,
       "rings": [
         [
@@ -225402,7 +225402,7 @@
       "subzoneName": "Río Papurí",
       "zoneName": "Vaupés",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 275,
       "rings": [
         [
@@ -226524,7 +226524,7 @@
       "subzoneName": "Río Querarí",
       "zoneName": "Vaupés",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 196,
       "rings": [
         [
@@ -227330,7 +227330,7 @@
       "subzoneName": "Río Tiquié",
       "zoneName": "Vaupés",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 234,
       "rings": [
         [
@@ -228288,7 +228288,7 @@
       "subzoneName": "Río Unilla",
       "zoneName": "Vaupés",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 140,
       "rings": [
         [
@@ -228870,7 +228870,7 @@
       "subzoneName": "Alto Vichada",
       "zoneName": "Vichada",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 248,
       "rings": [
         [
@@ -229884,7 +229884,7 @@
       "subzoneName": "Bajo Vichada",
       "zoneName": "Vichada",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 248,
       "rings": [
         [
@@ -230898,7 +230898,7 @@
       "subzoneName": "Directos Vichada Medio",
       "zoneName": "Vichada",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 184,
       "rings": [
         [
@@ -231656,7 +231656,7 @@
       "subzoneName": "Río Guarrojo",
       "zoneName": "Vichada",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 232,
       "rings": [
         [
@@ -232606,7 +232606,7 @@
       "subzoneName": "Río Muco",
       "zoneName": "Vichada",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 222,
       "rings": [
         [
@@ -233516,7 +233516,7 @@
       "subzoneName": "Bajo Yarí",
       "zoneName": "Yarí",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 206,
       "rings": [
         [
@@ -234362,7 +234362,7 @@
       "subzoneName": "Medio Yarí",
       "zoneName": "Yarí",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 169,
       "rings": [
         [
@@ -235060,7 +235060,7 @@
       "subzoneName": "Río Camuya",
       "zoneName": "Yarí",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 143,
       "rings": [
         [
@@ -235654,7 +235654,7 @@
       "subzoneName": "Río Cuñare",
       "zoneName": "Yarí",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 166,
       "rings": [
         [
@@ -236340,7 +236340,7 @@
       "subzoneName": "Río Luisa",
       "zoneName": "Yarí",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 164,
       "rings": [
         [
@@ -237018,7 +237018,7 @@
       "subzoneName": "Río Mesay",
       "zoneName": "Yarí",
       "severity": "no_data",
-      "issuedAt": "03-04-2026 16:00",
+      "issuedAt": "03-04-2026 17:00",
       "vertexCount": 295,
       "rings": [
         [
@@ -238214,6 +238214,33 @@
         "x": -72.460652480922,
         "y": 0.1614385562814021
       }
+    }
+  ],
+  "extraLayers": [
+    {
+      "id": "subzone_pobs",
+      "title": "Precipitacion observada por subzona",
+      "visibleByDefault": false,
+      "styleHint": "pobs",
+      "featureCount": 0,
+      "features": []
+    },
+    {
+      "id": "water_shortage",
+      "title": "Desabastecimiento por municipio",
+      "visibleByDefault": false,
+      "styleHint": "water_shortage",
+      "featureCount": 0,
+      "features": []
+    },
+    {
+      "id": "runap",
+      "title": "RUNAP",
+      "visibleByDefault": false,
+      "styleHint": "service",
+      "featureCount": null,
+      "serviceUrl": "https://mapas.parquesnacionales.gov.co/arcgis/rest/services/pnn/runap/MapServer",
+      "layerId": 0
     }
   ]
 }

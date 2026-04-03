@@ -30,7 +30,20 @@ function renderActiveView() {
   if (state.view === "alerts") renderAlerts({ state, i18n });
   if (state.view === "reservoirs") renderReservoirs({ state, i18n });
   if (state.view === "sources") renderSources({ state, i18n });
-  if (state.view === "map") renderMap({ state, i18n });
+  if (state.view === "map") {
+    renderMap({
+      state,
+      i18n,
+      onTogglePanel() {
+        store.toggleMapPanel();
+        renderActiveView();
+      },
+      onLayerVisibilityChange(layerId, isVisible) {
+        store.setMapLayerVisibility(layerId, isVisible);
+        renderActiveView();
+      }
+    });
+  }
 }
 
 async function renderView(view) {

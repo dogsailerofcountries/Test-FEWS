@@ -81,7 +81,12 @@ class FEWSDemoService:
         stations = self._build_stations(raw_sources.get("stations", {}).get("data"), raw_sources.get("forecast_hq", {}).get("data"))
         alerts = self._build_alerts(raw_sources.get("alerts_subzones", {}).get("data"))
         reservoirs = self._build_reservoirs(raw_sources.get("reservoirs", {}).get("data"))
-        map_summary = self._build_map_summary(stations, alerts)
+        map_summary = self._build_map_summary(
+            stations,
+            alerts,
+            raw_sources.get("subzone_pobs", {}).get("data"),
+            raw_sources.get("water_shortage", {}).get("data"),
+        )
         overview = self._build_overview(stations, alerts, reservoirs, source_statuses)
 
         payload = {
@@ -139,7 +144,9 @@ class FEWSDemoService:
 
     def get_map_summary(self):
         with self._lock:
-            return dict(self._state.get("map_summary") or {})
+            payload = dict(self._state.get("map_summary") or {})
+            payload.setdefault("extraLayers", [])
+            return payload
 
     def source_statuses(self):
         return list((self.get_meta() or {}).get("sourceStatuses") or [])
@@ -284,7 +291,63 @@ class FEWSDemoService:
             "sourceStatuses": source_statuses,
         }
 
-    def _build_map_summary(self, stations, alerts):
+    def _normalize_extra_layer(self, layer_id, title, features_geojson, visible=False, style_hint="polygon"):
+        normalized_features = []
+        for feature in (features_geojson or {}).get("features", []):
+            geometry = feature.get("geometry") or {}
+            properties = feature.get("properties") or {}
+            geometry_type = geometry.get("type")
+
+            if geometry_type in {"Polygon", "MultiPolygon"}:
+                rings = extract_simplified_rings(geometry)
+                if not rings:
+                    continue
+                feature_type = "polygon"
+                payload_geometry = {"rings": rings}
+            elif geometry_type == "Point":
+                coordinates = geometry.get("coordinates") or [None, None]
+                x = parse_float(coordinates[0])
+                y = parse_float(coordinates[1])
+                if x is None or y is None:
+                    continue
+                feature_type = "point"
+                payload_geometry = {"coordinates": [x, y]}
+            else:
+                continue
+
+            normalized_features.append(
+                {
+                    "id": str(
+                        properties.get("id")
+                        or properties.get("ID")
+                        or properties.get("OBJECTID")
+                        or properties.get("CODIGO")
+                        or properties.get("NOM_MPIO")
+                        or len(normalized_features) + 1
+                    ),
+                    "label": (
+                        properties.get("NOMSZH")
+                        or properties.get("NOM_MPIO")
+                        or properties.get("municipio")
+                        or properties.get("nombre")
+                        or title
+                    ),
+                    "geometryType": feature_type,
+                    "geometry": payload_geometry,
+                    "properties": properties,
+                }
+            )
+
+        return {
+            "id": layer_id,
+            "title": title,
+            "visibleByDefault": visible,
+            "styleHint": style_hint,
+            "featureCount": len(normalized_features),
+            "features": normalized_features,
+        }
+
+    def _build_map_summary(self, stations, alerts, subzone_pobs_geojson, water_shortage_geojson):
         map_stations = []
         for station in stations:
             if station["longitude"] is None or station["latitude"] is None:
@@ -334,4 +397,34 @@ class FEWSDemoService:
                     "centroid": {"x": sum_x / vertex_count, "y": sum_y / vertex_count},
                 }
             )
-        return {"generatedAt": now_iso(), "stations": map_stations, "alerts": map_alerts}
+        extra_layers = [
+            self._normalize_extra_layer(
+                "subzone_pobs",
+                "Precipitacion observada por subzona",
+                subzone_pobs_geojson,
+                visible=False,
+                style_hint="pobs",
+            ),
+            self._normalize_extra_layer(
+                "water_shortage",
+                "Desabastecimiento por municipio",
+                water_shortage_geojson,
+                visible=False,
+                style_hint="water_shortage",
+            ),
+            {
+                "id": "runap",
+                "title": "RUNAP",
+                "visibleByDefault": False,
+                "styleHint": "service",
+                "featureCount": None,
+                "serviceUrl": "https://mapas.parquesnacionales.gov.co/arcgis/rest/services/pnn/runap/MapServer",
+                "layerId": 0,
+            },
+        ]
+        return {
+            "generatedAt": now_iso(),
+            "stations": map_stations,
+            "alerts": map_alerts,
+            "extraLayers": extra_layers,
+        }

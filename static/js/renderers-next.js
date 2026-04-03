@@ -205,10 +205,54 @@ export function renderSources({ state, i18n }) {
     .join("");
 }
 
-export function renderMap({ state, i18n }) {
+export function renderMap({ state, i18n, onTogglePanel, onLayerVisibilityChange }) {
+  const t = i18n.t.bind(i18n);
+  const panel = document.getElementById("mapLayersPanel");
+  const extraLayers = state.mapSummary?.extraLayers || [];
+  const layerRows = [
+    { id: "stations", label: t("mapLayers.stations") },
+    { id: "alerts", label: t("mapLayers.alerts") },
+    ...extraLayers.map((layer) => ({
+      id: layer.id,
+      label: t(`mapLayers.${layer.id}`) === `mapLayers.${layer.id}` ? layer.title : t(`mapLayers.${layer.id}`),
+      count: layer.featureCount,
+    })),
+  ];
+
+  panel.classList.toggle("open", state.mapPanelOpen);
+  panel.innerHTML = `
+    <button type="button" class="map-layers-toggle" id="mapLayersToggle">
+      <span>${state.mapPanelOpen ? t("mapLayersClose") : t("mapLayersOpen")}</span>
+    </button>
+    <div class="map-layers-drawer ${state.mapPanelOpen ? "open" : ""}">
+      <div class="panel-head map-layers-head">
+        <h4>${t("mapLayersTitle")}</h4>
+      </div>
+      <div class="map-layers-list">
+        ${layerRows.map((layer) => `
+          <label class="layer-toggle-row">
+            <span class="layer-toggle-copy">
+              <strong>${layer.label}</strong>
+              ${layer.count != null ? `<small>${i18n.formatNumber(layer.count, 0)}</small>` : ""}
+            </span>
+            <input type="checkbox" data-layer-id="${layer.id}" ${state.mapLayerVisibility[layer.id] ? "checked" : ""} />
+          </label>
+        `).join("")}
+      </div>
+    </div>
+  `;
+
+  panel.querySelector("#mapLayersToggle")?.addEventListener("click", onTogglePanel);
+  panel.querySelectorAll("input[data-layer-id]").forEach((input) => {
+    input.addEventListener("change", (event) => {
+      onLayerVisibilityChange(event.target.dataset.layerId, event.target.checked);
+    });
+  });
+
   renderLightMap({
     mapSummary: state.mapSummary,
     target: document.getElementById("mapCanvas"),
-    t: i18n.t.bind(i18n)
+    t,
+    layerVisibility: state.mapLayerVisibility,
   });
 }

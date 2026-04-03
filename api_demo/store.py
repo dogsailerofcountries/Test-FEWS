@@ -23,7 +23,7 @@ class SnapshotStore:
             "stations": self.load("stations", []),
             "alerts": self.load("alerts", []),
             "reservoirs": self.load("reservoirs", []),
-            "map_summary": self.load("map_summary", {"generatedAt": None, "stations": [], "alerts": []}),
+            "map_summary": self.load("map_summary", {"generatedAt": None, "stations": [], "alerts": [], "extraLayers": []}),
         }
 
     def save_all(self, payload):
