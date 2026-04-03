@@ -4,7 +4,9 @@ const arcgisState = {
   map: null,
   alertsLayer: null,
   stationsLayer: null,
-  target: null
+  target: null,
+  dataSignature: null,
+  homeWidget: null
 };
 
 function colorForStatus(status) {
@@ -110,9 +112,10 @@ function loadArcGISModules() {
       "esri/Graphic",
       "esri/geometry/Polygon",
       "esri/geometry/Point",
-      "esri/geometry/Extent"
-    ], (Map, MapView, GraphicsLayer, Graphic, Polygon, Point, Extent) => {
-      resolve({ Map, MapView, GraphicsLayer, Graphic, Polygon, Point, Extent });
+      "esri/geometry/Extent",
+      "esri/widgets/Home"
+    ], (Map, MapView, GraphicsLayer, Graphic, Polygon, Point, Extent, Home) => {
+      resolve({ Map, MapView, GraphicsLayer, Graphic, Polygon, Point, Extent, Home });
     }, reject);
   });
   return arcgisState.modulesPromise;
@@ -141,7 +144,9 @@ async function ensureArcGISMap(target) {
     center: [-73.5, 4.5],
     zoom: 5,
     constraints: {
-      minZoom: 4,
+      rotationEnabled: false,
+      snapToZoom: false,
+      minZoom: 5,
       maxZoom: 12
     },
     ui: {
@@ -150,12 +155,15 @@ async function ensureArcGISMap(target) {
   });
 
   view.ui.move("zoom", "bottom-right");
+  const homeWidget = new modules.Home({ view });
+  view.ui.add(homeWidget, "bottom-right");
 
   arcgisState.map = map;
   arcgisState.view = view;
   arcgisState.alertsLayer = alertsLayer;
   arcgisState.stationsLayer = stationsLayer;
   arcgisState.target = target;
+  arcgisState.homeWidget = homeWidget;
 
   return { ...modules, ...arcgisState };
 }
@@ -251,6 +259,21 @@ function buildExtent(mapSummary, modules) {
   }).expand(1.08);
 }
 
+function buildConstraintExtent(mapSummary, modules) {
+  const extent = buildExtent(mapSummary, modules);
+  return extent ? extent.expand(1.18) : null;
+}
+
+function computeDataSignature(mapSummary) {
+  const stations = mapSummary?.stations || [];
+  const alerts = mapSummary?.alerts || [];
+  let vertices = 0;
+  for (const alert of alerts) {
+    for (const ring of alert.rings || []) vertices += ring.length;
+  }
+  return `${stations.length}:${alerts.length}:${vertices}`;
+}
+
 async function renderArcGISMap({ mapSummary, target, t }) {
   const stations = mapSummary?.stations || [];
   const alerts = mapSummary?.alerts || [];
@@ -260,6 +283,7 @@ async function renderArcGISMap({ mapSummary, target, t }) {
   }
 
   const modules = await ensureArcGISMap(target);
+  const dataSignature = computeDataSignature(mapSummary);
   const alertGraphics = alerts
     .filter((alert) => (alert.rings || []).length)
     .map((alert) => buildAlertGraphic(alert, modules));
@@ -273,7 +297,13 @@ async function renderArcGISMap({ mapSummary, target, t }) {
   modules.stationsLayer.addMany(stationGraphics);
 
   const extent = buildExtent(mapSummary, modules);
-  if (extent) {
+  const constraintExtent = buildConstraintExtent(mapSummary, modules);
+  if (constraintExtent) {
+    modules.view.constraints.geometry = constraintExtent;
+  }
+
+  if (extent && arcgisState.dataSignature !== dataSignature) {
+    arcgisState.dataSignature = dataSignature;
     modules.view.goTo(extent, {
       duration: 800
     }).catch(() => {});

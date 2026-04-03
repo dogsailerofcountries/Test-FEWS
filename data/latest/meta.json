@@ -1,45 +1,45 @@
 {
-  "generatedAt": "2026-04-03T02:46:29.723607+00:00",
+  "generatedAt": "2026-04-03T21:40:58.105177+00:00",
   "sourceStatuses": [
     {
       "id": "stations",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstaciones.json",
-      "status": "ok",
-      "lastAttemptAt": "2026-04-03T02:46:30.809673+00:00",
-      "lastSuccessAt": "2026-04-03T02:46:30.809675+00:00",
-      "latencyMs": 1086.02,
-      "snapshotAgeSeconds": 0,
-      "error": null
+      "status": "degraded",
+      "lastAttemptAt": "2026-04-03T21:41:00.158684+00:00",
+      "lastSuccessAt": "2026-04-03T21:32:46.152484+00:00",
+      "latencyMs": 2053.51,
+      "snapshotAgeSeconds": 494,
+      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
     },
     {
       "id": "alerts_subzones",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SZH_Alertas_Pobs.json",
-      "status": "ok",
-      "lastAttemptAt": "2026-04-03T02:46:36.487309+00:00",
-      "lastSuccessAt": "2026-04-03T02:46:36.487311+00:00",
-      "latencyMs": 5677.62,
-      "snapshotAgeSeconds": 0,
-      "error": null
+      "status": "degraded",
+      "lastAttemptAt": "2026-04-03T21:41:02.195689+00:00",
+      "lastSuccessAt": "2026-04-03T21:33:02.862736+00:00",
+      "latencyMs": 2036.94,
+      "snapshotAgeSeconds": 479,
+      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
     },
     {
       "id": "forecast_hq",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SeriesPronosticoHQ.csv",
-      "status": "ok",
-      "lastAttemptAt": "2026-04-03T02:46:37.386509+00:00",
-      "lastSuccessAt": "2026-04-03T02:46:37.386511+00:00",
-      "latencyMs": 899.18,
-      "snapshotAgeSeconds": 0,
-      "error": null
+      "status": "degraded",
+      "lastAttemptAt": "2026-04-03T21:41:04.218851+00:00",
+      "lastSuccessAt": "2026-04-03T21:33:03.899741+00:00",
+      "latencyMs": 2023.15,
+      "snapshotAgeSeconds": 480,
+      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
     },
     {
       "id": "reservoirs",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SeriesEmbalses.csv",
-      "status": "ok",
-      "lastAttemptAt": "2026-04-03T02:46:37.870605+00:00",
-      "lastSuccessAt": "2026-04-03T02:46:37.870607+00:00",
-      "latencyMs": 484.08,
-      "snapshotAgeSeconds": 0,
-      "error": null
+      "status": "degraded",
+      "lastAttemptAt": "2026-04-03T21:41:06.230426+00:00",
+      "lastSuccessAt": "2026-04-03T21:33:04.363721+00:00",
+      "latencyMs": 2011.55,
+      "snapshotAgeSeconds": 481,
+      "error": "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
     }
   ],
   "datasets": {
