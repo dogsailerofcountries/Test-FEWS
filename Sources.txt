@@ -1,0 +1,42 @@
+Layers - capas
+https://fews.ideam.gov.co/visorfews/descargas/SZH_Alertas_Pobs.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstaciones.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesQ.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesHsim.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesQsim.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesPobs.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesTobs.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesCalidad.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEmbalsesVolUtil.json
+
+Information
+https://fews.ideam.gov.co/visorfews/descargas/SeriesHM_aut.csv
+https://fews.ideam.gov.co/visorfews/descargas/SeriesHM_conv.csv
+https://fews.ideam.gov.co/visorfews/descargas/SeriesPronosticoHQ.csv
+https://fews.ideam.gov.co/visorfews/descargas/SeriesCalidad.csv
+https://fews.ideam.gov.co/visorfews/descargas/SeriesPobsPproSZH.csv
+https://fews.ideam.gov.co/visorfews/descargas/SeriesEmbalses.csv
+
+Regional
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesH_binal.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesQ_binal.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesPobs_binal.json
+https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstacionesTobs_binal.json
+
+Official app files
+https://fews.ideam.gov.co/
+https://fews.ideam.gov.co/visorfews/
+https://fews.ideam.gov.co/visorfews/static/js/main.d6ea32b1.js
+https://fews.ideam.gov.co/visorfews/static/css/main.99b87226.css
+https://fews.ideam.gov.co/visorfews/Bienvenida.js
+https://fews.ideam.gov.co/visorfews/manifest.json
+
+Verified external connections
+https://js.arcgis.com/4.28/@arcgis/core/assets/esri/themes/light/main.css
+https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer
+https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer
+https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Tac+One&display=swap
+https://www.googletagmanager.com/gtag/js
+https://www.ideam.gov.co/sala-de-prensa/boletines/Bolet%C3%ADn-de-Alertas-Hidrol%C3%B3gicas-(BAH)
+http://www.ideam.gov.co
+https://youtu.be/CmYNQqvWqcM?si=0fHIfhBxIqXRV-dy

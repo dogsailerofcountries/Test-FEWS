@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-04-03T02:46:29.723607+00:00",
+  "sourceStatuses": [
+    {
+      "id": "stations",
+      "name": "https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstaciones.json",
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T02:46:30.809673+00:00",
+      "lastSuccessAt": "2026-04-03T02:46:30.809675+00:00",
+      "latencyMs": 1086.02,
+      "snapshotAgeSeconds": 0,
+      "error": null
+    },
+    {
+      "id": "alerts_subzones",
+      "name": "https://fews.ideam.gov.co/visorfews/descargas/SZH_Alertas_Pobs.json",
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T02:46:36.487309+00:00",
+      "lastSuccessAt": "2026-04-03T02:46:36.487311+00:00",
+      "latencyMs": 5677.62,
+      "snapshotAgeSeconds": 0,
+      "error": null
+    },
+    {
+      "id": "forecast_hq",
+      "name": "https://fews.ideam.gov.co/visorfews/descargas/SeriesPronosticoHQ.csv",
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T02:46:37.386509+00:00",
+      "lastSuccessAt": "2026-04-03T02:46:37.386511+00:00",
+      "latencyMs": 899.18,
+      "snapshotAgeSeconds": 0,
+      "error": null
+    },
+    {
+      "id": "reservoirs",
+      "name": "https://fews.ideam.gov.co/visorfews/descargas/SeriesEmbalses.csv",
+      "status": "ok",
+      "lastAttemptAt": "2026-04-03T02:46:37.870605+00:00",
+      "lastSuccessAt": "2026-04-03T02:46:37.870607+00:00",
+      "latencyMs": 484.08,
+      "snapshotAgeSeconds": 0,
+      "error": null
+    }
+  ],
+  "datasets": {
+    "stations": 416,
+    "alerts": 316,
+    "reservoirs": 911
+  }
+}

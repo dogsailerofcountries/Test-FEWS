@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FEWS Web Nuevo</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-kicker">IDEAM / FEWS</div>
+          <h1>FEWS Web Nuevo</h1>
+          <p id="brandDescription"></p>
+        </div>
+        <nav class="nav">
+          <button class="nav-link active" data-view="overview" id="navOverview"></button>
+          <button class="nav-link" data-view="purpose" id="navPurpose"></button>
+          <button class="nav-link" data-view="stations" id="navStations"></button>
+          <button class="nav-link" data-view="alerts" id="navAlerts"></button>
+          <button class="nav-link" data-view="map" id="navMap"></button>
+          <button class="nav-link" data-view="reservoirs" id="navReservoirs"></button>
+          <button class="nav-link" data-view="sources" id="navSources"></button>
+        </nav>
+        <div class="sidebar-footer">
+          <label class="control-label" id="langLabel" for="languageSelect"></label>
+          <select id="languageSelect">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <div class="eyebrow" id="topbarEyebrow"></div>
+            <h2 id="viewTitle"></h2>
+          </div>
+          <div class="topbar-meta">
+            <div class="meta-card">
+              <span id="lastUpdateLabel"></span>
+              <strong id="lastUpdateValue">-</strong>
+            </div>
+            <div class="meta-card">
+              <span id="sourceHealthLabel"></span>
+              <strong id="sourceHealthValue">-</strong>
+            </div>
+          </div>
+        </header>
+
+        <section class="view active" id="view-overview">
+          <div class="hero-panel">
+            <div>
+              <div class="eyebrow" id="overviewHeroEyebrow"></div>
+              <h3 id="overviewHeroTitle"></h3>
+            </div>
+            <div class="legend" id="severityLegend"></div>
+          </div>
+          <div class="stats-grid" id="overviewStats"></div>
+          <div class="content-grid two-columns">
+            <section class="panel">
+              <div class="panel-head">
+                <h3 id="overviewHighlightedTitle"></h3>
+              </div>
+              <div id="highlightedStations" class="list-stack"></div>
+            </section>
+            <section class="panel">
+              <div class="panel-head">
+                <h3 id="overviewAlertsTitle"></h3>
+              </div>
+              <div id="overviewAlerts" class="list-stack"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-purpose">
+          <div class="content-grid two-columns">
+            <section class="panel purpose-copy">
+              <div class="panel-head">
+                <h3 id="purposeIntroTitle"></h3>
+              </div>
+              <p id="purposeIntroBody"></p>
+            </section>
+            <section class="panel purpose-copy">
+              <div class="panel-head">
+                <h3 id="purposeGoalsTitle"></h3>
+              </div>
+              <ul id="purposeGoalsList"></ul>
+            </section>
+          </div>
+          <section class="panel purpose-copy">
+            <div class="panel-head">
+              <h3 id="purposeHowTitle"></h3>
+            </div>
+            <ul id="purposeHowList"></ul>
+          </section>
+        </section>
+
+        <section class="view" id="view-stations">
+          <section class="panel">
+            <div class="panel-head">
+              <h3 id="stationFiltersTitle"></h3>
+            </div>
+            <div class="filters-grid">
+              <input id="searchInput" type="search" />
+              <select id="statusFilter"></select>
+              <select id="departmentFilter"></select>
+            </div>
+          </section>
+          <div class="content-grid two-columns">
+            <section class="panel">
+              <div class="panel-head">
+                <h3 id="stationsTableTitle"></h3>
+                <span id="stationsCount"></span>
+              </div>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th id="colStation"></th>
+                      <th id="colRiver"></th>
+                      <th id="colLocation"></th>
+                      <th id="colStatus"></th>
+                    </tr>
+                  </thead>
+                  <tbody id="stationsTableBody"></tbody>
+                </table>
+              </div>
+            </section>
+            <section class="panel detail-panel">
+              <div class="panel-head">
+                <h3 id="stationDetailTitle"></h3>
+              </div>
+              <div id="stationDetailEmpty" class="empty-state"></div>
+              <div id="stationDetail" class="detail-stack hidden"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="view-alerts">
+          <section class="panel">
+            <div class="panel-head">
+              <h3 id="alertsTitle"></h3>
+            </div>
+            <div id="alertsList" class="list-stack"></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-map">
+          <section class="panel">
+            <div class="panel-head">
+              <h3 id="mapTitle"></h3>
+            </div>
+            <div id="mapCanvas" class="map-canvas"></div>
+          </section>
+        </section>
+
+        <section class="view" id="view-reservoirs">
+          <section class="panel">
+            <div class="panel-head">
+              <h3 id="reservoirsTitle"></h3>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th id="colReservoir"></th>
+                    <th id="colUsefulVolume"></th>
+                    <th id="colUsefulPct"></th>
+                    <th id="colRainObs"></th>
+                    <th id="colRainForecast"></th>
+                  </tr>
+                </thead>
+                <tbody id="reservoirsTableBody"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="view-sources">
+          <section class="panel">
+            <div class="panel-head">
+              <h3 id="sourcesTitle"></h3>
+            </div>
+            <div id="sourcesList" class="list-stack"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
