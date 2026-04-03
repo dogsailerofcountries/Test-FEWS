@@ -59,4 +59,10 @@ def write_json(path, payload):
 def read_json(path, default):
     if not path.exists():
         return default
-    return json.loads(path.read_text(encoding="utf-8"))
+    try:
+        content = path.read_text(encoding="utf-8")
+        if not content.strip():
+            return default
+        return json.loads(content)
+    except json.JSONDecodeError:
+        return default

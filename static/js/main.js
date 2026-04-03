@@ -1,7 +1,7 @@
 import { createI18n } from "./i18n-next.js";
 import { BackendProvider, DirectSourceProvider } from "./providers.js";
 import { createStore } from "./store.js";
-import { applyStaticTranslations, renderAlerts, renderMap, renderOverview, renderPurpose, renderReservoirs, renderSources, renderStations, renderTopbar, updateVisibleView } from "./renderers-next.js";
+import { applyStaticTranslations, renderAlerts, renderMap, renderOverview, renderPurpose, renderReservoirs, renderSources, renderStations, renderStationDetail, renderTopbar, updateVisibleView } from "./renderers-next.js";
 
 const i18n = createI18n("es");
 const backendProvider = new BackendProvider("es");
@@ -11,7 +11,7 @@ const store = createStore(backendProvider);
 async function ensureDataForView(view) {
   if (view === "overview") return Promise.all([store.ensureOverview(), store.ensureSources()]);
   if (view === "purpose") return Promise.resolve();
-  if (view === "stations") return store.ensureStations();
+  if (view === "stations" || view === "station-detail") return store.ensureStations();
   if (view === "alerts") return store.ensureAlerts();
   if (view === "reservoirs") return store.ensureReservoirs();
   if (view === "sources") return store.ensureSources();
@@ -26,7 +26,8 @@ function renderActiveView() {
   updateVisibleView(state);
   if (state.view === "overview") renderOverview({ state, i18n });
   if (state.view === "purpose") renderPurpose({ i18n });
-  if (state.view === "stations") renderStations({ state, i18n, onStationSelect(stationId) { store.setSelectedStation(stationId); renderActiveView(); } });
+  if (state.view === "stations") renderStations({ state, i18n, onStationSelect(stationId) { store.setSelectedStation(stationId); renderView("station-detail"); } });
+  if (state.view === "station-detail") renderStationDetail({ state, i18n });
   if (state.view === "alerts") renderAlerts({ state, i18n });
   if (state.view === "reservoirs") renderReservoirs({ state, i18n });
   if (state.view === "sources") renderSources({ state, i18n });
@@ -53,14 +54,22 @@ async function renderView(view) {
 }
 
 function bindEvents() {
-  document.getElementById("languageSelect").addEventListener("change", (event) => {
-    const language = event.target.value;
-    store.setLanguage(language);
-    i18n.setLanguage(language);
-    backendProvider.setLanguage(language);
-    directProvider.setLanguage(language);
-    renderActiveView();
+  document.querySelectorAll(".lang-btn").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      const language = event.target.dataset.lang;
+      document.querySelectorAll(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === language));
+      store.setLanguage(language);
+      i18n.setLanguage(language);
+      backendProvider.setLanguage(language);
+      directProvider.setLanguage(language);
+      renderActiveView();
+    });
   });
+  window.addEventListener('stationSelect', (event) => {
+    store.setSelectedStation(event.detail);
+    renderView("station-detail");
+  });
+  document.getElementById("btnBackToStations").addEventListener("click", () => renderView("stations"));
   document.querySelectorAll(".nav-link").forEach((button) => button.addEventListener("click", async () => { await renderView(button.dataset.view); }));
   document.getElementById("searchInput").addEventListener("input", (event) => {
     store.setSearch(event.target.value);

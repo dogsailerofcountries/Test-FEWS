@@ -4,6 +4,13 @@ function severityClass(status) {
   return `status-${status}`;
 }
 
+function getAlertIcon(status) {
+  if (status === 'red' || status === 'orange' || status === 'yellow') {
+    return `<svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>`;
+  }
+  return '';
+}
+
 function safeText(value) {
   return value || "--";
 }
@@ -61,6 +68,11 @@ export function applyStaticTranslations({ state, i18n }) {
 }
 
 export function updateVisibleView(state) {
+  const mainContent = document.querySelector(".main-content");
+  if (mainContent) {
+    mainContent.classList.toggle("is-map-view", state.view === "map");
+  }
+
   document.querySelectorAll(".view").forEach((element) => {
     const active = element.id === `view-${state.view}`;
     element.classList.toggle("active", active);
@@ -68,7 +80,9 @@ export function updateVisibleView(state) {
   });
 
   document.querySelectorAll(".nav-link").forEach((button) => {
-    button.classList.toggle("active", button.dataset.view === state.view);
+    if (button.id !== "btnBackToStations") {
+      button.classList.toggle("active", button.dataset.view === state.view);
+    }
   });
 }
 
@@ -87,7 +101,7 @@ export function renderTopbar({ state, i18n }) {
 export function renderOverview({ state, i18n }) {
   const t = i18n.t.bind(i18n);
   document.getElementById("severityLegend").innerHTML = ["red", "orange", "yellow", "normal", "no_data"]
-    .map((status) => `<span class="pill ${severityClass(status)}">${t(`statLabels.${status}`)}</span>`)
+    .map((status) => `<span class="pill ${severityClass(status)}">${getAlertIcon(status)}${t(`statLabels.${status}`)}</span>`)
     .join("");
 
   const stats = state.overview?.stationCounts ?? {};
@@ -105,11 +119,11 @@ export function renderOverview({ state, i18n }) {
     .join("");
 
   document.getElementById("highlightedStations").innerHTML = (state.overview?.highlightedStations || [])
-    .map((station) => `<article class="list-item"><div class="panel-head"><h4>${safeText(station.stationName)}</h4><span class="pill ${severityClass(station.status)}">${station.statusLabel || t(`statLabels.${station.status}`)}</span></div><div class="list-meta">${safeText(station.riverName)} · ${safeText(station.municipality)}, ${safeText(station.department)}</div></article>`)
+    .map((station) => `<article class="list-item"><div class="panel-head"><h4>${safeText(station.stationName)}</h4><span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)}${station.statusLabel || t(`statLabels.${station.status}`)}</span></div><div class="list-meta">${safeText(station.riverName)} · ${safeText(station.municipality)}, ${safeText(station.department)}</div></article>`)
     .join("");
 
   document.getElementById("overviewAlerts").innerHTML = (state.overview?.activeAlerts || [])
-    .map((alert) => `<article class="list-item"><div class="panel-head"><h4>${safeText(alert.subzoneName)}</h4><span class="pill ${severityClass(alert.severity)}">${alert.severityLabel || t(`statLabels.${alert.severity}`)}</span></div><div class="list-meta">${safeText(alert.zoneName)} · ${i18n.formatDate(alert.issuedAt)}</div></article>`)
+    .map((alert) => `<article class="list-item"><div class="panel-head"><h4>${safeText(alert.subzoneName)}</h4><span class="pill ${severityClass(alert.severity)}">${getAlertIcon(alert.severity)}${alert.severityLabel || t(`statLabels.${alert.severity}`)}</span></div><div class="list-meta">${safeText(alert.zoneName)} · ${i18n.formatDate(alert.issuedAt)}</div></article>`)
     .join("");
 }
 
@@ -157,7 +171,7 @@ export function renderStations({ state, i18n, onStationSelect }) {
 
   const body = document.getElementById("stationsTableBody");
   body.innerHTML = stations
-    .map((station) => `<tr data-station-id="${station.stationId}" class="${state.selectedStationId === station.stationId ? "selected" : ""}"><td><strong>${safeText(station.stationName)}</strong><br /><span class="small-note">${safeText(station.stationId)}</span></td><td>${safeText(station.riverName)}</td><td>${safeText(station.municipality)}, ${safeText(station.department)}</td><td><span class="pill ${severityClass(station.status)}">${station.statusLabel || t(`statLabels.${station.status}`)}</span></td></tr>`)
+    .map((station) => `<tr data-station-id="${station.stationId}" class="${state.selectedStationId === station.stationId ? "selected" : ""}"><td><strong>${safeText(station.stationName)}</strong><br /><span class="small-note">${safeText(station.stationId)}</span></td><td>${safeText(station.riverName)}</td><td>${safeText(station.municipality)}, ${safeText(station.department)}</td><td><span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)}${station.statusLabel || t(`statLabels.${station.status}`)}</span></td></tr>`)
     .join("");
 
   body.querySelectorAll("tr").forEach((row) => {
@@ -181,13 +195,88 @@ export function renderStations({ state, i18n, onStationSelect }) {
     ? `<table><thead><tr><th>${t("labels.forecast")}</th><th>Level</th><th>Flow</th></tr></thead><tbody>${station.forecastSummary.slice(0, 6).map((item) => `<tr><td>${i18n.formatDate(item.forecastAt)}</td><td>${i18n.formatNumber(item.forecastLevel)}</td><td>${i18n.formatNumber(item.forecastFlow)}</td></tr>`).join("")}</tbody></table>`
     : `<div class="small-note">${t("labels.noForecast")}</div>`;
 
-  detail.innerHTML = `<section class="detail-section"><div class="panel-head"><h4>${safeText(station.stationName)}</h4><span class="pill ${severityClass(station.status)}">${station.statusLabel || t(`statLabels.${station.status}`)}</span></div><div class="detail-grid"><div><div class="detail-key">${t("labels.river")}</div><div class="detail-value">${safeText(station.riverName)}</div></div><div><div class="detail-key">${t("labels.subzone")}</div><div class="detail-value">${safeText(station.subzoneName)}</div></div><div><div class="detail-key">${t("labels.zone")}</div><div class="detail-value">${safeText(station.zoneName)}</div></div><div><div class="detail-key">${t("labels.municipality")}</div><div class="detail-value">${safeText(station.municipality)}</div></div><div><div class="detail-key">${t("labels.department")}</div><div class="detail-value">${safeText(station.department)}</div></div><div><div class="detail-key">${t("labels.altitude")}</div><div class="detail-value">${i18n.formatNumber(station.altitude, 0)}</div></div><div><div class="detail-key">${t("labels.category")}</div><div class="detail-value">${safeText(station.category)}</div></div><div><div class="detail-key">ID</div><div class="detail-value">${safeText(station.stationId)}</div></div></div></section><section class="detail-section"><h4>${t("labels.source")}</h4><div class="detail-grid"><div><div class="detail-key">${t("labels.currentObserved")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelObserved)}</div></div><div><div class="detail-key">${t("labels.currentSensor")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelSensor)}</div></div></div></section><section class="detail-section"><h4>${t("labels.thresholds")}</h4><div class="detail-grid"><div><div class="detail-key">${t("statLabels.yellow")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.yellow)}</div></div><div><div class="detail-key">${t("statLabels.orange")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.orange)}</div></div><div><div class="detail-key">${t("statLabels.red")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.red)}</div></div><div><div class="detail-key">Bajos</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.low)}</div></div></div></section><section class="detail-section"><h4>${t("labels.forecast")}</h4>${forecast}</section>`;
+  detail.innerHTML = `<section class="detail-section"><div class="panel-head"><h4>${safeText(station.stationName)}</h4><span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)}${station.statusLabel || t(`statLabels.${station.status}`)}</span></div><div class="detail-grid"><div><div class="detail-key">${t("labels.river")}</div><div class="detail-value">${safeText(station.riverName)}</div></div><div><div class="detail-key">${t("labels.subzone")}</div><div class="detail-value">${safeText(station.subzoneName)}</div></div><div><div class="detail-key">${t("labels.zone")}</div><div class="detail-value">${safeText(station.zoneName)}</div></div><div><div class="detail-key">${t("labels.municipality")}</div><div class="detail-value">${safeText(station.municipality)}</div></div><div><div class="detail-key">${t("labels.department")}</div><div class="detail-value">${safeText(station.department)}</div></div><div><div class="detail-key">${t("labels.altitude")}</div><div class="detail-value">${i18n.formatNumber(station.altitude, 0)}</div></div><div><div class="detail-key">${t("labels.category")}</div><div class="detail-value">${safeText(station.category)}</div></div><div><div class="detail-key">ID</div><div class="detail-value">${safeText(station.stationId)}</div></div></div></section><section class="detail-section"><h4>${t("labels.source")}</h4><div class="detail-grid"><div><div class="detail-key">${t("labels.currentObserved")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelObserved)}</div></div><div><div class="detail-key">${t("labels.currentSensor")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelSensor)}</div></div></div></section><section class="detail-section"><h4>${t("labels.thresholds")}</h4><div class="detail-grid"><div><div class="detail-key">${t("statLabels.yellow")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.yellow)}</div></div><div><div class="detail-key">${t("statLabels.orange")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.orange)}</div></div><div><div class="detail-key">${t("statLabels.red")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.red)}</div></div><div><div class="detail-key">Bajos</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.low)}</div></div></div></section>`;
+}
+
+let activeChart = null;
+
+export function renderStationDetail({ state, i18n }) {
+  const t = i18n.t.bind(i18n);
+  const station = state.stations.find((item) => item.stationId === state.selectedStationId);
+  const empty = document.getElementById("stationDetailPageEmpty");
+  const detail = document.getElementById("stationDetailPageInfo");
+  const chartCanvas = document.getElementById("stationChart");
+
+  if (!station) {
+    empty.classList.remove("hidden");
+    detail.classList.add("hidden");
+    if (activeChart) {
+      activeChart.destroy();
+      activeChart = null;
+    }
+    return;
+  }
+
+  empty.classList.add("hidden");
+  detail.classList.remove("hidden");
+
+  // Format detail text heavily mirroring the old one but expanded
+  detail.innerHTML = `<section class="detail-section"><div class="panel-head"><h4>${safeText(station.stationName)}</h4><span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)}${station.statusLabel || t(`statLabels.${station.status}`)}</span></div><div class="detail-grid"><div><div class="detail-key">${t("labels.river")}</div><div class="detail-value">${safeText(station.riverName)}</div></div><div><div class="detail-key">${t("labels.municipality")}</div><div class="detail-value">${safeText(station.municipality)}</div></div><div><div class="detail-key">${t("labels.department")}</div><div class="detail-value">${safeText(station.department)}</div></div><div><div class="detail-key">ID</div><div class="detail-value">${safeText(station.stationId)}</div></div></div></section><section class="detail-section"><h4>${t("labels.source")}</h4><div class="detail-grid"><div><div class="detail-key">${t("labels.currentObserved")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelObserved)}</div></div><div><div class="detail-key">${t("labels.currentSensor")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelSensor)}</div></div></div></section>`;
+
+  // Build Graphic (Chart)
+  if (activeChart) {
+    activeChart.destroy();
+  }
+
+  const forecasts = station.forecastSummary || [];
+  if (forecasts.length === 0) {
+    const ctx = chartCanvas.getContext('2d');
+    ctx.clearRect(0, 0, chartCanvas.width, chartCanvas.height);
+    return;
+  }
+
+  const labels = forecasts.map(f => i18n.formatDate(f.forecastAt));
+  const levels = forecasts.map(f => f.forecastLevel);
+
+  activeChart = new Chart(chartCanvas, {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label: t('labels.forecast') + ' (Nivel)',
+        data: levels,
+        borderColor: '#0ea5e9',
+        backgroundColor: 'rgba(14, 165, 233, 0.1)',
+        borderWidth: 2,
+        tension: 0.3,
+        fill: true,
+        pointBackgroundColor: '#0ea5e9',
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: { 
+          beginAtZero: false,
+          grid: { color: 'rgba(226, 232, 240, 0.8)' }
+        },
+        x: {
+          grid: { display: false },
+          ticks: { maxRotation: 45, minRotation: 45 }
+        }
+      }
+    }
+  });
 }
 
 export function renderAlerts({ state, i18n }) {
   const t = i18n.t.bind(i18n);
   document.getElementById("alertsList").innerHTML = state.alerts
-    .map((alert) => `<article class="list-item"><div class="panel-head"><h4>${safeText(alert.subzoneName)}</h4><span class="pill ${severityClass(alert.severity)}">${alert.severityLabel || t(`statLabels.${alert.severity}`)}</span></div><div class="list-meta">${safeText(alert.zoneName)} · ${safeText(alert.macroAreaName)}</div><div class="small-note">${t("labels.issuedAt")}: ${i18n.formatDate(alert.issuedAt)} · ${t("labels.metric")}: ${i18n.formatNumber(alert.observedMetric, 0)}</div></article>`)
+    .map((alert) => `<article class="list-item"><div class="panel-head"><h4>${safeText(alert.subzoneName)}</h4><span class="pill ${severityClass(alert.severity)}">${getAlertIcon(alert.severity)}${alert.severityLabel || t(`statLabels.${alert.severity}`)}</span></div><div class="list-meta">${safeText(alert.zoneName)} · ${safeText(alert.macroAreaName)}</div><div class="small-note">${t("labels.issuedAt")}: ${i18n.formatDate(alert.issuedAt)} · ${t("labels.metric")}: ${i18n.formatNumber(alert.observedMetric, 0)}</div></article>`)
     .join("");
 }
 

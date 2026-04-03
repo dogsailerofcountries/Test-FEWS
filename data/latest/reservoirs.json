@@ -6798,7 +6798,7 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": 3.43,
+    "observedPrecipitation": 3.44,
     "forecastPrecipitation": 0.35,
     "forecastUsefulVolumeMass": 829.56,
     "forecastUsefulVolumePct": 0.8
@@ -7862,7 +7862,7 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": 7.91,
+    "observedPrecipitation": 7.92,
     "forecastPrecipitation": 0.52,
     "forecastUsefulVolumeMass": 54.57,
     "forecastUsefulVolumePct": 0.6

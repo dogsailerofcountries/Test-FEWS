@@ -127,6 +127,9 @@ function drawStations(stations, layerGroup) {
     `;
     
     circle.bindTooltip(tooltipContent);
+    circle.on('click', () => {
+      window.dispatchEvent(new CustomEvent('stationSelect', { detail: station.stationId }));
+    });
     circle.addTo(layerGroup);
   });
 }

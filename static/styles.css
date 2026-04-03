@@ -95,6 +95,33 @@ button, input, select {
 .sidebar-footer { margin-top: auto; }
 .control-label { display: block; margin-bottom: 8px; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.6); }
 
+/* Language Toggle */
+.language-toggle {
+  display: flex;
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 4px;
+}
+.lang-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  padding: 8px 0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.lang-btn.active {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+.lang-btn:hover:not(.active) {
+  color: rgba(255,255,255,0.9);
+}
+
 select, input[type="search"] {
   width: 100%; 
   border: 1px solid var(--line); 
@@ -110,6 +137,48 @@ select:focus, input[type="search"]:focus {
 }
 
 .main-content { padding: 32px; display: grid; gap: 24px; }
+
+/* Full Screen Map Modifiers */
+.main-content.is-map-view {
+  padding: 0;
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+}
+.main-content.is-map-view > .topbar {
+  margin: 20px 24px;
+  flex-shrink: 0;
+}
+.main-content.is-map-view > #view-map {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.main-content.is-map-view #view-map .panel {
+  flex: 1;
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.main-content.is-map-view #view-map .panel-head {
+  padding: 16px 24px 0;
+  margin-bottom: 12px;
+}
+.main-content.is-map-view .map-workspace {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.main-content.is-map-view .map-canvas {
+  flex: 1;
+  height: calc(100vh - 146px);
+  border-radius: 0;
+  border: none;
+}
 
 /* Premium Glassmorphism Panels */
 .topbar, .hero-panel, .panel {
@@ -138,6 +207,19 @@ select:focus, input[type="search"]:focus {
 .hero-panel p { margin: 12px 0 0; max-width: 60ch; line-height: 1.6; color: var(--muted); }
 
 .legend { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+
+/* Skeletons */
+.skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: loadingPulse 1.5s infinite linear;
+  border-color: transparent !important;
+  color: transparent !important;
+}
+@keyframes loadingPulse {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
 
 .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
 
@@ -198,12 +280,34 @@ select:focus, input[type="search"]:focus {
 
 .filters-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 16px; margin-bottom: 20px; }
 
+/* Search Wrapper */
+.search-wrapper { position: relative; display: flex; align-items: center; }
+.search-icon { position: absolute; left: 14px; width: 18px; height: 18px; color: var(--muted); pointer-events: none; }
+.search-wrapper input { padding-left: 42px; }
+
 .table-wrap { overflow: auto; border-radius: 12px; border: 1px solid var(--line); }
 table { width: 100%; border-collapse: collapse; background: white; }
 th, td { text-align: left; padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: middle; }
 th { color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; background: #f8fafc; }
 tbody tr { cursor: pointer; transition: background 0.2s ease; }
 tbody tr:hover, tbody tr.selected { background: #f1f5f9; }
+
+/* Table Interactivity */
+tbody tr td:first-child { position: relative; padding-left: 28px; transition: padding 0.2s ease; }
+tbody tr:hover td:first-child { padding-left: 32px; }
+tbody tr td:first-child::before {
+  content: "›";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--brand);
+  opacity: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  transition: opacity 0.2s ease, left 0.2s ease;
+}
+tbody tr:hover td:first-child::before { opacity: 1; left: 14px; }
 
 .detail-panel { min-height: 520px; }
 .detail-stack { display: grid; gap: 16px; }

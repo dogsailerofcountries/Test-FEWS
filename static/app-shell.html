@@ -28,11 +28,11 @@
           <button class="nav-link" data-view="sources" id="navSources"></button>
         </nav>
         <div class="sidebar-footer">
-          <label class="control-label" id="langLabel" for="languageSelect"></label>
-          <select id="languageSelect">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-          </select>
+          <label class="control-label" id="langLabel"></label>
+          <div class="language-toggle">
+            <button type="button" class="lang-btn active" data-lang="es">ES</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
         </div>
       </aside>
 
@@ -62,19 +62,30 @@
             </div>
             <div class="legend" id="severityLegend"></div>
           </div>
-          <div class="stats-grid" id="overviewStats"></div>
+          <div class="stats-grid" id="overviewStats">
+            <article class="stat-card skeleton"></article>
+            <article class="stat-card skeleton"></article>
+            <article class="stat-card skeleton"></article>
+            <article class="stat-card skeleton"></article>
+          </div>
           <div class="content-grid two-columns">
             <section class="panel">
               <div class="panel-head">
                 <h3 id="overviewHighlightedTitle"></h3>
               </div>
-              <div id="highlightedStations" class="list-stack"></div>
+              <div id="highlightedStations" class="list-stack">
+                <div class="list-item skeleton" style="height:86px;"></div>
+                <div class="list-item skeleton" style="height:86px;"></div>
+              </div>
             </section>
             <section class="panel">
               <div class="panel-head">
                 <h3 id="overviewAlertsTitle"></h3>
               </div>
-              <div id="overviewAlerts" class="list-stack"></div>
+              <div id="overviewAlerts" class="list-stack">
+                <div class="list-item skeleton" style="height:86px;"></div>
+                <div class="list-item skeleton" style="height:86px;"></div>
+              </div>
             </section>
           </div>
         </section>
@@ -108,7 +119,10 @@
               <h3 id="stationFiltersTitle"></h3>
             </div>
             <div class="filters-grid">
-              <input id="searchInput" type="search" />
+              <div class="search-wrapper">
+                <svg viewBox="0 0 24 24" class="search-icon"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input id="searchInput" type="search" />
+              </div>
               <select id="statusFilter"></select>
               <select id="departmentFilter"></select>
             </div>
@@ -148,7 +162,11 @@
             <div class="panel-head">
               <h3 id="alertsTitle"></h3>
             </div>
-            <div id="alertsList" class="list-stack"></div>
+            <div id="alertsList" class="list-stack">
+              <div class="list-item skeleton" style="height:102px;"></div>
+              <div class="list-item skeleton" style="height:102px;"></div>
+              <div class="list-item skeleton" style="height:102px;"></div>
+            </div>
           </section>
         </section>
 
@@ -162,6 +180,27 @@
               <div id="mapCanvas" class="map-canvas"></div>
             </div>
           </section>
+        </section>
+
+        <section class="view" id="view-station-detail">
+          <div class="content-grid two-columns">
+            <section class="panel detail-panel" style="border-right: none;">
+              <div class="panel-head">
+                <h3 id="detailPageTitle">Detalle de Estación</h3>
+              </div>
+              <button id="btnBackToStations" class="lang-btn" style="margin-bottom: 16px; width: auto; padding: 6px 12px; background: #e0f2fe; color: #0284c7;">← Volver</button>
+              <div id="stationDetailPageEmpty" class="empty-state">Seleccione una estación en el mapa o lista para ver los detalles.</div>
+              <div id="stationDetailPageInfo" class="detail-stack hidden"></div>
+            </section>
+            <section class="panel">
+              <div class="panel-head">
+                <h3>Histórico y Pronóstico</h3>
+              </div>
+              <div style="position: relative; height: 440px; width: 100%;">
+                <canvas id="stationChart"></canvas>
+              </div>
+            </section>
+          </div>
         </section>
 
         <section class="view" id="view-reservoirs">
@@ -191,12 +230,16 @@
             <div class="panel-head">
               <h3 id="sourcesTitle"></h3>
             </div>
-            <div id="sourcesList" class="list-stack"></div>
+            <div id="sourcesList" class="list-stack">
+              <div class="source-item skeleton" style="height:90px;"></div>
+              <div class="source-item skeleton" style="height:90px;"></div>
+            </div>
           </section>
         </section>
       </main>
     </div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="module" src="/js/main.js"></script>
   </body>
 </html>

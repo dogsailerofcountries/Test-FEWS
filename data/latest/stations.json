@@ -607,7 +607,7 @@
     "altitude": 96.0,
     "longitude": -75.679444,
     "latitude": 8.027778,
-    "currentLevelSensor": 3.03,
+    "currentLevelSensor": 3.0,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 3.0,
@@ -806,7 +806,7 @@
     "longitude": -73.560333,
     "latitude": 7.57858,
     "currentLevelSensor": null,
-    "currentLevelObserved": 3.3,
+    "currentLevelObserved": 3.25,
     "thresholds": {
       "yellow": 3.038606,
       "orange": 3.634303,
@@ -1128,7 +1128,7 @@
     "altitude": 64.0,
     "longitude": -73.759278,
     "latitude": 7.692806,
-    "currentLevelSensor": 1.02,
+    "currentLevelSensor": 1.0,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -1228,7 +1228,7 @@
     "longitude": -69.94272222,
     "latitude": -4.222527778,
     "currentLevelSensor": null,
-    "currentLevelObserved": 15.87,
+    "currentLevelObserved": 15.85,
     "thresholds": {
       "yellow": 16.261495,
       "orange": 17.130748,
@@ -1426,7 +1426,7 @@
     "longitude": -75.32795278,
     "latitude": 7.470553056,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.75,
+    "currentLevelObserved": 2.64,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -1525,7 +1525,7 @@
     "longitude": -75.841694,
     "latitude": 5.966083,
     "currentLevelSensor": 3.88,
-    "currentLevelObserved": 4.0,
+    "currentLevelObserved": 3.95,
     "thresholds": {
       "yellow": 4.96,
       "orange": 5.46,
@@ -1822,7 +1822,7 @@
     "longitude": -76.68391667,
     "latitude": 7.673055556,
     "currentLevelSensor": null,
-    "currentLevelObserved": 0.19,
+    "currentLevelObserved": 0.14,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -2019,7 +2019,7 @@
     "altitude": 160.0,
     "longitude": -74.811938,
     "latitude": 7.603299,
-    "currentLevelSensor": 4.5,
+    "currentLevelSensor": 4.47,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -2204,105 +2204,6 @@
     ]
   },
   {
-    "stationId": "0023087190",
-    "stationName": "GARRUCHA LA   [23087190]",
-    "stationCode": "0023087190",
-    "riverName": "SAMANA NORTE",
-    "subzoneName": "Río Nare",
-    "zoneName": "Medio Magdalena",
-    "populationCenter": "SAN LUIS",
-    "municipality": "SAN LUIS",
-    "department": "ANTIOQUIA",
-    "category": "Limnigráfica",
-    "altitude": 403.0,
-    "longitude": -74.93825,
-    "latitude": 5.998417,
-    "currentLevelSensor": 2.22,
-    "currentLevelObserved": null,
-    "thresholds": {
-      "yellow": null,
-      "orange": null,
-      "red": null,
-      "low": 0.5,
-      "historicalMax": 8.5
-    },
-    "status": "normal",
-    "forecastSummary": [
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-03-24 07:00",
-        "forecastLevel": 5.63,
-        "forecastFlow": 668.0
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-03-25 07:00",
-        "forecastLevel": 2.46,
-        "forecastFlow": 155.82
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-03-26 07:00",
-        "forecastLevel": 1.91,
-        "forecastFlow": 99.73
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-03-27 07:00",
-        "forecastLevel": 3.61,
-        "forecastFlow": 305.44
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-03-28 07:00",
-        "forecastLevel": 2.37,
-        "forecastFlow": 145.84
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-03-29 07:00",
-        "forecastLevel": 4.85,
-        "forecastFlow": 513.78
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-03-30 07:00",
-        "forecastLevel": 3.09,
-        "forecastFlow": 232.4
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-03-31 07:00",
-        "forecastLevel": 2.32,
-        "forecastFlow": 140.3
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-04-01 07:00",
-        "forecastLevel": 2.04,
-        "forecastFlow": 111.98
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-04-02 07:00",
-        "forecastLevel": 3.1,
-        "forecastFlow": 233.73
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-04-03 07:00",
-        "forecastLevel": 2.53,
-        "forecastFlow": 163.59
-      },
-      {
-        "stationId": "0023087190",
-        "forecastAt": "2026-04-04 07:00",
-        "forecastLevel": 2.89,
-        "forecastFlow": 206.95
-      }
-    ]
-  },
-  {
     "stationId": "0026247020",
     "stationName": "LA COQUERA AUTOM  [26247020]",
     "stationCode": "0026247020",
@@ -2317,7 +2218,7 @@
     "longitude": -75.196,
     "latitude": 7.962139,
     "currentLevelSensor": 3.5,
-    "currentLevelObserved": 3.58,
+    "currentLevelObserved": 3.52,
     "thresholds": {
       "yellow": 3.74,
       "orange": 4.04,
@@ -2415,7 +2316,7 @@
     "altitude": 37.364,
     "longitude": -74.785556,
     "latitude": 8.030111,
-    "currentLevelSensor": 2.94,
+    "currentLevelSensor": 2.93,
     "currentLevelObserved": 2.98,
     "thresholds": {
       "yellow": 4.59,
@@ -2713,7 +2614,7 @@
     "longitude": -76.134417,
     "latitude": 6.298389,
     "currentLevelSensor": null,
-    "currentLevelObserved": 1.14,
+    "currentLevelObserved": 1.13,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -2811,7 +2712,7 @@
     "altitude": 45.0,
     "longitude": -74.952417,
     "latitude": 8.036417,
-    "currentLevelSensor": 5.04,
+    "currentLevelSensor": 5.02,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 6.55,
@@ -3208,7 +3109,7 @@
     "longitude": -73.95083333,
     "latitude": 6.954722222,
     "currentLevelSensor": null,
-    "currentLevelObserved": 4.32,
+    "currentLevelObserved": 4.26,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -3307,7 +3208,7 @@
     "longitude": -75.7055,
     "latitude": 5.829944,
     "currentLevelSensor": null,
-    "currentLevelObserved": 3.32,
+    "currentLevelObserved": 3.3,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -3505,7 +3406,7 @@
     "longitude": -74.401167,
     "latitude": 6.485139,
     "currentLevelSensor": 4.43,
-    "currentLevelObserved": 4.4,
+    "currentLevelObserved": 4.25,
     "thresholds": {
       "yellow": 4.721,
       "orange": 5.221,
@@ -3604,7 +3505,7 @@
     "longitude": -74.56955556,
     "latitude": 6.2215,
     "currentLevelSensor": null,
-    "currentLevelObserved": 3.62,
+    "currentLevelObserved": 3.5,
     "thresholds": {
       "yellow": 3.629,
       "orange": 4.129,
@@ -3900,7 +3801,7 @@
     "altitude": 2017.0,
     "longitude": -75.366389,
     "latitude": 6.18125,
-    "currentLevelSensor": 2.2,
+    "currentLevelSensor": 2.18,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -5214,7 +5115,7 @@
     "longitude": -74.91169444,
     "latitude": 10.25386111,
     "currentLevelSensor": null,
-    "currentLevelObserved": 5.52,
+    "currentLevelObserved": 5.51,
     "thresholds": {
       "yellow": 8.853,
       "orange": 9.353,
@@ -5610,7 +5511,7 @@
     "longitude": -74.74166667,
     "latitude": 9.24,
     "currentLevelSensor": null,
-    "currentLevelObserved": 5.44,
+    "currentLevelObserved": 5.42,
     "thresholds": {
       "yellow": 8.39,
       "orange": 8.54,
@@ -5709,7 +5610,7 @@
     "longitude": -74.77,
     "latitude": 9.04,
     "currentLevelSensor": 4.61,
-    "currentLevelObserved": 4.48,
+    "currentLevelObserved": 4.46,
     "thresholds": {
       "yellow": 5.43,
       "orange": 5.58,
@@ -5907,7 +5808,7 @@
     "longitude": -73.034167,
     "latitude": 5.081389,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.3,
+    "currentLevelObserved": 2.25,
     "thresholds": {
       "yellow": 3.5,
       "orange": 3.9,
@@ -7319,7 +7220,7 @@
     "longitude": -72.74452222,
     "latitude": 5.9877472,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.45,
+    "currentLevelObserved": 2.4,
     "thresholds": {
       "yellow": 3.9798,
       "orange": 4.4798,
@@ -7418,7 +7319,7 @@
     "longitude": -73.36163889,
     "latitude": 5.385,
     "currentLevelSensor": null,
-    "currentLevelObserved": 0.36,
+    "currentLevelObserved": 0.34,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -7516,7 +7417,7 @@
     "altitude": 2130.0,
     "longitude": -73.542194,
     "latitude": 5.678131,
-    "currentLevelSensor": 0.72,
+    "currentLevelSensor": 0.69,
     "currentLevelObserved": 1.05,
     "thresholds": {
       "yellow": 1.232019,
@@ -8236,7 +8137,7 @@
     "longitude": -73.014039,
     "latitude": 5.807692,
     "currentLevelSensor": 1.7,
-    "currentLevelObserved": 1.69,
+    "currentLevelObserved": 1.66,
     "thresholds": {
       "yellow": 3.889354,
       "orange": 4.224677,
@@ -8632,7 +8533,7 @@
     "longitude": -75.858833,
     "latitude": 4.988028,
     "currentLevelSensor": 2.56,
-    "currentLevelObserved": 2.6,
+    "currentLevelObserved": 2.5,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -8713,105 +8614,6 @@
         "forecastAt": "2026-04-04 07:00",
         "forecastLevel": 2.5,
         "forecastFlow": 253.83
-      }
-    ]
-  },
-  {
-    "stationId": "0026157190",
-    "stationName": "RIO CLARO AUTOM  [26157190]",
-    "stationCode": "0026157190",
-    "riverName": "CLARO",
-    "subzoneName": "Río Chinchiná",
-    "zoneName": "Cauca",
-    "populationCenter": "NUEVO RIO CLARO",
-    "municipality": "VILLAMARIA",
-    "department": "CALDAS",
-    "category": "Limnigráfica",
-    "altitude": 2712.0,
-    "longitude": -75.451086,
-    "latitude": 4.901022,
-    "currentLevelSensor": 1.28,
-    "currentLevelObserved": null,
-    "thresholds": {
-      "yellow": null,
-      "orange": null,
-      "red": null,
-      "low": 0.21,
-      "historicalMax": 1.5
-    },
-    "status": "normal",
-    "forecastSummary": [
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-03-24 07:00",
-        "forecastLevel": 0.32,
-        "forecastFlow": 1.97
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-03-25 07:00",
-        "forecastLevel": 0.31,
-        "forecastFlow": 1.92
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-03-26 07:00",
-        "forecastLevel": 1.4,
-        "forecastFlow": 13.93
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-03-27 07:00",
-        "forecastLevel": 1.34,
-        "forecastFlow": 13.07
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-03-28 07:00",
-        "forecastLevel": 0.32,
-        "forecastFlow": 1.97
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-03-29 07:00",
-        "forecastLevel": 0.32,
-        "forecastFlow": 1.97
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-03-30 07:00",
-        "forecastLevel": 0.3,
-        "forecastFlow": 1.86
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-03-31 07:00",
-        "forecastLevel": 0.3,
-        "forecastFlow": 1.86
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-04-01 07:00",
-        "forecastLevel": 1.4,
-        "forecastFlow": 13.93
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-04-02 07:00",
-        "forecastLevel": 1.39,
-        "forecastFlow": 13.79
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-04-03 07:00",
-        "forecastLevel": 0.84,
-        "forecastFlow": 6.2
-      },
-      {
-        "stationId": "0026157190",
-        "forecastAt": "2026-04-04 07:00",
-        "forecastLevel": 0.65,
-        "forecastFlow": 4.29
       }
     ]
   },
@@ -9126,7 +8928,7 @@
     "altitude": null,
     "longitude": -77.848469,
     "latitude": 0.497047,
-    "currentLevelSensor": 0.32,
+    "currentLevelSensor": 0.31,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -9137,105 +8939,6 @@
     },
     "status": "normal",
     "forecastSummary": []
-  },
-  {
-    "stationId": "0035267010",
-    "stationName": "HERMOSA LA [35267010]",
-    "stationCode": "0035267010",
-    "riverName": "META",
-    "subzoneName": "Directos al Río Meta entre ríos Pauto y Carare (mi)",
-    "zoneName": "Meta",
-    "populationCenter": "PAZ DE ARIPORO",
-    "municipality": "PAZ DE ARIPORO",
-    "department": "CASANARE",
-    "category": "Limnimétrica",
-    "altitude": 93.0,
-    "longitude": -70.44197222,
-    "latitude": 5.533333333,
-    "currentLevelSensor": null,
-    "currentLevelObserved": 3.2,
-    "thresholds": {
-      "yellow": 8.063841,
-      "orange": 8.52192,
-      "red": 8.98,
-      "low": 2.02,
-      "historicalMax": 10.18
-    },
-    "status": "normal",
-    "forecastSummary": [
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-03-24 07:00",
-        "forecastLevel": 3.3,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-03-25 07:00",
-        "forecastLevel": 3.27,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-03-26 07:00",
-        "forecastLevel": 3.14,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-03-27 07:00",
-        "forecastLevel": 3.06,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-03-28 07:00",
-        "forecastLevel": 3.09,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-03-29 07:00",
-        "forecastLevel": 3.09,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-03-30 07:00",
-        "forecastLevel": 3.11,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-03-31 07:00",
-        "forecastLevel": 3.18,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-04-01 07:00",
-        "forecastLevel": 4.27,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-04-02 07:00",
-        "forecastLevel": 4.32,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-04-03 07:00",
-        "forecastLevel": 4.4,
-        "forecastFlow": null
-      },
-      {
-        "stationId": "0035267010",
-        "forecastAt": "2026-04-04 07:00",
-        "forecastLevel": 4.56,
-        "forecastFlow": null
-      }
-    ]
   },
   {
     "stationId": "0035197030",
@@ -9450,7 +9153,7 @@
     "longitude": -72.063778,
     "latitude": 5.928799,
     "currentLevelSensor": 2.17,
-    "currentLevelObserved": 2.0,
+    "currentLevelObserved": 1.9,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -9846,7 +9549,7 @@
     "longitude": -72.412581,
     "latitude": 5.367513,
     "currentLevelSensor": 1.08,
-    "currentLevelObserved": 1.5,
+    "currentLevelObserved": 1.3,
     "thresholds": {
       "yellow": 2.719319,
       "orange": 3.099659,
@@ -9945,7 +9648,7 @@
     "longitude": -71.668361,
     "latitude": 5.414389,
     "currentLevelSensor": 0.9,
-    "currentLevelObserved": 0.96,
+    "currentLevelObserved": 0.76,
     "thresholds": {
       "yellow": 2.0,
       "orange": 2.4,
@@ -10043,7 +9746,7 @@
     "altitude": 412.0,
     "longitude": -72.90089,
     "latitude": 4.88565,
-    "currentLevelSensor": 3.95,
+    "currentLevelSensor": 3.93,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -10241,7 +9944,7 @@
     "altitude": 700.0,
     "longitude": -77.046667,
     "latitude": 2.147778,
-    "currentLevelSensor": 1.54,
+    "currentLevelSensor": 1.53,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -10539,7 +10242,7 @@
     "longitude": -74.04691667,
     "latitude": 10.19344444,
     "currentLevelSensor": null,
-    "currentLevelObserved": 1.62,
+    "currentLevelObserved": 1.6,
     "thresholds": {
       "yellow": 1.86,
       "orange": 2.36,
@@ -11033,7 +10736,7 @@
     "altitude": 20.579,
     "longitude": -76.669667,
     "latitude": 5.764833,
-    "currentLevelSensor": 6.48,
+    "currentLevelSensor": 6.4,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -11356,7 +11059,7 @@
     "altitude": 20.83,
     "longitude": -76.66205,
     "latitude": 5.697972,
-    "currentLevelSensor": 3.32,
+    "currentLevelSensor": 3.23,
     "currentLevelObserved": 4.0,
     "thresholds": {
       "yellow": 4.746074,
@@ -11456,7 +11159,7 @@
     "longitude": -76.152139,
     "latitude": 5.862111,
     "currentLevelSensor": 1.22,
-    "currentLevelObserved": 1.37,
+    "currentLevelObserved": 1.35,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -11653,7 +11356,7 @@
     "altitude": 24.0,
     "longitude": -74.960439,
     "latitude": 8.235847,
-    "currentLevelSensor": 0.98,
+    "currentLevelSensor": 0.96,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 3.45,
@@ -11852,7 +11555,7 @@
     "longitude": -75.834667,
     "latitude": 9.223556,
     "currentLevelSensor": 3.47,
-    "currentLevelObserved": 3.62,
+    "currentLevelObserved": 3.56,
     "thresholds": {
       "yellow": 4.857,
       "orange": 5.357,
@@ -12643,7 +12346,7 @@
     "altitude": 1520.0,
     "longitude": -74.364,
     "latitude": 4.399869,
-    "currentLevelSensor": 2.85,
+    "currentLevelSensor": 2.83,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -13039,7 +12742,7 @@
     "altitude": 1860.0,
     "longitude": -74.504361,
     "latitude": 4.011639,
-    "currentLevelSensor": 2.5,
+    "currentLevelSensor": 2.46,
     "currentLevelObserved": 2.9,
     "thresholds": {
       "yellow": 3.5,
@@ -13435,7 +13138,7 @@
     "altitude": 750.0,
     "longitude": -74.500722,
     "latitude": 4.19225,
-    "currentLevelSensor": 3.19,
+    "currentLevelSensor": 3.14,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 3.398348,
@@ -13634,7 +13337,7 @@
     "longitude": -74.662167,
     "latitude": 5.469667,
     "currentLevelSensor": 3.58,
-    "currentLevelObserved": 3.57,
+    "currentLevelObserved": 3.45,
     "thresholds": {
       "yellow": 5.18,
       "orange": 5.68,
@@ -14240,105 +13943,6 @@
     "forecastSummary": []
   },
   {
-    "stationId": "0031097020",
-    "stationName": "PTO INIRIDA [31097020]",
-    "stationCode": "0031097020",
-    "riverName": "INIRIDA",
-    "subzoneName": "R._Inírida_(mi) -_hasta_bocas_Caño_Bocón -_y_R._Las_Viñas",
-    "zoneName": "Inírida",
-    "populationCenter": "INIRIDA",
-    "municipality": "INIRIDA",
-    "department": "GUAINIA",
-    "category": "Limnimétrica",
-    "altitude": 100.0,
-    "longitude": -67.93169444,
-    "latitude": 3.867666667,
-    "currentLevelSensor": null,
-    "currentLevelObserved": 2.14,
-    "thresholds": {
-      "yellow": 10.14,
-      "orange": 10.64,
-      "red": 11.14,
-      "low": 1.08,
-      "historicalMax": 14.63
-    },
-    "status": "normal",
-    "forecastSummary": [
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-03-24 07:00",
-        "forecastLevel": 2.21,
-        "forecastFlow": 944.95
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-03-25 07:00",
-        "forecastLevel": 2.18,
-        "forecastFlow": 937.52
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-03-26 07:00",
-        "forecastLevel": 2.15,
-        "forecastFlow": 930.09
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-03-27 07:00",
-        "forecastLevel": 2.12,
-        "forecastFlow": 922.67
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-03-28 07:00",
-        "forecastLevel": 2.1,
-        "forecastFlow": 917.72
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-03-29 07:00",
-        "forecastLevel": 2.09,
-        "forecastFlow": 915.24
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-03-30 07:00",
-        "forecastLevel": 2.09,
-        "forecastFlow": 915.24
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-03-31 07:00",
-        "forecastLevel": 2.12,
-        "forecastFlow": 922.67
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-04-01 07:00",
-        "forecastLevel": 3.39,
-        "forecastFlow": 1247.39
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-04-02 07:00",
-        "forecastLevel": 3.43,
-        "forecastFlow": 1257.99
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-04-03 07:00",
-        "forecastLevel": 3.28,
-        "forecastFlow": 1218.24
-      },
-      {
-        "stationId": "0031097020",
-        "forecastAt": "2026-04-04 07:00",
-        "forecastLevel": 3.32,
-        "forecastFlow": 1228.84
-      }
-    ]
-  },
-  {
     "stationId": "0032107030",
     "stationName": "SAN JOSE GUAVIARE [32107030]",
     "stationCode": "0032107030",
@@ -14650,7 +14254,7 @@
     "longitude": -75.54,
     "latitude": 2.64,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.65,
+    "currentLevelObserved": 2.4,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -14933,105 +14537,6 @@
     ]
   },
   {
-    "stationId": "0021097070",
-    "stationName": "PTE SANTANDER [21097070]",
-    "stationCode": "0021097070",
-    "riverName": "MAGDALENA",
-    "subzoneName": "Río Fortalecillas y otros",
-    "zoneName": "Alto Magdalena",
-    "populationCenter": "AMBORCO",
-    "municipality": "PALERMO",
-    "department": "HUILA",
-    "category": "Limnigráfica",
-    "altitude": 431.265,
-    "longitude": -75.308528,
-    "latitude": 2.942611,
-    "currentLevelSensor": null,
-    "currentLevelObserved": 3.6,
-    "thresholds": {
-      "yellow": 5.5,
-      "orange": 6.0,
-      "red": 6.5,
-      "low": 1.36,
-      "historicalMax": 6.56
-    },
-    "status": "normal",
-    "forecastSummary": [
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-03-24 07:00",
-        "forecastLevel": 2.17,
-        "forecastFlow": 229.8
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-03-25 07:00",
-        "forecastLevel": 3.45,
-        "forecastFlow": 672.5
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-03-26 07:00",
-        "forecastLevel": 4.0,
-        "forecastFlow": 947.0
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-03-27 07:00",
-        "forecastLevel": 3.25,
-        "forecastFlow": 585.5
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-03-28 07:00",
-        "forecastLevel": 3.75,
-        "forecastFlow": 816.0
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-03-29 07:00",
-        "forecastLevel": 3.54,
-        "forecastFlow": 713.8
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-03-30 07:00",
-        "forecastLevel": 3.77,
-        "forecastFlow": 826.0
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-03-31 07:00",
-        "forecastLevel": 3.54,
-        "forecastFlow": 713.8
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-04-01 07:00",
-        "forecastLevel": 2.91,
-        "forecastFlow": 452.7
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-04-02 07:00",
-        "forecastLevel": 2.88,
-        "forecastFlow": 442.0
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-04-03 07:00",
-        "forecastLevel": 2.65,
-        "forecastFlow": 365.0
-      },
-      {
-        "stationId": "0021097070",
-        "forecastAt": "2026-04-04 07:00",
-        "forecastLevel": 2.95,
-        "forecastFlow": 467.5
-      }
-    ]
-  },
-  {
     "stationId": "0021017040",
     "stationName": "SALADO BLANCO [21017040]",
     "stationCode": "0021017040",
@@ -15144,7 +14649,7 @@
     "altitude": 420.0,
     "longitude": -75.114167,
     "latitude": 3.3705,
-    "currentLevelSensor": 1.95,
+    "currentLevelSensor": 1.91,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -15739,7 +15244,7 @@
     "longitude": -73.1583,
     "latitude": 11.262395,
     "currentLevelSensor": null,
-    "currentLevelObserved": 1.18,
+    "currentLevelObserved": 1.14,
     "thresholds": {
       "yellow": 1.86,
       "orange": 2.36,
@@ -15838,7 +15343,7 @@
     "longitude": -73.56861111,
     "latitude": 11.24455556,
     "currentLevelSensor": null,
-    "currentLevelObserved": 1.28,
+    "currentLevelObserved": 1.22,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -16135,7 +15640,7 @@
     "longitude": -73.764338,
     "latitude": 11.250034,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.21,
+    "currentLevelObserved": 2.09,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -16432,7 +15937,7 @@
     "longitude": -74.182576,
     "latitude": 10.525085,
     "currentLevelSensor": null,
-    "currentLevelObserved": 3.15,
+    "currentLevelObserved": 3.1,
     "thresholds": {
       "yellow": 3.39,
       "orange": 3.89,
@@ -16530,7 +16035,7 @@
     "altitude": 67.0,
     "longitude": -74.126667,
     "latitude": 10.57491,
-    "currentLevelSensor": 0.22,
+    "currentLevelSensor": 0.21,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 2.69,
@@ -16728,7 +16233,7 @@
     "altitude": 15.912,
     "longitude": -74.805833,
     "latitude": 9.787778,
-    "currentLevelSensor": 9.51,
+    "currentLevelSensor": 9.5,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 14.5,
@@ -16827,7 +16332,7 @@
     "altitude": 55.0,
     "longitude": -74.12813,
     "latitude": 10.496917,
-    "currentLevelSensor": 1.91,
+    "currentLevelSensor": 1.9,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -17719,7 +17224,7 @@
     "longitude": -73.79225,
     "latitude": 2.185638889,
     "currentLevelSensor": null,
-    "currentLevelObserved": 3.67,
+    "currentLevelObserved": 3.6,
     "thresholds": {
       "yellow": 7.24,
       "orange": 7.79,
@@ -18101,32 +17606,6 @@
     ]
   },
   {
-    "stationId": "0035127010",
-    "stationName": "PTO GAITAN [35127010]",
-    "stationCode": "0035127010",
-    "riverName": "MANACACIAS",
-    "subzoneName": "Río Manacacias",
-    "zoneName": "Meta",
-    "populationCenter": "PUERTO GAITAN",
-    "municipality": "PUERTO GAITAN",
-    "department": "META",
-    "category": "Limnimétrica",
-    "altitude": 146.0,
-    "longitude": -72.07658333,
-    "latitude": 4.311555556,
-    "currentLevelSensor": null,
-    "currentLevelObserved": 2.2,
-    "thresholds": {
-      "yellow": null,
-      "orange": null,
-      "red": null,
-      "low": 0.01,
-      "historicalMax": 9.64
-    },
-    "status": "normal",
-    "forecastSummary": []
-  },
-  {
     "stationId": "0032077080",
     "stationName": "PTO RICO [32077080]",
     "stationCode": "0032077080",
@@ -18240,7 +17719,7 @@
     "longitude": -77.44197222,
     "latitude": 1.574388889,
     "currentLevelSensor": null,
-    "currentLevelObserved": 1.35,
+    "currentLevelObserved": 1.3,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -18339,7 +17818,7 @@
     "longitude": -77.24777778,
     "latitude": 1.201388889,
     "currentLevelSensor": null,
-    "currentLevelObserved": 1.3,
+    "currentLevelObserved": 1.28,
     "thresholds": {
       "yellow": 2.13,
       "orange": 2.63,
@@ -18635,7 +18114,7 @@
     "altitude": 1650.0,
     "longitude": -77.30675,
     "latitude": 0.800833,
-    "currentLevelSensor": 0.77,
+    "currentLevelSensor": 0.76,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": 5.3791,
@@ -18933,7 +18412,7 @@
     "longitude": -77.478917,
     "latitude": 1.624056,
     "currentLevelSensor": 2.97,
-    "currentLevelObserved": 3.1,
+    "currentLevelObserved": 3.0,
     "thresholds": {
       "yellow": 8.2172,
       "orange": 8.7172,
@@ -19032,7 +18511,7 @@
     "longitude": -77.234306,
     "latitude": 1.199806,
     "currentLevelSensor": null,
-    "currentLevelObserved": 0.32,
+    "currentLevelObserved": 0.3,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -19427,7 +18906,7 @@
     "altitude": 0.0,
     "longitude": -78.730278,
     "latitude": 1.819306,
-    "currentLevelSensor": 3.17,
+    "currentLevelSensor": 3.05,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -19626,7 +19105,7 @@
     "longitude": -72.63111111,
     "latitude": 8.488055556,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.9,
+    "currentLevelObserved": 2.8,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -19909,105 +19388,6 @@
     ]
   },
   {
-    "stationId": "0037017040",
-    "stationName": "PTE LOPEZ [37017040]",
-    "stationCode": "0037017040",
-    "riverName": "CHITAGA",
-    "subzoneName": "Río Chítaga",
-    "zoneName": "Arauca",
-    "populationCenter": "CACOTA",
-    "municipality": "CACOTA",
-    "department": "NORTE DE SANTANDER",
-    "category": "Limnigráfica",
-    "altitude": 1862.0,
-    "longitude": -72.635889,
-    "latitude": 7.207,
-    "currentLevelSensor": 1.68,
-    "currentLevelObserved": null,
-    "thresholds": {
-      "yellow": 2.5,
-      "orange": 3.0,
-      "red": 3.75,
-      "low": 0.34,
-      "historicalMax": 4.48
-    },
-    "status": "normal",
-    "forecastSummary": [
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-03-24 07:00",
-        "forecastLevel": 1.38,
-        "forecastFlow": 8.29
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-03-25 07:00",
-        "forecastLevel": 1.63,
-        "forecastFlow": 17.88
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-03-26 07:00",
-        "forecastLevel": 1.81,
-        "forecastFlow": 28.95
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-03-27 07:00",
-        "forecastLevel": 1.75,
-        "forecastFlow": 24.81
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-03-28 07:00",
-        "forecastLevel": 1.83,
-        "forecastFlow": 30.71
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-03-29 07:00",
-        "forecastLevel": 1.48,
-        "forecastFlow": 11.44
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-03-30 07:00",
-        "forecastLevel": 1.47,
-        "forecastFlow": 11.11
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-03-31 07:00",
-        "forecastLevel": 1.81,
-        "forecastFlow": 28.95
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-04-01 07:00",
-        "forecastLevel": 1.74,
-        "forecastFlow": 24.16
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-04-02 07:00",
-        "forecastLevel": 1.69,
-        "forecastFlow": 21.03
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-04-03 07:00",
-        "forecastLevel": 1.7,
-        "forecastFlow": 21.56
-      },
-      {
-        "stationId": "0037017040",
-        "forecastAt": "2026-04-04 07:00",
-        "forecastLevel": 1.67,
-        "forecastFlow": 19.98
-      }
-    ]
-  },
-  {
     "stationId": "0047017070",
     "stationName": "EDEN EL   [47017070]",
     "stationCode": "0047017070",
@@ -20022,7 +19402,7 @@
     "longitude": -76.986833,
     "latitude": 1.100972,
     "currentLevelSensor": 1.04,
-    "currentLevelObserved": 1.08,
+    "currentLevelObserved": 1.06,
     "thresholds": {
       "yellow": 3.53,
       "orange": 4.03,
@@ -20616,7 +19996,7 @@
     "longitude": -75.63305556,
     "latitude": 4.773388889,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.76,
+    "currentLevelObserved": 2.75,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -20740,7 +20120,7 @@
     "altitude": 914.0,
     "longitude": -75.89925,
     "latitude": 4.757611,
-    "currentLevelSensor": 1.4,
+    "currentLevelSensor": 1.37,
     "currentLevelObserved": 2.58,
     "thresholds": {
       "yellow": 8.0,
@@ -20939,7 +20319,7 @@
     "longitude": -75.882694,
     "latitude": 4.8925,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.75,
+    "currentLevelObserved": 2.64,
     "thresholds": {
       "yellow": 4.69,
       "orange": 5.19,
@@ -21433,7 +20813,7 @@
     "altitude": 900.0,
     "longitude": -73.307194,
     "latitude": 6.44925,
-    "currentLevelSensor": 1.68,
+    "currentLevelSensor": 1.64,
     "currentLevelObserved": 3.78,
     "thresholds": {
       "yellow": null,
@@ -21730,7 +21110,7 @@
     "altitude": 90.0,
     "longitude": -73.935,
     "latitude": 6.773611,
-    "currentLevelSensor": 5.3,
+    "currentLevelSensor": 5.2,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -22027,7 +21407,7 @@
     "altitude": 1057.0,
     "longitude": -73.493281,
     "latitude": 6.118139,
-    "currentLevelSensor": 2.71,
+    "currentLevelSensor": 2.68,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -22226,7 +21606,7 @@
     "longitude": -74.965944,
     "latitude": 8.906306,
     "currentLevelSensor": 4.99,
-    "currentLevelObserved": 4.27,
+    "currentLevelObserved": 4.22,
     "thresholds": {
       "yellow": 5.4,
       "orange": 5.55,
@@ -22325,7 +21705,7 @@
     "longitude": -74.71388889,
     "latitude": 8.982222222,
     "currentLevelSensor": null,
-    "currentLevelObserved": 2.45,
+    "currentLevelObserved": 2.44,
     "thresholds": {
       "yellow": 4.05,
       "orange": 4.13,
@@ -22424,7 +21804,7 @@
     "longitude": -74.72222222,
     "latitude": 8.809722222,
     "currentLevelSensor": null,
-    "currentLevelObserved": 1.48,
+    "currentLevelObserved": 1.46,
     "thresholds": {
       "yellow": 3.41,
       "orange": 3.56,
@@ -22919,7 +22299,7 @@
     "longitude": -74.972139,
     "latitude": 4.795583,
     "currentLevelSensor": 1.12,
-    "currentLevelObserved": 1.15,
+    "currentLevelObserved": 1.04,
     "thresholds": {
       "yellow": null,
       "orange": null,
@@ -23314,7 +22694,7 @@
     "altitude": 640.0,
     "longitude": -74.656806,
     "latitude": 3.926639,
-    "currentLevelSensor": 2.51,
+    "currentLevelSensor": 2.48,
     "currentLevelObserved": 2.97,
     "thresholds": {
       "yellow": 6.5,
@@ -23512,7 +22892,7 @@
     "altitude": 1.0,
     "longitude": -77.06188,
     "latitude": 3.89007,
-    "currentLevelSensor": 4.39,
+    "currentLevelSensor": 4.09,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -23710,7 +23090,7 @@
     "altitude": 931.0,
     "longitude": -76.100752,
     "latitude": 4.405279,
-    "currentLevelSensor": 2.87,
+    "currentLevelSensor": 2.85,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -23908,7 +23288,7 @@
     "altitude": 10.0,
     "longitude": -77.34908,
     "latitude": 3.92518,
-    "currentLevelSensor": 5.19,
+    "currentLevelSensor": 4.69,
     "currentLevelObserved": null,
     "thresholds": {
       "yellow": null,
@@ -24107,7 +23487,7 @@
     "longitude": -76.03333333,
     "latitude": 4.516666667,
     "currentLevelSensor": null,
-    "currentLevelObserved": 3.96,
+    "currentLevelObserved": 3.91,
     "thresholds": {
       "yellow": 7.0,
       "orange": 7.48,
@@ -24305,7 +23685,7 @@
     "longitude": -76.34997222,
     "latitude": 3.889611111,
     "currentLevelSensor": null,
-    "currentLevelObserved": 3.55,
+    "currentLevelObserved": 3.52,
     "thresholds": {
       "yellow": 4.81,
       "orange": 5.31,
@@ -25475,6 +24855,105 @@
         "forecastAt": "2026-04-04 07:00",
         "forecastLevel": 1.77,
         "forecastFlow": 850.01
+      }
+    ]
+  },
+  {
+    "stationId": "0023087190",
+    "stationName": "GARRUCHA LA   [23087190]",
+    "stationCode": "0023087190",
+    "riverName": "SAMANA NORTE",
+    "subzoneName": "Río Nare",
+    "zoneName": "Medio Magdalena",
+    "populationCenter": "SAN LUIS",
+    "municipality": "SAN LUIS",
+    "department": "ANTIOQUIA",
+    "category": "Limnigráfica",
+    "altitude": 403.0,
+    "longitude": -74.93825,
+    "latitude": 5.998417,
+    "currentLevelSensor": null,
+    "currentLevelObserved": null,
+    "thresholds": {
+      "yellow": null,
+      "orange": null,
+      "red": null,
+      "low": 0.5,
+      "historicalMax": 8.5
+    },
+    "status": "no_data",
+    "forecastSummary": [
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-03-24 07:00",
+        "forecastLevel": 5.63,
+        "forecastFlow": 668.0
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-03-25 07:00",
+        "forecastLevel": 2.46,
+        "forecastFlow": 155.82
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-03-26 07:00",
+        "forecastLevel": 1.91,
+        "forecastFlow": 99.73
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-03-27 07:00",
+        "forecastLevel": 3.61,
+        "forecastFlow": 305.44
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-03-28 07:00",
+        "forecastLevel": 2.37,
+        "forecastFlow": 145.84
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-03-29 07:00",
+        "forecastLevel": 4.85,
+        "forecastFlow": 513.78
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-03-30 07:00",
+        "forecastLevel": 3.09,
+        "forecastFlow": 232.4
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-03-31 07:00",
+        "forecastLevel": 2.32,
+        "forecastFlow": 140.3
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-04-01 07:00",
+        "forecastLevel": 2.04,
+        "forecastFlow": 111.98
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-04-02 07:00",
+        "forecastLevel": 3.1,
+        "forecastFlow": 233.73
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-04-03 07:00",
+        "forecastLevel": 2.53,
+        "forecastFlow": 163.59
+      },
+      {
+        "stationId": "0023087190",
+        "forecastAt": "2026-04-04 07:00",
+        "forecastLevel": 2.89,
+        "forecastFlow": 206.95
       }
     ]
   },
@@ -28876,6 +28355,105 @@
     ]
   },
   {
+    "stationId": "0026157190",
+    "stationName": "RIO CLARO AUTOM  [26157190]",
+    "stationCode": "0026157190",
+    "riverName": "CLARO",
+    "subzoneName": "Río Chinchiná",
+    "zoneName": "Cauca",
+    "populationCenter": "NUEVO RIO CLARO",
+    "municipality": "VILLAMARIA",
+    "department": "CALDAS",
+    "category": "Limnigráfica",
+    "altitude": 2712.0,
+    "longitude": -75.451086,
+    "latitude": 4.901022,
+    "currentLevelSensor": null,
+    "currentLevelObserved": null,
+    "thresholds": {
+      "yellow": null,
+      "orange": null,
+      "red": null,
+      "low": 0.21,
+      "historicalMax": 1.5
+    },
+    "status": "no_data",
+    "forecastSummary": [
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-03-24 07:00",
+        "forecastLevel": 0.32,
+        "forecastFlow": 1.97
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-03-25 07:00",
+        "forecastLevel": 0.31,
+        "forecastFlow": 1.92
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-03-26 07:00",
+        "forecastLevel": 1.4,
+        "forecastFlow": 13.93
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-03-27 07:00",
+        "forecastLevel": 1.34,
+        "forecastFlow": 13.07
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-03-28 07:00",
+        "forecastLevel": 0.32,
+        "forecastFlow": 1.97
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-03-29 07:00",
+        "forecastLevel": 0.32,
+        "forecastFlow": 1.97
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-03-30 07:00",
+        "forecastLevel": 0.3,
+        "forecastFlow": 1.86
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-03-31 07:00",
+        "forecastLevel": 0.3,
+        "forecastFlow": 1.86
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-04-01 07:00",
+        "forecastLevel": 1.4,
+        "forecastFlow": 13.93
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-04-02 07:00",
+        "forecastLevel": 1.39,
+        "forecastFlow": 13.79
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-04-03 07:00",
+        "forecastLevel": 0.84,
+        "forecastFlow": 6.2
+      },
+      {
+        "stationId": "0026157190",
+        "forecastAt": "2026-04-04 07:00",
+        "forecastLevel": 0.65,
+        "forecastFlow": 4.29
+      }
+    ]
+  },
+  {
     "stationId": "0044037040",
     "stationName": "EL ROSARIO AUTOMATICA [44037040]",
     "stationCode": "0044037040",
@@ -29247,6 +28825,105 @@
         "forecastAt": "2026-04-04 07:00",
         "forecastLevel": 0.91,
         "forecastFlow": 50.5
+      }
+    ]
+  },
+  {
+    "stationId": "0035267010",
+    "stationName": "HERMOSA LA [35267010]",
+    "stationCode": "0035267010",
+    "riverName": "META",
+    "subzoneName": "Directos al Río Meta entre ríos Pauto y Carare (mi)",
+    "zoneName": "Meta",
+    "populationCenter": "PAZ DE ARIPORO",
+    "municipality": "PAZ DE ARIPORO",
+    "department": "CASANARE",
+    "category": "Limnimétrica",
+    "altitude": 93.0,
+    "longitude": -70.44197222,
+    "latitude": 5.533333333,
+    "currentLevelSensor": null,
+    "currentLevelObserved": null,
+    "thresholds": {
+      "yellow": 8.063841,
+      "orange": 8.52192,
+      "red": 8.98,
+      "low": 2.02,
+      "historicalMax": 10.18
+    },
+    "status": "no_data",
+    "forecastSummary": [
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-03-24 07:00",
+        "forecastLevel": 3.3,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-03-25 07:00",
+        "forecastLevel": 3.27,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-03-26 07:00",
+        "forecastLevel": 3.14,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-03-27 07:00",
+        "forecastLevel": 3.06,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-03-28 07:00",
+        "forecastLevel": 3.09,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-03-29 07:00",
+        "forecastLevel": 3.09,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-03-30 07:00",
+        "forecastLevel": 3.11,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-03-31 07:00",
+        "forecastLevel": 3.18,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-04-01 07:00",
+        "forecastLevel": 4.27,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-04-02 07:00",
+        "forecastLevel": 4.32,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-04-03 07:00",
+        "forecastLevel": 4.4,
+        "forecastFlow": null
+      },
+      {
+        "stationId": "0035267010",
+        "forecastAt": "2026-04-04 07:00",
+        "forecastLevel": 4.56,
+        "forecastFlow": null
       }
     ]
   },
@@ -32450,6 +32127,105 @@
     "forecastSummary": []
   },
   {
+    "stationId": "0031097020",
+    "stationName": "PTO INIRIDA [31097020]",
+    "stationCode": "0031097020",
+    "riverName": "INIRIDA",
+    "subzoneName": "R._Inírida_(mi) -_hasta_bocas_Caño_Bocón -_y_R._Las_Viñas",
+    "zoneName": "Inírida",
+    "populationCenter": "INIRIDA",
+    "municipality": "INIRIDA",
+    "department": "GUAINIA",
+    "category": "Limnimétrica",
+    "altitude": 100.0,
+    "longitude": -67.93169444,
+    "latitude": 3.867666667,
+    "currentLevelSensor": null,
+    "currentLevelObserved": null,
+    "thresholds": {
+      "yellow": 10.14,
+      "orange": 10.64,
+      "red": 11.14,
+      "low": 1.08,
+      "historicalMax": 14.63
+    },
+    "status": "no_data",
+    "forecastSummary": [
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-03-24 07:00",
+        "forecastLevel": 2.21,
+        "forecastFlow": 944.95
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-03-25 07:00",
+        "forecastLevel": 2.18,
+        "forecastFlow": 937.52
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-03-26 07:00",
+        "forecastLevel": 2.15,
+        "forecastFlow": 930.09
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-03-27 07:00",
+        "forecastLevel": 2.12,
+        "forecastFlow": 922.67
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-03-28 07:00",
+        "forecastLevel": 2.1,
+        "forecastFlow": 917.72
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-03-29 07:00",
+        "forecastLevel": 2.09,
+        "forecastFlow": 915.24
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-03-30 07:00",
+        "forecastLevel": 2.09,
+        "forecastFlow": 915.24
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-03-31 07:00",
+        "forecastLevel": 2.12,
+        "forecastFlow": 922.67
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-04-01 07:00",
+        "forecastLevel": 3.39,
+        "forecastFlow": 1247.39
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-04-02 07:00",
+        "forecastLevel": 3.43,
+        "forecastFlow": 1257.99
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-04-03 07:00",
+        "forecastLevel": 3.28,
+        "forecastFlow": 1218.24
+      },
+      {
+        "stationId": "0031097020",
+        "forecastAt": "2026-04-04 07:00",
+        "forecastLevel": 3.32,
+        "forecastFlow": 1228.84
+      }
+    ]
+  },
+  {
     "stationId": "0032157010",
     "stationName": "MAPIRIPANA [32157010]",
     "stationCode": "0032157010",
@@ -32842,6 +32618,105 @@
         "forecastAt": "2026-04-04 07:00",
         "forecastLevel": 1.37,
         "forecastFlow": 2.46
+      }
+    ]
+  },
+  {
+    "stationId": "0021097070",
+    "stationName": "PTE SANTANDER [21097070]",
+    "stationCode": "0021097070",
+    "riverName": "MAGDALENA",
+    "subzoneName": "Río Fortalecillas y otros",
+    "zoneName": "Alto Magdalena",
+    "populationCenter": "AMBORCO",
+    "municipality": "PALERMO",
+    "department": "HUILA",
+    "category": "Limnigráfica",
+    "altitude": 431.265,
+    "longitude": -75.308528,
+    "latitude": 2.942611,
+    "currentLevelSensor": null,
+    "currentLevelObserved": null,
+    "thresholds": {
+      "yellow": 5.5,
+      "orange": 6.0,
+      "red": 6.5,
+      "low": 1.36,
+      "historicalMax": 6.56
+    },
+    "status": "no_data",
+    "forecastSummary": [
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-03-24 07:00",
+        "forecastLevel": 2.17,
+        "forecastFlow": 229.8
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-03-25 07:00",
+        "forecastLevel": 3.45,
+        "forecastFlow": 672.5
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-03-26 07:00",
+        "forecastLevel": 4.0,
+        "forecastFlow": 947.0
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-03-27 07:00",
+        "forecastLevel": 3.25,
+        "forecastFlow": 585.5
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-03-28 07:00",
+        "forecastLevel": 3.75,
+        "forecastFlow": 816.0
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-03-29 07:00",
+        "forecastLevel": 3.54,
+        "forecastFlow": 713.8
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-03-30 07:00",
+        "forecastLevel": 3.77,
+        "forecastFlow": 826.0
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-03-31 07:00",
+        "forecastLevel": 3.54,
+        "forecastFlow": 713.8
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-04-01 07:00",
+        "forecastLevel": 2.91,
+        "forecastFlow": 452.7
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-04-02 07:00",
+        "forecastLevel": 2.88,
+        "forecastFlow": 442.0
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-04-03 07:00",
+        "forecastLevel": 2.65,
+        "forecastFlow": 365.0
+      },
+      {
+        "stationId": "0021097070",
+        "forecastAt": "2026-04-04 07:00",
+        "forecastLevel": 2.95,
+        "forecastFlow": 467.5
       }
     ]
   },
@@ -34852,6 +34727,32 @@
     ]
   },
   {
+    "stationId": "0035127010",
+    "stationName": "PTO GAITAN [35127010]",
+    "stationCode": "0035127010",
+    "riverName": "MANACACIAS",
+    "subzoneName": "Río Manacacias",
+    "zoneName": "Meta",
+    "populationCenter": "PUERTO GAITAN",
+    "municipality": "PUERTO GAITAN",
+    "department": "META",
+    "category": "Limnimétrica",
+    "altitude": 146.0,
+    "longitude": -72.07658333,
+    "latitude": 4.311555556,
+    "currentLevelSensor": null,
+    "currentLevelObserved": null,
+    "thresholds": {
+      "yellow": null,
+      "orange": null,
+      "red": null,
+      "low": 0.01,
+      "historicalMax": 9.64
+    },
+    "status": "no_data",
+    "forecastSummary": []
+  },
+  {
     "stationId": "0052077020",
     "stationName": "LOS NORTES AUTOMATICA [52077020]",
     "stationCode": "0052077020",
@@ -35838,6 +35739,105 @@
         "forecastAt": "2026-04-04 07:00",
         "forecastLevel": 1.52,
         "forecastFlow": 5.97
+      }
+    ]
+  },
+  {
+    "stationId": "0037017040",
+    "stationName": "PTE LOPEZ [37017040]",
+    "stationCode": "0037017040",
+    "riverName": "CHITAGA",
+    "subzoneName": "Río Chítaga",
+    "zoneName": "Arauca",
+    "populationCenter": "CACOTA",
+    "municipality": "CACOTA",
+    "department": "NORTE DE SANTANDER",
+    "category": "Limnigráfica",
+    "altitude": 1862.0,
+    "longitude": -72.635889,
+    "latitude": 7.207,
+    "currentLevelSensor": null,
+    "currentLevelObserved": null,
+    "thresholds": {
+      "yellow": 2.5,
+      "orange": 3.0,
+      "red": 3.75,
+      "low": 0.34,
+      "historicalMax": 4.48
+    },
+    "status": "no_data",
+    "forecastSummary": [
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-03-24 07:00",
+        "forecastLevel": 1.38,
+        "forecastFlow": 8.29
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-03-25 07:00",
+        "forecastLevel": 1.63,
+        "forecastFlow": 17.88
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-03-26 07:00",
+        "forecastLevel": 1.81,
+        "forecastFlow": 28.95
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-03-27 07:00",
+        "forecastLevel": 1.75,
+        "forecastFlow": 24.81
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-03-28 07:00",
+        "forecastLevel": 1.83,
+        "forecastFlow": 30.71
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-03-29 07:00",
+        "forecastLevel": 1.48,
+        "forecastFlow": 11.44
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-03-30 07:00",
+        "forecastLevel": 1.47,
+        "forecastFlow": 11.11
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-03-31 07:00",
+        "forecastLevel": 1.81,
+        "forecastFlow": 28.95
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-04-01 07:00",
+        "forecastLevel": 1.74,
+        "forecastFlow": 24.16
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-04-02 07:00",
+        "forecastLevel": 1.69,
+        "forecastFlow": 21.03
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-04-03 07:00",
+        "forecastLevel": 1.7,
+        "forecastFlow": 21.56
+      },
+      {
+        "stationId": "0037017040",
+        "forecastAt": "2026-04-04 07:00",
+        "forecastLevel": 1.67,
+        "forecastFlow": 19.98
       }
     ]
   },
