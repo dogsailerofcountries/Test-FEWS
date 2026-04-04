@@ -1,4 +1,6 @@
-# FEWS Web Nuevo
+### Disclaimer
+### ----- Done Fully with AI ------
+## New FEWS
 
 Implementacion ligera del nuevo FEWS Web con:
 
@@ -7,26 +9,12 @@ Implementacion ligera del nuevo FEWS Web con:
 - UI bilingue en espanol e ingles
 - script opcional de validacion con Playwright en Python
 
-## Ejecutar
+## Quick guide
 
-```powershell
-python server.py
-```
++ git clone this repo
++ Navigate to it's directory
++ Then run server.py
++ Finally open http://127.0.0.1:8000 in your browser
 
-Luego abre `http://127.0.0.1:8000`
-
+## Explanation
 La UI consume una API demo propia. Esa API sincroniza snapshots de FEWS en segundo plano y sirve respuestas ya procesadas al frontend.
-
-## Sincronizar manualmente
-
-```powershell
-python scripts/sync_now.py
-```
-
-## Playwright en Python
-
-```powershell
-pip install playwright
-python -m playwright install
-python scripts/playwright_validate.py http://127.0.0.1:8000
-```
