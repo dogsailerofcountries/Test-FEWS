@@ -1,41 +1,14 @@
 import threading
-import time
-from http import HTTPStatus
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from urllib.parse import parse_qs, urlparse
-import json
+from fastapi import FastAPI, Request, HTTPException
+from fastapi.responses import JSONResponse, FileResponse
+from fastapi.staticfiles import StaticFiles
+from typing import Optional
 
-from .config import HOST, PORT, STATIC_DIR, SYNC_INTERVAL_SECONDS
+from .config import STATIC_DIR, SYNC_INTERVAL_SECONDS
 from .service import FEWSDemoService
 
-
-def json_response(handler, payload, status=HTTPStatus.OK):
-    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-    handler.send_response(status)
-    handler.send_header("Content-Type", "application/json; charset=utf-8")
-    handler.send_header("Content-Length", str(len(body)))
-    handler.send_header("Cache-Control", "no-store")
-    handler.end_headers()
-    handler.wfile.write(body)
-
-
-def file_response(handler, file_path):
-    if not file_path.exists() or not file_path.is_file():
-        handler.send_error(HTTPStatus.NOT_FOUND, "Not Found")
-        return
-    content = file_path.read_bytes()
-    mime = {
-        ".html": "text/html; charset=utf-8",
-        ".css": "text/css; charset=utf-8",
-        ".js": "application/javascript; charset=utf-8",
-        ".json": "application/json; charset=utf-8",
-    }.get(file_path.suffix.lower(), "application/octet-stream")
-    handler.send_response(HTTPStatus.OK)
-    handler.send_header("Content-Type", mime)
-    handler.send_header("Content-Length", str(len(content)))
-    handler.end_headers()
-    handler.wfile.write(content)
-
+app = FastAPI()
+service = FEWSDemoService()
 
 class SyncWorker:
     def __init__(self, service, interval_seconds=SYNC_INTERVAL_SECONDS):
@@ -60,118 +33,91 @@ class SyncWorker:
         while not self._stop_event.wait(self.interval_seconds):
             self.service.sync_once()
 
+worker = SyncWorker(service)
 
-def create_handler(service):
-    class FEWSRequestHandler(BaseHTTPRequestHandler):
-        def do_GET(self):  # noqa: N802
-            parsed = urlparse(self.path)
-            if parsed.path.startswith("/api/"):
-                self.handle_api(parsed)
-                return
-            if parsed.path == "/":
-                preferred_entry = STATIC_DIR / "app-shell.html"
-                file_response(self, preferred_entry if preferred_entry.exists() else STATIC_DIR / "index.html")
-                return
-            file_response(self, STATIC_DIR / parsed.path.lstrip("/"))
-
-        def handle_api(self, parsed):
-            path = parsed.path
-            query = parse_qs(parsed.query)
-            language = (query.get("lang") or ["es"])[0]
-
-            if path == "/api/health":
-                json_response(self, service.health())
-                return
-
-            if path == "/api/fuentes":
-                json_response(self, {"items": service.source_statuses()})
-                return
-
-            if path == "/api/overview":
-                json_response(self, service.get_overview())
-                return
-
-            if path == "/api/estaciones":
-                stations = self.filter_stations(service.localized_stations(language), query)
-                json_response(self, {"items": stations, "total": len(stations)})
-                return
-
-            if path.startswith("/api/estaciones/") and path.endswith("/pronostico"):
-                station_id = path.split("/")[3]
-                station = service.get_station_by_id(station_id)
-                if not station:
-                    json_response(self, {"error": "Station not found"}, HTTPStatus.NOT_FOUND)
-                    return
-                json_response(self, {"stationId": station_id, "items": station.get("forecastSummary") or []})
-                return
-
-            if path.startswith("/api/estaciones/"):
-                station_id = path.split("/")[3]
-                station = service.get_station_by_id(station_id)
-                if not station:
-                    json_response(self, {"error": "Station not found"}, HTTPStatus.NOT_FOUND)
-                    return
-                station_copy = dict(station)
-                station_copy["statusLabel"] = station_copy.get("statusLabel") or station_copy.get("status")
-                json_response(self, station_copy)
-                return
-
-            if path == "/api/alertas/subzonas":
-                json_response(self, {"items": service.localized_alerts(language)})
-                return
-
-            if path == "/api/embalses":
-                json_response(self, {"items": service.get_reservoirs()})
-                return
-
-            if path == "/api/map-summary":
-                json_response(self, service.get_map_summary())
-                return
-
-            if path == "/api/admin/sync":
-                payload = service.sync_once()
-                json_response(self, {"status": "ok", "generatedAt": payload["meta"]["generatedAt"]})
-                return
-
-            json_response(self, {"error": "Not found"}, HTTPStatus.NOT_FOUND)
-
-        def filter_stations(self, stations, query):
-            status_filter = (query.get("status") or [""])[0]
-            department_filter = (query.get("department") or [""])[0]
-            municipality_filter = (query.get("municipality") or [""])[0]
-            zone_filter = (query.get("zone") or [""])[0]
-            subzone_filter = (query.get("subzone") or [""])[0]
-            river_filter = (query.get("river") or [""])[0]
-
-            items = []
-            for station in stations:
-                if status_filter and station["status"] != status_filter:
-                    continue
-                if department_filter and station["department"] != department_filter:
-                    continue
-                if municipality_filter and station["municipality"] != municipality_filter:
-                    continue
-                if zone_filter and station["zoneName"] != zone_filter:
-                    continue
-                if subzone_filter and station["subzoneName"] != subzone_filter:
-                    continue
-                if river_filter and station["riverName"] != river_filter:
-                    continue
-                items.append(station)
-            return items
-
-        def log_message(self, format, *args):  # noqa: A003
-            return
-
-    return FEWSRequestHandler
-
-
-def create_server(host=HOST, port=PORT):
-    service = FEWSDemoService()
-    worker = SyncWorker(service)
+@app.on_event("startup")
+def startup_event():
     worker.start()
-    handler = create_handler(service)
-    server = ThreadingHTTPServer((host, port), handler)
-    server.service = service  # type: ignore[attr-defined]
-    server.sync_worker = worker  # type: ignore[attr-defined]
-    return server
+
+@app.on_event("shutdown")
+def shutdown_event():
+    worker.stop()
+
+@app.get("/api/health")
+def get_health():
+    return JSONResponse(content=service.health())
+
+@app.get("/api/fuentes")
+def get_fuentes():
+    return JSONResponse(content={"items": service.source_statuses()})
+
+@app.get("/api/overview")
+def get_overview():
+    return JSONResponse(content=service.get_overview())
+
+@app.get("/api/estaciones")
+def get_estaciones(
+    lang: str = "es", 
+    status: str = "", 
+    department: str = "", 
+    municipality: str = "", 
+    zone: str = "", 
+    subzone: str = "", 
+    river: str = ""
+):
+    stations = service.localized_stations(lang)
+    items = []
+    for station in stations:
+        if status and station["status"] != status: continue
+        if department and station["department"] != department: continue
+        if municipality and station["municipality"] != municipality: continue
+        if zone and station["zoneName"] != zone: continue
+        if subzone and station["subzoneName"] != subzone: continue
+        if river and station["riverName"] != river: continue
+        items.append(station)
+    return JSONResponse(content={"items": items, "total": len(items)})
+
+@app.get("/api/estaciones/{station_id}/pronostico")
+def get_estacion_pronostico(station_id: str):
+    station = service.get_station_by_id(station_id)
+    if not station:
+        raise HTTPException(status_code=404, detail="Station not found")
+    return JSONResponse(content={"stationId": station_id, "items": station.get("forecastSummary") or []})
+
+@app.get("/api/estaciones/{station_id}")
+def get_estacion(station_id: str):
+    station = service.get_station_by_id(station_id)
+    if not station:
+        raise HTTPException(status_code=404, detail="Station not found")
+    station_copy = dict(station)
+    station_copy["statusLabel"] = station_copy.get("statusLabel") or station_copy.get("status")
+    return JSONResponse(content=station_copy)
+
+@app.get("/api/alertas/subzonas")
+def get_alertas_subzonas(lang: str = "es"):
+    return JSONResponse(content={"items": service.localized_alerts(lang)})
+
+@app.get("/api/embalses")
+def get_embalses():
+    return JSONResponse(content={"items": service.get_reservoirs()})
+
+@app.get("/api/map-summary")
+def get_map_summary():
+    return JSONResponse(content=service.get_map_summary())
+
+@app.get("/api/admin/sync")
+def admin_sync():
+    payload = service.sync_once()
+    return JSONResponse(content={"status": "ok", "generatedAt": payload["meta"]["generatedAt"]})
+
+# Serve static files and fallback to index.html/app-shell.html
+from starlette.responses import FileResponse
+
+@app.get("/")
+def catch_root():
+    preferred_entry = STATIC_DIR / "app-shell.html"
+    if preferred_entry.exists():
+        return FileResponse(preferred_entry)
+    return FileResponse(STATIC_DIR / "index.html")
+
+app.mount("/", StaticFiles(directory=STATIC_DIR), name="static")

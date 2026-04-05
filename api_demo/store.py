@@ -1,19 +1,14 @@
-from .config import DATA_DIR
-from .utils import read_json, write_json
-
+from .db import SQLiteStore
 
 class SnapshotStore:
-    def __init__(self, base_dir=DATA_DIR):
-        self.base_dir = base_dir
-
-    def _path(self, name):
-        return self.base_dir / f"{name}.json"
+    def __init__(self):
+        self.store = SQLiteStore()
 
     def load(self, name, default):
-        return read_json(self._path(name), default)
+        return self.store.get(name, default)
 
     def save(self, name, payload):
-        write_json(self._path(name), payload)
+        self.store.set(name, payload)
 
     def load_all(self):
         return {

@@ -5,6 +5,7 @@ const mapState = {
   extraLayerMap: new Map(),
   target: null,
   dataSignature: null,
+  activeFilters: new Set(['red', 'orange', 'yellow', 'normal', 'no_data'])
 };
 
 function alertFillColor(status) {
@@ -42,7 +43,6 @@ function ensureMap(target) {
     mapState.mapInstance.remove();
   }
 
-  // Uses Leaflet from global window.L
   const map = L.map(target, {
     center: [4.5, -73.5],
     zoom: 5,
@@ -57,10 +57,35 @@ function ensureMap(target) {
   }).addTo(map);
 
   mapState.alertsLayer = L.layerGroup().addTo(map);
-  mapState.stationsLayer = L.layerGroup().addTo(map);
+  
+  // Initialize MarkerCluster
+  mapState.stationsLayer = L.markerClusterGroup({
+    disableClusteringAtZoom: 10,
+    maxClusterRadius: 40,
+    spiderfyOnMaxZoom: true,
+    showCoverageOnHover: false
+  }).addTo(map);
+  
   mapState.mapInstance = map;
   mapState.target = target;
   mapState.extraLayerMap = new Map();
+  
+  // Set up filter buttons
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const el = e.currentTarget;
+      const color = el.getAttribute('data-color');
+      if (el.classList.contains('active')) {
+        el.classList.remove('active');
+        mapState.activeFilters.delete(color);
+      } else {
+        el.classList.add('active');
+        mapState.activeFilters.add(color);
+      }
+      // Re-trigger render logic via custom event or just recall drawStations if we stored stations
+      window.dispatchEvent(new CustomEvent('mapFiltersChanged'));
+    });
+  });
 
   return Promise.resolve(map);
 }
@@ -71,7 +96,6 @@ function drawAlerts(alerts, layerGroup) {
   alerts.forEach(alert => {
     if (!alert.rings || !alert.rings.length) return;
     
-    // Leaflet uses [lat, lng]. Rings are usually [lng, lat] from GeoJSON
     const latLngs = alert.rings.map(ring => 
       ring.map(coord => [coord[1], coord[0]])
     );
@@ -100,10 +124,27 @@ function drawAlerts(alerts, layerGroup) {
   });
 }
 
+function generateSparklineHTML(forecasts) {
+  if (!forecasts || forecasts.length === 0) return '';
+  // simple absolute heights based on array values relative to max
+  const levels = forecasts.map(f => f.forecastLevel || 0);
+  const max = Math.max(...levels) || 1;
+  const bars = levels.map(val => {
+    const heightPct = Math.max(10, (val / max) * 100);
+    return `<div class="sparkline-bar" style="height: ${heightPct}%"></div>`;
+  }).join('');
+  
+  return `<div style="font-size: 0.75rem; font-weight: 600; margin-top: 6px; color: #475569;">Nivel (Pronóstico)</div>
+          <div class="sparkline-container">${bars}</div>`;
+}
+
 function drawStations(stations, layerGroup) {
   layerGroup.clearLayers();
   
-  stations.forEach(station => {
+  // Filter stations client-side
+  const filtered = stations.filter(s => mapState.activeFilters.has(s.status || 'no_data'));
+
+  filtered.forEach(station => {
     if (station.longitude == null || station.latitude == null) return;
     
     const color = stationFillColor(station.status || "no_data");
@@ -118,15 +159,18 @@ function drawStations(stations, layerGroup) {
       className: 'map-point'
     });
 
+    const sparklineHtml = generateSparklineHTML(station.forecastSummary);
+
     const tooltipContent = `
-      <div style="font-family: 'Inter', sans-serif;">
+      <div style="font-family: 'Inter', sans-serif; min-width: 120px;">
         <strong>${station.stationName || '--'}</strong><br/>
         <span style="color:#64748b; font-size:0.85em;">River: ${station.riverName || '--'}</span><br/>
         <span style="font-weight:600; text-transform:uppercase; font-size:0.8em; color:${color}">${station.status || 'No Data'}</span>
+        ${sparklineHtml}
       </div>
     `;
     
-    circle.bindTooltip(tooltipContent);
+    circle.bindTooltip(tooltipContent, { className: 'custom-tooltip' });
     circle.on('click', () => {
       window.dispatchEvent(new CustomEvent('stationSelect', { detail: station.stationId }));
     });
@@ -134,16 +178,20 @@ function drawStations(stations, layerGroup) {
   });
 }
 
+// Keep a local ref to latest stations for filtering
+let currentStations = [];
+
 export async function renderLightMap({ mapSummary, target, t, layerVisibility = { alerts: true, stations: true } }) {
   const stations = mapSummary?.stations || [];
   const alerts = mapSummary?.alerts || [];
   
+  currentStations = stations; // stash it
+
   if (!stations.length && !alerts.length) {
     target.innerHTML = `<div class="empty-state">${t("labels.noMapData")}</div>`;
     return;
   }
 
-  // Ensure DOM is ready for Leaflet if it wasn't
   if (target.innerHTML.includes('empty-state')) {
     target.innerHTML = '';
   }
@@ -152,12 +200,25 @@ export async function renderLightMap({ mapSummary, target, t, layerVisibility = 
     const map = await ensureMap(target);
     const dataSignature = computeDataSignature(mapSummary);
 
+    setTimeout(() => {
+      if (map) map.invalidateSize();
+    }, 200);
+    
+    // We bind a one-time global listener for the filter change to redraw immediately if map is active
+    if (!window._fewsFiltersBound) {
+      window.addEventListener('mapFiltersChanged', () => {
+        if (mapState.stationsLayer) {
+           drawStations(currentStations, mapState.stationsLayer);
+        }
+      });
+      window._fewsFiltersBound = true;
+    }
+
     if (arcgisState?.dataSignature !== dataSignature) {
       if (typeof window.arcgisState !== 'undefined') window.arcgisState.dataSignature = dataSignature;
       drawAlerts(alerts, mapState.alertsLayer);
       drawStations(stations, mapState.stationsLayer);
 
-      // Fit bounds
       const bounds = L.latLngBounds();
       stations.forEach(s => {
         if (s.latitude && s.longitude) bounds.extend([s.latitude, s.longitude]);
@@ -178,14 +239,16 @@ export async function renderLightMap({ mapSummary, target, t, layerVisibility = 
     // Toggle visibility based on layerVisibility proxy state
     if (layerVisibility.alerts === false) {
       map.removeLayer(mapState.alertsLayer);
-    } else {
+    } else if (!map.hasLayer(mapState.alertsLayer)) {
       map.addLayer(mapState.alertsLayer);
     }
 
     if (layerVisibility.stations === false) {
       map.removeLayer(mapState.stationsLayer);
+      document.querySelector('.map-controls').style.display = 'none';
     } else {
-      map.addLayer(mapState.stationsLayer);
+      if (!map.hasLayer(mapState.stationsLayer)) map.addLayer(mapState.stationsLayer);
+      document.querySelector('.map-controls').style.display = 'block';
     }
   } catch (error) {
     console.warn("Leaflet error:", error);
@@ -193,5 +256,4 @@ export async function renderLightMap({ mapSummary, target, t, layerVisibility = 
   }
 }
 
-// Dummy for arcgisState reference backwards compatibility in local scope
 const arcgisState = { dataSignature: null };

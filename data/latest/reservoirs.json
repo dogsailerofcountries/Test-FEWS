@@ -1,20 +1,6 @@
 [
   {
     "reservoirId": "AGREGADO BOGOTA",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 517.19,
-    "usefulVolumePct": 0.58,
-    "spillVolume": null,
-    "dischargeVolume": 1.01,
-    "capacityVolume": 896.49,
-    "turbineVolume": 3.13,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 517.19,
-    "forecastUsefulVolumePct": 0.58
-  },
-  {
-    "reservoirId": "AGREGADO BOGOTA",
     "timestamp": "2026-03-05 07:00",
     "usefulVolumeMass": 516.52,
     "usefulVolumePct": 0.58,
@@ -422,15 +408,15 @@
   {
     "reservoirId": "AGREGADO BOGOTA",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 499.72,
+    "usefulVolumePct": 0.56,
     "spillVolume": null,
-    "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "dischargeVolume": 0.11,
+    "capacityVolume": 896.49,
+    "turbineVolume": 0.47,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 499.71,
+    "forecastUsefulVolumeMass": 499.72,
     "forecastUsefulVolumePct": 0.56
   },
   {
@@ -444,7 +430,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 498.93,
+    "forecastUsefulVolumeMass": 499.07,
     "forecastUsefulVolumePct": 0.56
   },
   {
@@ -458,7 +444,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 498.62,
+    "forecastUsefulVolumeMass": 498.64,
     "forecastUsefulVolumePct": 0.56
   },
   {
@@ -472,7 +458,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 497.94,
+    "forecastUsefulVolumeMass": 497.93,
     "forecastUsefulVolumePct": 0.56
   },
   {
@@ -486,7 +472,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 497.4,
+    "forecastUsefulVolumeMass": 497.55,
     "forecastUsefulVolumePct": 0.56
   },
   {
@@ -500,7 +486,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 496.91,
+    "forecastUsefulVolumeMass": 497.27,
     "forecastUsefulVolumePct": 0.56
   },
   {
@@ -514,7 +500,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 495.77,
+    "forecastUsefulVolumeMass": 496.49,
     "forecastUsefulVolumePct": 0.56
   },
   {
@@ -528,22 +514,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 495.14,
+    "forecastUsefulVolumeMass": 495.79,
     "forecastUsefulVolumePct": 0.56
   },
   {
-    "reservoirId": "ALTOANCHICAYA",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 9.96,
-    "usefulVolumePct": 0.31,
+    "reservoirId": "AGREGADO BOGOTA",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 32.06,
-    "turbineVolume": 2.19,
+    "capacityVolume": null,
+    "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 9.96,
-    "forecastUsefulVolumePct": 0.31
+    "forecastUsefulVolumeMass": 495.75,
+    "forecastUsefulVolumePct": 0.55
   },
   {
     "reservoirId": "ALTOANCHICAYA",
@@ -954,16 +940,16 @@
   {
     "reservoirId": "ALTOANCHICAYA",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 6.34,
+    "usefulVolumePct": 0.2,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 32.06,
+    "turbineVolume": 0.31,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 4.88,
-    "forecastUsefulVolumePct": 0.19
+    "forecastUsefulVolumeMass": 6.34,
+    "forecastUsefulVolumePct": 0.2
   },
   {
     "reservoirId": "ALTOANCHICAYA",
@@ -976,8 +962,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 4.01,
-    "forecastUsefulVolumePct": 0.19
+    "forecastUsefulVolumeMass": 6.36,
+    "forecastUsefulVolumePct": 0.18
   },
   {
     "reservoirId": "ALTOANCHICAYA",
@@ -990,8 +976,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 5.27,
-    "forecastUsefulVolumePct": 0.19
+    "forecastUsefulVolumeMass": 6.6,
+    "forecastUsefulVolumePct": 0.21
   },
   {
     "reservoirId": "ALTOANCHICAYA",
@@ -1004,8 +990,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 5.01,
-    "forecastUsefulVolumePct": 0.26
+    "forecastUsefulVolumeMass": 6.56,
+    "forecastUsefulVolumePct": 0.23
   },
   {
     "reservoirId": "ALTOANCHICAYA",
@@ -1018,8 +1004,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 5.7,
-    "forecastUsefulVolumePct": 0.24
+    "forecastUsefulVolumeMass": 6.74,
+    "forecastUsefulVolumePct": 0.22
   },
   {
     "reservoirId": "ALTOANCHICAYA",
@@ -1032,8 +1018,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 5.57,
-    "forecastUsefulVolumePct": 0.19
+    "forecastUsefulVolumeMass": 6.18,
+    "forecastUsefulVolumePct": 0.21
   },
   {
     "reservoirId": "ALTOANCHICAYA",
@@ -1046,8 +1032,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 5.23,
-    "forecastUsefulVolumePct": 0.28
+    "forecastUsefulVolumeMass": 6.9,
+    "forecastUsefulVolumePct": 0.26
   },
   {
     "reservoirId": "ALTOANCHICAYA",
@@ -1060,22 +1046,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 4.99,
+    "forecastUsefulVolumeMass": 6.14,
     "forecastUsefulVolumePct": 0.23
   },
   {
-    "reservoirId": "AMANI",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 376.45,
-    "usefulVolumePct": 0.85,
+    "reservoirId": "ALTOANCHICAYA",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 441.79,
-    "turbineVolume": 1.48,
+    "capacityVolume": null,
+    "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 376.45,
-    "forecastUsefulVolumePct": 0.85
+    "forecastUsefulVolumeMass": 6.58,
+    "forecastUsefulVolumePct": 0.25
   },
   {
     "reservoirId": "AMANI",
@@ -1486,16 +1472,16 @@
   {
     "reservoirId": "AMANI",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 332.79,
+    "usefulVolumePct": 0.75,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 441.79,
+    "turbineVolume": 2.5,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 322.51,
-    "forecastUsefulVolumePct": 0.73
+    "forecastUsefulVolumeMass": 332.79,
+    "forecastUsefulVolumePct": 0.75
   },
   {
     "reservoirId": "AMANI",
@@ -1508,8 +1494,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 319.79,
-    "forecastUsefulVolumePct": 0.73
+    "forecastUsefulVolumeMass": 334.59,
+    "forecastUsefulVolumePct": 0.76
   },
   {
     "reservoirId": "AMANI",
@@ -1522,8 +1508,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 318.32,
-    "forecastUsefulVolumePct": 0.73
+    "forecastUsefulVolumeMass": 335.74,
+    "forecastUsefulVolumePct": 0.76
   },
   {
     "reservoirId": "AMANI",
@@ -1536,8 +1522,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 314.7,
-    "forecastUsefulVolumePct": 0.72
+    "forecastUsefulVolumeMass": 332.27,
+    "forecastUsefulVolumePct": 0.75
   },
   {
     "reservoirId": "AMANI",
@@ -1550,8 +1536,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 310.12,
-    "forecastUsefulVolumePct": 0.72
+    "forecastUsefulVolumeMass": 329.51,
+    "forecastUsefulVolumePct": 0.75
   },
   {
     "reservoirId": "AMANI",
@@ -1564,8 +1550,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 305.77,
-    "forecastUsefulVolumePct": 0.72
+    "forecastUsefulVolumeMass": 324.9,
+    "forecastUsefulVolumePct": 0.75
   },
   {
     "reservoirId": "AMANI",
@@ -1578,8 +1564,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 308.48,
-    "forecastUsefulVolumePct": 0.72
+    "forecastUsefulVolumeMass": 323.14,
+    "forecastUsefulVolumePct": 0.76
   },
   {
     "reservoirId": "AMANI",
@@ -1592,21 +1578,21 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 309.38,
-    "forecastUsefulVolumePct": 0.72
+    "forecastUsefulVolumeMass": 324.91,
+    "forecastUsefulVolumePct": 0.77
   },
   {
-    "reservoirId": "BETANIA",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 557.55,
-    "usefulVolumePct": 0.77,
+    "reservoirId": "AMANI",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 723.6,
-    "turbineVolume": 33.34,
-    "observedPrecipitation": 0.0,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 557.55,
+    "forecastUsefulVolumeMass": 317.71,
     "forecastUsefulVolumePct": 0.77
   },
   {
@@ -1912,7 +1898,7 @@
     "dischargeVolume": null,
     "capacityVolume": 723.6,
     "turbineVolume": 36.56,
-    "observedPrecipitation": 10.77,
+    "observedPrecipitation": 11.99,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 606.6,
     "forecastUsefulVolumePct": 0.84
@@ -2010,7 +1996,7 @@
     "dischargeVolume": null,
     "capacityVolume": 723.6,
     "turbineVolume": 43.69,
-    "observedPrecipitation": 8.56,
+    "observedPrecipitation": 8.62,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 597.39,
     "forecastUsefulVolumePct": 0.83
@@ -2018,16 +2004,16 @@
   {
     "reservoirId": "BETANIA",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 603.88,
+    "usefulVolumePct": 0.83,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
-    "observedPrecipitation": 3.26,
-    "forecastPrecipitation": 0.47,
-    "forecastUsefulVolumeMass": 596.59,
-    "forecastUsefulVolumePct": 0.82
+    "capacityVolume": 723.6,
+    "turbineVolume": 33.82,
+    "observedPrecipitation": 3.21,
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 603.88,
+    "forecastUsefulVolumePct": 0.83
   },
   {
     "reservoirId": "BETANIA",
@@ -2038,10 +2024,10 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 11.87,
-    "forecastUsefulVolumeMass": 597.69,
-    "forecastUsefulVolumePct": 0.82
+    "observedPrecipitation": 2.45,
+    "forecastPrecipitation": 0.67,
+    "forecastUsefulVolumeMass": 609.62,
+    "forecastUsefulVolumePct": 0.83
   },
   {
     "reservoirId": "BETANIA",
@@ -2053,9 +2039,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 6.43,
-    "forecastUsefulVolumeMass": 605.51,
-    "forecastUsefulVolumePct": 0.82
+    "forecastPrecipitation": 4.84,
+    "forecastUsefulVolumeMass": 623.43,
+    "forecastUsefulVolumePct": 0.83
   },
   {
     "reservoirId": "BETANIA",
@@ -2067,9 +2053,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 5.16,
-    "forecastUsefulVolumeMass": 602.42,
-    "forecastUsefulVolumePct": 0.81
+    "forecastPrecipitation": 4.64,
+    "forecastUsefulVolumeMass": 626.76,
+    "forecastUsefulVolumePct": 0.83
   },
   {
     "reservoirId": "BETANIA",
@@ -2081,8 +2067,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 3.55,
-    "forecastUsefulVolumeMass": 606.38,
+    "forecastPrecipitation": 6.06,
+    "forecastUsefulVolumeMass": 618.48,
     "forecastUsefulVolumePct": 0.83
   },
   {
@@ -2095,8 +2081,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 4.2,
-    "forecastUsefulVolumeMass": 602.1,
+    "forecastPrecipitation": 8.64,
+    "forecastUsefulVolumeMass": 606.29,
     "forecastUsefulVolumePct": 0.81
   },
   {
@@ -2109,9 +2095,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 3.33,
-    "forecastUsefulVolumeMass": 602.89,
-    "forecastUsefulVolumePct": 0.82
+    "forecastPrecipitation": 3.07,
+    "forecastUsefulVolumeMass": 613.96,
+    "forecastUsefulVolumePct": 0.81
   },
   {
     "reservoirId": "BETANIA",
@@ -2123,23 +2109,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 612.84,
+    "forecastPrecipitation": 0.9,
+    "forecastUsefulVolumeMass": 606.09,
     "forecastUsefulVolumePct": 0.82
   },
   {
-    "reservoirId": "CALIMA1",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 416.91,
-    "usefulVolumePct": 0.98,
+    "reservoirId": "BETANIA",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 424.94,
+    "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 416.91,
-    "forecastUsefulVolumePct": 0.98
+    "forecastUsefulVolumeMass": 600.68,
+    "forecastUsefulVolumePct": 0.82
   },
   {
     "reservoirId": "CALIMA1",
@@ -2550,15 +2536,15 @@
   {
     "reservoirId": "CALIMA1",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 399.98,
+    "usefulVolumePct": 0.94,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 424.94,
+    "turbineVolume": 0.47,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 400.04,
+    "forecastUsefulVolumeMass": 399.98,
     "forecastUsefulVolumePct": 0.94
   },
   {
@@ -2572,7 +2558,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 399.66,
+    "forecastUsefulVolumeMass": 399.92,
     "forecastUsefulVolumePct": 0.94
   },
   {
@@ -2586,7 +2572,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 399.28,
+    "forecastUsefulVolumeMass": 399.72,
     "forecastUsefulVolumePct": 0.94
   },
   {
@@ -2600,7 +2586,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 399.01,
+    "forecastUsefulVolumeMass": 399.41,
     "forecastUsefulVolumePct": 0.94
   },
   {
@@ -2614,7 +2600,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 399.0,
+    "forecastUsefulVolumeMass": 399.39,
     "forecastUsefulVolumePct": 0.93
   },
   {
@@ -2628,7 +2614,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 399.35,
+    "forecastUsefulVolumeMass": 398.04,
     "forecastUsefulVolumePct": 0.94
   },
   {
@@ -2642,8 +2628,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 398.46,
-    "forecastUsefulVolumePct": 0.94
+    "forecastUsefulVolumeMass": 397.77,
+    "forecastUsefulVolumePct": 0.93
   },
   {
     "reservoirId": "CALIMA1",
@@ -2656,22 +2642,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 397.68,
-    "forecastUsefulVolumePct": 0.94
+    "forecastUsefulVolumeMass": 397.21,
+    "forecastUsefulVolumePct": 0.92
   },
   {
-    "reservoirId": "CHUZA",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 85.9,
-    "usefulVolumePct": 0.39,
+    "reservoirId": "CALIMA1",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
-    "dischargeVolume": 1.31,
-    "capacityVolume": 218.11,
+    "dischargeVolume": null,
+    "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 85.9,
-    "forecastUsefulVolumePct": 0.39
+    "forecastUsefulVolumeMass": 396.84,
+    "forecastUsefulVolumePct": 0.92
   },
   {
     "reservoirId": "CHUZA",
@@ -3082,15 +3068,15 @@
   {
     "reservoirId": "CHUZA",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 60.45,
+    "usefulVolumePct": 0.28,
     "spillVolume": null,
-    "dischargeVolume": null,
-    "capacityVolume": null,
+    "dischargeVolume": 0.76,
+    "capacityVolume": 218.11,
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 60.29,
+    "forecastUsefulVolumeMass": 60.45,
     "forecastUsefulVolumePct": 0.28
   },
   {
@@ -3104,7 +3090,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 59.91,
+    "forecastUsefulVolumeMass": 59.93,
     "forecastUsefulVolumePct": 0.28
   },
   {
@@ -3118,7 +3104,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 59.53,
+    "forecastUsefulVolumeMass": 59.74,
     "forecastUsefulVolumePct": 0.28
   },
   {
@@ -3132,7 +3118,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 59.43,
+    "forecastUsefulVolumeMass": 59.38,
     "forecastUsefulVolumePct": 0.28
   },
   {
@@ -3146,7 +3132,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 59.81,
+    "forecastUsefulVolumeMass": 59.99,
     "forecastUsefulVolumePct": 0.28
   },
   {
@@ -3160,7 +3146,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 59.88,
+    "forecastUsefulVolumeMass": 60.37,
     "forecastUsefulVolumePct": 0.29
   },
   {
@@ -3174,7 +3160,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 59.51,
+    "forecastUsefulVolumeMass": 60.38,
     "forecastUsefulVolumePct": 0.29
   },
   {
@@ -3188,22 +3174,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 60.47,
+    "forecastUsefulVolumeMass": 60.93,
     "forecastUsefulVolumePct": 0.29
   },
   {
-    "reservoirId": "EL QUIMBO",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 1453.86,
-    "usefulVolumePct": 0.63,
+    "reservoirId": "CHUZA",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 2295.04,
-    "turbineVolume": 24.53,
-    "observedPrecipitation": 0.0,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 1453.86,
-    "forecastUsefulVolumePct": 0.63
+    "forecastUsefulVolumeMass": 60.7,
+    "forecastUsefulVolumePct": 0.29
   },
   {
     "reservoirId": "EL QUIMBO",
@@ -3508,7 +3494,7 @@
     "dischargeVolume": null,
     "capacityVolume": 2295.04,
     "turbineVolume": 26.65,
-    "observedPrecipitation": 11.55,
+    "observedPrecipitation": 12.03,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 1140.47,
     "forecastUsefulVolumePct": 0.5
@@ -3606,7 +3592,7 @@
     "dischargeVolume": null,
     "capacityVolume": 2295.04,
     "turbineVolume": 21.73,
-    "observedPrecipitation": 9.85,
+    "observedPrecipitation": 9.96,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 1045.59,
     "forecastUsefulVolumePct": 0.46
@@ -3614,16 +3600,16 @@
   {
     "reservoirId": "EL QUIMBO",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 1030.53,
+    "usefulVolumePct": 0.45,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
-    "observedPrecipitation": 3.15,
-    "forecastPrecipitation": 0.48,
-    "forecastUsefulVolumeMass": 1045.25,
-    "forecastUsefulVolumePct": 0.46
+    "capacityVolume": 2295.04,
+    "turbineVolume": 27.19,
+    "observedPrecipitation": 3.02,
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 1030.53,
+    "forecastUsefulVolumePct": 0.45
   },
   {
     "reservoirId": "EL QUIMBO",
@@ -3634,10 +3620,10 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 12.34,
-    "forecastUsefulVolumeMass": 1042.99,
-    "forecastUsefulVolumePct": 0.46
+    "observedPrecipitation": 2.47,
+    "forecastPrecipitation": 0.68,
+    "forecastUsefulVolumeMass": 1021.31,
+    "forecastUsefulVolumePct": 0.45
   },
   {
     "reservoirId": "EL QUIMBO",
@@ -3649,9 +3635,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 3.31,
-    "forecastUsefulVolumeMass": 1040.97,
-    "forecastUsefulVolumePct": 0.46
+    "forecastPrecipitation": 4.16,
+    "forecastUsefulVolumeMass": 1017.08,
+    "forecastUsefulVolumePct": 0.45
   },
   {
     "reservoirId": "EL QUIMBO",
@@ -3663,9 +3649,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 3.9,
-    "forecastUsefulVolumeMass": 1043.76,
-    "forecastUsefulVolumePct": 0.46
+    "forecastPrecipitation": 3.93,
+    "forecastUsefulVolumeMass": 1018.17,
+    "forecastUsefulVolumePct": 0.45
   },
   {
     "reservoirId": "EL QUIMBO",
@@ -3677,9 +3663,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 3.31,
-    "forecastUsefulVolumeMass": 1031.28,
-    "forecastUsefulVolumePct": 0.46
+    "forecastPrecipitation": 5.05,
+    "forecastUsefulVolumeMass": 1003.83,
+    "forecastUsefulVolumePct": 0.44
   },
   {
     "reservoirId": "EL QUIMBO",
@@ -3691,9 +3677,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 2.65,
-    "forecastUsefulVolumeMass": 1024.89,
-    "forecastUsefulVolumePct": 0.45
+    "forecastPrecipitation": 5.01,
+    "forecastUsefulVolumeMass": 996.29,
+    "forecastUsefulVolumePct": 0.43
   },
   {
     "reservoirId": "EL QUIMBO",
@@ -3705,9 +3691,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 2.66,
-    "forecastUsefulVolumeMass": 1017.28,
-    "forecastUsefulVolumePct": 0.45
+    "forecastPrecipitation": 2.1,
+    "forecastUsefulVolumeMass": 987.97,
+    "forecastUsefulVolumePct": 0.43
   },
   {
     "reservoirId": "EL QUIMBO",
@@ -3719,23 +3705,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 1005.72,
-    "forecastUsefulVolumePct": 0.45
+    "forecastPrecipitation": 0.34,
+    "forecastUsefulVolumeMass": 976.01,
+    "forecastUsefulVolumePct": 0.43
   },
   {
-    "reservoirId": "ESMERALDA",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 277.57,
-    "usefulVolumePct": 0.6,
+    "reservoirId": "EL QUIMBO",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 460.78,
-    "turbineVolume": 0.81,
-    "observedPrecipitation": 0.0,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 277.57,
-    "forecastUsefulVolumePct": 0.6
+    "forecastUsefulVolumeMass": 976.62,
+    "forecastUsefulVolumePct": 0.42
   },
   {
     "reservoirId": "ESMERALDA",
@@ -4124,7 +4110,7 @@
     "dischargeVolume": null,
     "capacityVolume": 460.78,
     "turbineVolume": 1.87,
-    "observedPrecipitation": 5.04,
+    "observedPrecipitation": 4.94,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 183.46,
     "forecastUsefulVolumePct": 0.4
@@ -4138,7 +4124,7 @@
     "dischargeVolume": null,
     "capacityVolume": 460.78,
     "turbineVolume": null,
-    "observedPrecipitation": 2.7,
+    "observedPrecipitation": 2.67,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 186.37,
     "forecastUsefulVolumePct": 0.4
@@ -4146,16 +4132,16 @@
   {
     "reservoirId": "ESMERALDA",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 187.96,
+    "usefulVolumePct": 0.41,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
+    "capacityVolume": 460.78,
     "turbineVolume": null,
-    "observedPrecipitation": 0.43,
-    "forecastPrecipitation": 1.77,
-    "forecastUsefulVolumeMass": 185.77,
-    "forecastUsefulVolumePct": 0.4
+    "observedPrecipitation": 0.47,
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 187.96,
+    "forecastUsefulVolumePct": 0.41
   },
   {
     "reservoirId": "ESMERALDA",
@@ -4166,10 +4152,10 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 9.77,
-    "forecastUsefulVolumeMass": 181.45,
-    "forecastUsefulVolumePct": 0.39
+    "observedPrecipitation": 2.2,
+    "forecastPrecipitation": 2.55,
+    "forecastUsefulVolumeMass": 185.77,
+    "forecastUsefulVolumePct": 0.41
   },
   {
     "reservoirId": "ESMERALDA",
@@ -4181,9 +4167,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 2.49,
-    "forecastUsefulVolumeMass": 178.13,
-    "forecastUsefulVolumePct": 0.39
+    "forecastPrecipitation": 1.6,
+    "forecastUsefulVolumeMass": 181.98,
+    "forecastUsefulVolumePct": 0.41
   },
   {
     "reservoirId": "ESMERALDA",
@@ -4195,9 +4181,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 4.57,
-    "forecastUsefulVolumeMass": 178.91,
-    "forecastUsefulVolumePct": 0.38
+    "forecastPrecipitation": 3.02,
+    "forecastUsefulVolumeMass": 181.42,
+    "forecastUsefulVolumePct": 0.4
   },
   {
     "reservoirId": "ESMERALDA",
@@ -4209,9 +4195,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 1.63,
-    "forecastUsefulVolumeMass": 172.28,
-    "forecastUsefulVolumePct": 0.39
+    "forecastPrecipitation": 1.64,
+    "forecastUsefulVolumeMass": 180.53,
+    "forecastUsefulVolumePct": 0.4
   },
   {
     "reservoirId": "ESMERALDA",
@@ -4223,9 +4209,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 0.69,
-    "forecastUsefulVolumeMass": 174.56,
-    "forecastUsefulVolumePct": 0.38
+    "forecastPrecipitation": 0.72,
+    "forecastUsefulVolumeMass": 176.87,
+    "forecastUsefulVolumePct": 0.39
   },
   {
     "reservoirId": "ESMERALDA",
@@ -4237,9 +4223,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 1.29,
+    "forecastPrecipitation": 0.55,
     "forecastUsefulVolumeMass": 177.17,
-    "forecastUsefulVolumePct": 0.37
+    "forecastUsefulVolumePct": 0.39
   },
   {
     "reservoirId": "ESMERALDA",
@@ -4251,23 +4237,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 174.59,
-    "forecastUsefulVolumePct": 0.38
+    "forecastPrecipitation": 0.65,
+    "forecastUsefulVolumeMass": 176.69,
+    "forecastUsefulVolumePct": 0.4
   },
   {
-    "reservoirId": "GUAVIO",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 364.15,
-    "usefulVolumePct": 0.69,
+    "reservoirId": "ESMERALDA",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 529.77,
-    "turbineVolume": 9.28,
-    "observedPrecipitation": 0.0,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 364.15,
-    "forecastUsefulVolumePct": 0.69
+    "forecastUsefulVolumeMass": 175.97,
+    "forecastUsefulVolumePct": 0.39
   },
   {
     "reservoirId": "GUAVIO",
@@ -4572,7 +4558,7 @@
     "dischargeVolume": null,
     "capacityVolume": 529.77,
     "turbineVolume": 4.07,
-    "observedPrecipitation": 0.09,
+    "observedPrecipitation": 0.0,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 283.91,
     "forecastUsefulVolumePct": 0.54
@@ -4678,15 +4664,15 @@
   {
     "reservoirId": "GUAVIO",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 268.3,
+    "usefulVolumePct": 0.51,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 529.77,
+    "turbineVolume": 3.06,
     "observedPrecipitation": 0.46,
-    "forecastPrecipitation": 1.73,
-    "forecastUsefulVolumeMass": 268.83,
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 268.3,
     "forecastUsefulVolumePct": 0.51
   },
   {
@@ -4698,9 +4684,9 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 14.38,
-    "forecastUsefulVolumeMass": 266.25,
+    "observedPrecipitation": 1.03,
+    "forecastPrecipitation": 4.58,
+    "forecastUsefulVolumeMass": 265.1,
     "forecastUsefulVolumePct": 0.51
   },
   {
@@ -4713,8 +4699,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 2.48,
-    "forecastUsefulVolumeMass": 264.84,
+    "forecastPrecipitation": 2.99,
+    "forecastUsefulVolumeMass": 260.76,
     "forecastUsefulVolumePct": 0.5
   },
   {
@@ -4727,8 +4713,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 4.46,
-    "forecastUsefulVolumeMass": 261.85,
+    "forecastPrecipitation": 3.08,
+    "forecastUsefulVolumeMass": 257.88,
     "forecastUsefulVolumePct": 0.5
   },
   {
@@ -4741,9 +4727,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 2.85,
-    "forecastUsefulVolumeMass": 261.19,
-    "forecastUsefulVolumePct": 0.5
+    "forecastPrecipitation": 3.43,
+    "forecastUsefulVolumeMass": 257.69,
+    "forecastUsefulVolumePct": 0.49
   },
   {
     "reservoirId": "GUAVIO",
@@ -4755,9 +4741,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 2.29,
-    "forecastUsefulVolumeMass": 259.56,
-    "forecastUsefulVolumePct": 0.5
+    "forecastPrecipitation": 8.63,
+    "forecastUsefulVolumeMass": 256.49,
+    "forecastUsefulVolumePct": 0.49
   },
   {
     "reservoirId": "GUAVIO",
@@ -4769,9 +4755,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 2.55,
-    "forecastUsefulVolumeMass": 259.94,
-    "forecastUsefulVolumePct": 0.5
+    "forecastPrecipitation": 1.68,
+    "forecastUsefulVolumeMass": 255.85,
+    "forecastUsefulVolumePct": 0.49
   },
   {
     "reservoirId": "GUAVIO",
@@ -4783,23 +4769,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 266.17,
-    "forecastUsefulVolumePct": 0.5
+    "forecastPrecipitation": 2.91,
+    "forecastUsefulVolumeMass": 255.98,
+    "forecastUsefulVolumePct": 0.49
   },
   {
-    "reservoirId": "ITUANGO",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 122.26,
-    "usefulVolumePct": 0.93,
-    "spillVolume": 60.36,
+    "reservoirId": "GUAVIO",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
+    "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 132.0,
-    "turbineVolume": 63.82,
-    "observedPrecipitation": 3.78,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": null,
-    "forecastUsefulVolumePct": null
+    "forecastUsefulVolumeMass": 252.29,
+    "forecastUsefulVolumePct": 0.49
   },
   {
     "reservoirId": "ITUANGO",
@@ -5104,7 +5090,7 @@
     "dischargeVolume": null,
     "capacityVolume": 132.0,
     "turbineVolume": 64.19,
-    "observedPrecipitation": 2.23,
+    "observedPrecipitation": 2.33,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
@@ -5174,7 +5160,7 @@
     "dischargeVolume": null,
     "capacityVolume": 132.0,
     "turbineVolume": 64.22,
-    "observedPrecipitation": 8.61,
+    "observedPrecipitation": 8.33,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
@@ -5188,7 +5174,7 @@
     "dischargeVolume": null,
     "capacityVolume": 132.0,
     "turbineVolume": 63.47,
-    "observedPrecipitation": 1.85,
+    "observedPrecipitation": 2.04,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
@@ -5202,7 +5188,7 @@
     "dischargeVolume": null,
     "capacityVolume": 132.0,
     "turbineVolume": 64.53,
-    "observedPrecipitation": 3.94,
+    "observedPrecipitation": 3.98,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
@@ -5210,14 +5196,14 @@
   {
     "reservoirId": "ITUANGO",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
-    "spillVolume": null,
+    "usefulVolumeMass": 134.29,
+    "usefulVolumePct": 1.02,
+    "spillVolume": 17.3,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
-    "observedPrecipitation": 1.16,
-    "forecastPrecipitation": 0.04,
+    "capacityVolume": 132.0,
+    "turbineVolume": 63.74,
+    "observedPrecipitation": 1.53,
+    "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
   },
@@ -5230,8 +5216,8 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 8.99,
+    "observedPrecipitation": 1.1,
+    "forecastPrecipitation": 0.06,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
   },
@@ -5245,7 +5231,7 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 18.59,
+    "forecastPrecipitation": 13.14,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
   },
@@ -5259,7 +5245,7 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 13.65,
+    "forecastPrecipitation": 13.01,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
   },
@@ -5273,7 +5259,7 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 13.12,
+    "forecastPrecipitation": 15.74,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
   },
@@ -5287,7 +5273,7 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 8.93,
+    "forecastPrecipitation": 19.39,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
   },
@@ -5301,23 +5287,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 7.89,
+    "forecastPrecipitation": 7.32,
     "forecastUsefulVolumeMass": null,
     "forecastUsefulVolumePct": null
   },
   {
-    "reservoirId": "MIRAFLORES",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 128.89,
-    "usefulVolumePct": 0.94,
+    "reservoirId": "ITUANGO",
+    "timestamp": "2026-04-10 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 137.12,
+    "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 128.89,
-    "forecastUsefulVolumePct": 0.94
+    "forecastPrecipitation": 8.2,
+    "forecastUsefulVolumeMass": null,
+    "forecastUsefulVolumePct": null
   },
   {
     "reservoirId": "MIRAFLORES",
@@ -5728,15 +5714,15 @@
   {
     "reservoirId": "MIRAFLORES",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 123.74,
+    "usefulVolumePct": 0.9,
     "spillVolume": null,
-    "dischargeVolume": null,
-    "capacityVolume": null,
+    "dischargeVolume": 0.56,
+    "capacityVolume": 137.12,
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 123.69,
+    "forecastUsefulVolumeMass": 123.74,
     "forecastUsefulVolumePct": 0.9
   },
   {
@@ -5750,7 +5736,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 123.43,
+    "forecastUsefulVolumeMass": 123.45,
     "forecastUsefulVolumePct": 0.89
   },
   {
@@ -5764,8 +5750,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 123.07,
-    "forecastUsefulVolumePct": 0.88
+    "forecastUsefulVolumeMass": 123.18,
+    "forecastUsefulVolumePct": 0.9
   },
   {
     "reservoirId": "MIRAFLORES",
@@ -5778,8 +5764,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 122.88,
-    "forecastUsefulVolumePct": 0.88
+    "forecastUsefulVolumeMass": 123.05,
+    "forecastUsefulVolumePct": 0.9
   },
   {
     "reservoirId": "MIRAFLORES",
@@ -5792,8 +5778,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 122.56,
-    "forecastUsefulVolumePct": 0.87
+    "forecastUsefulVolumeMass": 122.88,
+    "forecastUsefulVolumePct": 0.9
   },
   {
     "reservoirId": "MIRAFLORES",
@@ -5806,8 +5792,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 122.25,
-    "forecastUsefulVolumePct": 0.86
+    "forecastUsefulVolumeMass": 122.6,
+    "forecastUsefulVolumePct": 0.91
   },
   {
     "reservoirId": "MIRAFLORES",
@@ -5820,8 +5806,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 122.07,
-    "forecastUsefulVolumePct": 0.85
+    "forecastUsefulVolumeMass": 122.46,
+    "forecastUsefulVolumePct": 0.91
   },
   {
     "reservoirId": "MIRAFLORES",
@@ -5834,22 +5820,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 121.79,
-    "forecastUsefulVolumePct": 0.85
+    "forecastUsefulVolumeMass": 122.19,
+    "forecastUsefulVolumePct": 0.91
   },
   {
-    "reservoirId": "MUNA",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 5.42,
-    "usefulVolumePct": 0.44,
+    "reservoirId": "MIRAFLORES",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 12.33,
+    "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 5.42,
-    "forecastUsefulVolumePct": 0.44
+    "forecastUsefulVolumeMass": 121.98,
+    "forecastUsefulVolumePct": 0.92
   },
   {
     "reservoirId": "MUNA",
@@ -6260,16 +6246,16 @@
   {
     "reservoirId": "MUNA",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 6.58,
+    "usefulVolumePct": 0.53,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
+    "capacityVolume": 12.33,
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 6.29,
-    "forecastUsefulVolumePct": 0.51
+    "forecastUsefulVolumeMass": 6.58,
+    "forecastUsefulVolumePct": 0.53
   },
   {
     "reservoirId": "MUNA",
@@ -6282,8 +6268,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 6.72,
-    "forecastUsefulVolumePct": 0.55
+    "forecastUsefulVolumeMass": 7.2,
+    "forecastUsefulVolumePct": 0.59
   },
   {
     "reservoirId": "MUNA",
@@ -6296,8 +6282,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 6.97,
-    "forecastUsefulVolumePct": 0.61
+    "forecastUsefulVolumeMass": 7.5,
+    "forecastUsefulVolumePct": 0.68
   },
   {
     "reservoirId": "MUNA",
@@ -6310,8 +6296,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 7.29,
-    "forecastUsefulVolumePct": 0.66
+    "forecastUsefulVolumeMass": 7.73,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "MUNA",
@@ -6324,8 +6310,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 7.98,
-    "forecastUsefulVolumePct": 0.67
+    "forecastUsefulVolumeMass": 8.49,
+    "forecastUsefulVolumePct": 0.7
   },
   {
     "reservoirId": "MUNA",
@@ -6338,8 +6324,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 8.26,
-    "forecastUsefulVolumePct": 0.67
+    "forecastUsefulVolumeMass": 8.46,
+    "forecastUsefulVolumePct": 0.65
   },
   {
     "reservoirId": "MUNA",
@@ -6352,8 +6338,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 8.06,
-    "forecastUsefulVolumePct": 0.63
+    "forecastUsefulVolumeMass": 8.6,
+    "forecastUsefulVolumePct": 0.65
   },
   {
     "reservoirId": "MUNA",
@@ -6366,22 +6352,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 8.34,
-    "forecastUsefulVolumePct": 0.63
+    "forecastUsefulVolumeMass": 8.11,
+    "forecastUsefulVolumePct": 0.65
   },
   {
-    "reservoirId": "PENOL",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 889.61,
-    "usefulVolumePct": 0.85,
+    "reservoirId": "MUNA",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 1042.18,
-    "turbineVolume": 7.04,
-    "observedPrecipitation": 2.43,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 889.61,
-    "forecastUsefulVolumePct": 0.85
+    "forecastUsefulVolumeMass": 7.57,
+    "forecastUsefulVolumePct": 0.58
   },
   {
     "reservoirId": "PENOL",
@@ -6686,7 +6672,7 @@
     "dischargeVolume": null,
     "capacityVolume": 1042.18,
     "turbineVolume": 6.82,
-    "observedPrecipitation": 1.57,
+    "observedPrecipitation": 1.31,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 838.25,
     "forecastUsefulVolumePct": 0.8
@@ -6792,15 +6778,15 @@
   {
     "reservoirId": "PENOL",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 831.27,
+    "usefulVolumePct": 0.8,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 1042.18,
+    "turbineVolume": 3.51,
     "observedPrecipitation": 3.44,
-    "forecastPrecipitation": 0.35,
-    "forecastUsefulVolumeMass": 829.56,
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 831.27,
     "forecastUsefulVolumePct": 0.8
   },
   {
@@ -6812,9 +6798,9 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 6.11,
-    "forecastUsefulVolumeMass": 830.66,
+    "observedPrecipitation": 4.77,
+    "forecastPrecipitation": 0.03,
+    "forecastUsefulVolumeMass": 832.43,
     "forecastUsefulVolumePct": 0.81
   },
   {
@@ -6827,9 +6813,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 6.64,
-    "forecastUsefulVolumeMass": 830.56,
-    "forecastUsefulVolumePct": 0.81
+    "forecastPrecipitation": 3.71,
+    "forecastUsefulVolumeMass": 833.18,
+    "forecastUsefulVolumePct": 0.8
   },
   {
     "reservoirId": "PENOL",
@@ -6841,9 +6827,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 7.35,
-    "forecastUsefulVolumeMass": 832.29,
-    "forecastUsefulVolumePct": 0.82
+    "forecastPrecipitation": 8.28,
+    "forecastUsefulVolumeMass": 836.07,
+    "forecastUsefulVolumePct": 0.81
   },
   {
     "reservoirId": "PENOL",
@@ -6855,9 +6841,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 7.27,
-    "forecastUsefulVolumeMass": 831.11,
-    "forecastUsefulVolumePct": 0.82
+    "forecastPrecipitation": 11.87,
+    "forecastUsefulVolumeMass": 835.99,
+    "forecastUsefulVolumePct": 0.81
   },
   {
     "reservoirId": "PENOL",
@@ -6869,8 +6855,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 5.63,
-    "forecastUsefulVolumeMass": 833.17,
+    "forecastPrecipitation": 13.37,
+    "forecastUsefulVolumeMass": 836.74,
     "forecastUsefulVolumePct": 0.82
   },
   {
@@ -6883,8 +6869,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 3.91,
-    "forecastUsefulVolumeMass": 833.1,
+    "forecastPrecipitation": 4.24,
+    "forecastUsefulVolumeMass": 837.81,
     "forecastUsefulVolumePct": 0.82
   },
   {
@@ -6897,23 +6883,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 835.11,
+    "forecastPrecipitation": 1.78,
+    "forecastUsefulVolumeMass": 839.09,
     "forecastUsefulVolumePct": 0.82
   },
   {
-    "reservoirId": "PLAYAS",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 47.92,
-    "usefulVolumePct": 1.0,
+    "reservoirId": "PENOL",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 48.02,
-    "turbineVolume": 8.73,
+    "capacityVolume": null,
+    "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 47.92,
-    "forecastUsefulVolumePct": 1.0
+    "forecastUsefulVolumeMass": 840.45,
+    "forecastUsefulVolumePct": 0.82
   },
   {
     "reservoirId": "PLAYAS",
@@ -7324,16 +7310,16 @@
   {
     "reservoirId": "PLAYAS",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 35.65,
+    "usefulVolumePct": 0.74,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 48.02,
+    "turbineVolume": 8.92,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 38.5,
-    "forecastUsefulVolumePct": 0.8
+    "forecastUsefulVolumeMass": 35.65,
+    "forecastUsefulVolumePct": 0.74
   },
   {
     "reservoirId": "PLAYAS",
@@ -7346,8 +7332,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 39.34,
-    "forecastUsefulVolumePct": 0.85
+    "forecastUsefulVolumeMass": 35.43,
+    "forecastUsefulVolumePct": 0.78
   },
   {
     "reservoirId": "PLAYAS",
@@ -7360,8 +7346,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 38.9,
-    "forecastUsefulVolumePct": 0.84
+    "forecastUsefulVolumeMass": 37.13,
+    "forecastUsefulVolumePct": 0.79
   },
   {
     "reservoirId": "PLAYAS",
@@ -7374,8 +7360,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 40.61,
-    "forecastUsefulVolumePct": 0.97
+    "forecastUsefulVolumeMass": 37.54,
+    "forecastUsefulVolumePct": 0.84
   },
   {
     "reservoirId": "PLAYAS",
@@ -7388,8 +7374,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 39.74,
-    "forecastUsefulVolumePct": 0.92
+    "forecastUsefulVolumeMass": 38.57,
+    "forecastUsefulVolumePct": 0.85
   },
   {
     "reservoirId": "PLAYAS",
@@ -7402,8 +7388,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 39.37,
-    "forecastUsefulVolumePct": 0.84
+    "forecastUsefulVolumeMass": 39.19,
+    "forecastUsefulVolumePct": 0.83
   },
   {
     "reservoirId": "PLAYAS",
@@ -7416,8 +7402,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 43.21,
-    "forecastUsefulVolumePct": 0.95
+    "forecastUsefulVolumeMass": 39.96,
+    "forecastUsefulVolumePct": 0.85
   },
   {
     "reservoirId": "PLAYAS",
@@ -7430,22 +7416,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 42.6,
-    "forecastUsefulVolumePct": 0.91
+    "forecastUsefulVolumeMass": 38.75,
+    "forecastUsefulVolumePct": 0.83
   },
   {
-    "reservoirId": "PORCE II",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 41.51,
-    "usefulVolumePct": 0.48,
+    "reservoirId": "PLAYAS",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 85.88,
-    "turbineVolume": 10.15,
-    "observedPrecipitation": 6.51,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 41.51,
-    "forecastUsefulVolumePct": 0.48
+    "forecastUsefulVolumeMass": 40.82,
+    "forecastUsefulVolumePct": 0.87
   },
   {
     "reservoirId": "PORCE II",
@@ -7750,7 +7736,7 @@
     "dischargeVolume": null,
     "capacityVolume": 85.88,
     "turbineVolume": 17.93,
-    "observedPrecipitation": 1.54,
+    "observedPrecipitation": 1.32,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 34.45,
     "forecastUsefulVolumePct": 0.4
@@ -7856,16 +7842,16 @@
   {
     "reservoirId": "PORCE II",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 60.44,
+    "usefulVolumePct": 0.7,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 85.88,
+    "turbineVolume": 0.23,
     "observedPrecipitation": 7.92,
-    "forecastPrecipitation": 0.52,
-    "forecastUsefulVolumeMass": 54.57,
-    "forecastUsefulVolumePct": 0.6
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 60.44,
+    "forecastUsefulVolumePct": 0.7
   },
   {
     "reservoirId": "PORCE II",
@@ -7876,10 +7862,10 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 14.4,
-    "forecastUsefulVolumeMass": 54.14,
-    "forecastUsefulVolumePct": 0.61
+    "observedPrecipitation": 15.95,
+    "forecastPrecipitation": 0.0,
+    "forecastUsefulVolumeMass": 60.97,
+    "forecastUsefulVolumePct": 0.75
   },
   {
     "reservoirId": "PORCE II",
@@ -7891,9 +7877,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 16.63,
-    "forecastUsefulVolumeMass": 54.72,
-    "forecastUsefulVolumePct": 0.59
+    "forecastPrecipitation": 11.48,
+    "forecastUsefulVolumeMass": 55.49,
+    "forecastUsefulVolumePct": 0.65
   },
   {
     "reservoirId": "PORCE II",
@@ -7905,9 +7891,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 16.81,
-    "forecastUsefulVolumeMass": 52.54,
-    "forecastUsefulVolumePct": 0.55
+    "forecastPrecipitation": 16.17,
+    "forecastUsefulVolumeMass": 55.28,
+    "forecastUsefulVolumePct": 0.62
   },
   {
     "reservoirId": "PORCE II",
@@ -7919,9 +7905,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 15.33,
-    "forecastUsefulVolumeMass": 51.36,
-    "forecastUsefulVolumePct": 0.61
+    "forecastPrecipitation": 19.44,
+    "forecastUsefulVolumeMass": 52.91,
+    "forecastUsefulVolumePct": 0.62
   },
   {
     "reservoirId": "PORCE II",
@@ -7933,9 +7919,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 10.28,
-    "forecastUsefulVolumeMass": 51.82,
-    "forecastUsefulVolumePct": 0.58
+    "forecastPrecipitation": 25.35,
+    "forecastUsefulVolumeMass": 55.02,
+    "forecastUsefulVolumePct": 0.62
   },
   {
     "reservoirId": "PORCE II",
@@ -7947,9 +7933,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 10.85,
-    "forecastUsefulVolumeMass": 50.89,
-    "forecastUsefulVolumePct": 0.59
+    "forecastPrecipitation": 10.27,
+    "forecastUsefulVolumeMass": 51.72,
+    "forecastUsefulVolumePct": 0.61
   },
   {
     "reservoirId": "PORCE II",
@@ -7961,23 +7947,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 51.91,
-    "forecastUsefulVolumePct": 0.61
+    "forecastPrecipitation": 4.18,
+    "forecastUsefulVolumeMass": 53.64,
+    "forecastUsefulVolumePct": 0.64
   },
   {
-    "reservoirId": "PORCE III",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 55.52,
-    "usefulVolumePct": 0.42,
+    "reservoirId": "PORCE II",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 131.83,
-    "turbineVolume": 19.87,
+    "capacityVolume": null,
+    "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 55.52,
-    "forecastUsefulVolumePct": 0.42
+    "forecastUsefulVolumeMass": 54.83,
+    "forecastUsefulVolumePct": 0.7
   },
   {
     "reservoirId": "PORCE III",
@@ -8388,16 +8374,16 @@
   {
     "reservoirId": "PORCE III",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 71.4,
+    "usefulVolumePct": 0.54,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 131.83,
+    "turbineVolume": 19.51,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 89.52,
-    "forecastUsefulVolumePct": 0.68
+    "forecastUsefulVolumeMass": 71.4,
+    "forecastUsefulVolumePct": 0.54
   },
   {
     "reservoirId": "PORCE III",
@@ -8410,8 +8396,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 82.54,
-    "forecastUsefulVolumePct": 0.63
+    "forecastUsefulVolumeMass": 67.48,
+    "forecastUsefulVolumePct": 0.5
   },
   {
     "reservoirId": "PORCE III",
@@ -8424,8 +8410,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 79.92,
-    "forecastUsefulVolumePct": 0.61
+    "forecastUsefulVolumeMass": 72.23,
+    "forecastUsefulVolumePct": 0.55
   },
   {
     "reservoirId": "PORCE III",
@@ -8438,8 +8424,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 78.48,
-    "forecastUsefulVolumePct": 0.59
+    "forecastUsefulVolumeMass": 68.48,
+    "forecastUsefulVolumePct": 0.52
   },
   {
     "reservoirId": "PORCE III",
@@ -8452,8 +8438,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 81.85,
-    "forecastUsefulVolumePct": 0.62
+    "forecastUsefulVolumeMass": 73.84,
+    "forecastUsefulVolumePct": 0.57
   },
   {
     "reservoirId": "PORCE III",
@@ -8466,8 +8452,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 84.29,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 76.95,
+    "forecastUsefulVolumePct": 0.59
   },
   {
     "reservoirId": "PORCE III",
@@ -8480,8 +8466,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 78.36,
-    "forecastUsefulVolumePct": 0.6
+    "forecastUsefulVolumeMass": 75.67,
+    "forecastUsefulVolumePct": 0.57
   },
   {
     "reservoirId": "PORCE III",
@@ -8494,22 +8480,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 73.3,
-    "forecastUsefulVolumePct": 0.56
+    "forecastUsefulVolumeMass": 68.62,
+    "forecastUsefulVolumePct": 0.53
   },
   {
-    "reservoirId": "PRADO",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 429.88,
-    "usefulVolumePct": 0.66,
+    "reservoirId": "PORCE III",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 653.07,
-    "turbineVolume": 8.6,
-    "observedPrecipitation": 0.13,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 429.88,
-    "forecastUsefulVolumePct": 0.66
+    "forecastUsefulVolumeMass": 64.97,
+    "forecastUsefulVolumePct": 0.49
   },
   {
     "reservoirId": "PRADO",
@@ -8814,7 +8800,7 @@
     "dischargeVolume": null,
     "capacityVolume": 653.07,
     "turbineVolume": 9.82,
-    "observedPrecipitation": 8.77,
+    "observedPrecipitation": 9.83,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 409.59,
     "forecastUsefulVolumePct": 0.63
@@ -8920,16 +8906,16 @@
   {
     "reservoirId": "PRADO",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 429.88,
+    "usefulVolumePct": 0.66,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
-    "observedPrecipitation": 0.25,
-    "forecastPrecipitation": 0.38,
-    "forecastUsefulVolumeMass": 432.08,
-    "forecastUsefulVolumePct": 0.67
+    "capacityVolume": 653.07,
+    "turbineVolume": 8.37,
+    "observedPrecipitation": 0.21,
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 429.88,
+    "forecastUsefulVolumePct": 0.66
   },
   {
     "reservoirId": "PRADO",
@@ -8940,10 +8926,10 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 15.88,
-    "forecastUsefulVolumeMass": 435.85,
-    "forecastUsefulVolumePct": 0.68
+    "observedPrecipitation": 2.53,
+    "forecastPrecipitation": 3.0,
+    "forecastUsefulVolumeMass": 430.4,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "PRADO",
@@ -8955,9 +8941,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 7.09,
-    "forecastUsefulVolumeMass": 438.11,
-    "forecastUsefulVolumePct": 0.69
+    "forecastPrecipitation": 7.63,
+    "forecastUsefulVolumeMass": 430.15,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "PRADO",
@@ -8969,9 +8955,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 6.98,
-    "forecastUsefulVolumeMass": 437.4,
-    "forecastUsefulVolumePct": 0.69
+    "forecastPrecipitation": 8.78,
+    "forecastUsefulVolumeMass": 428.72,
+    "forecastUsefulVolumePct": 0.68
   },
   {
     "reservoirId": "PRADO",
@@ -8983,8 +8969,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 4.94,
-    "forecastUsefulVolumeMass": 432.88,
+    "forecastPrecipitation": 8.69,
+    "forecastUsefulVolumeMass": 425.05,
     "forecastUsefulVolumePct": 0.68
   },
   {
@@ -8997,9 +8983,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 3.35,
-    "forecastUsefulVolumeMass": 432.09,
-    "forecastUsefulVolumePct": 0.7
+    "forecastPrecipitation": 9.76,
+    "forecastUsefulVolumeMass": 422.83,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "PRADO",
@@ -9011,9 +8997,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 2.77,
-    "forecastUsefulVolumeMass": 432.88,
-    "forecastUsefulVolumePct": 0.7
+    "forecastPrecipitation": 2.44,
+    "forecastUsefulVolumeMass": 422.0,
+    "forecastUsefulVolumePct": 0.68
   },
   {
     "reservoirId": "PRADO",
@@ -9025,23 +9011,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 432.3,
-    "forecastUsefulVolumePct": 0.69
+    "forecastPrecipitation": 1.04,
+    "forecastUsefulVolumeMass": 418.44,
+    "forecastUsefulVolumePct": 0.67
   },
   {
-    "reservoirId": "PUNCHINA",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 23.33,
-    "usefulVolumePct": 0.53,
+    "reservoirId": "PRADO",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 43.96,
-    "turbineVolume": 13.15,
+    "capacityVolume": null,
+    "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 23.33,
-    "forecastUsefulVolumePct": 0.53
+    "forecastUsefulVolumeMass": 419.64,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "PUNCHINA",
@@ -9452,16 +9438,16 @@
   {
     "reservoirId": "PUNCHINA",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 21.18,
+    "usefulVolumePct": 0.48,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 43.96,
+    "turbineVolume": 15.93,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 25.89,
-    "forecastUsefulVolumePct": 0.58
+    "forecastUsefulVolumeMass": 21.18,
+    "forecastUsefulVolumePct": 0.48
   },
   {
     "reservoirId": "PUNCHINA",
@@ -9474,8 +9460,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 25.38,
-    "forecastUsefulVolumePct": 0.56
+    "forecastUsefulVolumeMass": 21.81,
+    "forecastUsefulVolumePct": 0.48
   },
   {
     "reservoirId": "PUNCHINA",
@@ -9488,8 +9474,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 24.34,
-    "forecastUsefulVolumePct": 0.48
+    "forecastUsefulVolumeMass": 22.75,
+    "forecastUsefulVolumePct": 0.43
   },
   {
     "reservoirId": "PUNCHINA",
@@ -9502,8 +9488,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 22.3,
-    "forecastUsefulVolumePct": 0.38
+    "forecastUsefulVolumeMass": 21.36,
+    "forecastUsefulVolumePct": 0.36
   },
   {
     "reservoirId": "PUNCHINA",
@@ -9516,8 +9502,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 24.8,
-    "forecastUsefulVolumePct": 0.45
+    "forecastUsefulVolumeMass": 24.35,
+    "forecastUsefulVolumePct": 0.48
   },
   {
     "reservoirId": "PUNCHINA",
@@ -9530,8 +9516,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 22.29,
-    "forecastUsefulVolumePct": 0.47
+    "forecastUsefulVolumeMass": 20.93,
+    "forecastUsefulVolumePct": 0.43
   },
   {
     "reservoirId": "PUNCHINA",
@@ -9544,8 +9530,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 24.03,
-    "forecastUsefulVolumePct": 0.51
+    "forecastUsefulVolumeMass": 23.49,
+    "forecastUsefulVolumePct": 0.49
   },
   {
     "reservoirId": "PUNCHINA",
@@ -9558,22 +9544,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 20.59,
-    "forecastUsefulVolumePct": 0.47
+    "forecastUsefulVolumeMass": 20.12,
+    "forecastUsefulVolumePct": 0.46
   },
   {
-    "reservoirId": "RIOGRANDE2",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 123.92,
-    "usefulVolumePct": 0.9,
+    "reservoirId": "PUNCHINA",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 137.62,
-    "turbineVolume": 3.45,
+    "capacityVolume": null,
+    "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 123.92,
-    "forecastUsefulVolumePct": 0.9
+    "forecastUsefulVolumeMass": 21.8,
+    "forecastUsefulVolumePct": 0.52
   },
   {
     "reservoirId": "RIOGRANDE2",
@@ -9984,16 +9970,16 @@
   {
     "reservoirId": "RIOGRANDE2",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 118.08,
+    "usefulVolumePct": 0.86,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 137.62,
+    "turbineVolume": 0.14,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 114.38,
-    "forecastUsefulVolumePct": 0.83
+    "forecastUsefulVolumeMass": 118.08,
+    "forecastUsefulVolumePct": 0.86
   },
   {
     "reservoirId": "RIOGRANDE2",
@@ -10006,8 +9992,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 114.72,
-    "forecastUsefulVolumePct": 0.83
+    "forecastUsefulVolumeMass": 120.21,
+    "forecastUsefulVolumePct": 0.88
   },
   {
     "reservoirId": "RIOGRANDE2",
@@ -10020,8 +10006,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 114.23,
-    "forecastUsefulVolumePct": 0.84
+    "forecastUsefulVolumeMass": 120.69,
+    "forecastUsefulVolumePct": 0.88
   },
   {
     "reservoirId": "RIOGRANDE2",
@@ -10034,8 +10020,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 114.52,
-    "forecastUsefulVolumePct": 0.84
+    "forecastUsefulVolumeMass": 121.89,
+    "forecastUsefulVolumePct": 0.89
   },
   {
     "reservoirId": "RIOGRANDE2",
@@ -10048,8 +10034,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 114.49,
-    "forecastUsefulVolumePct": 0.85
+    "forecastUsefulVolumeMass": 121.82,
+    "forecastUsefulVolumePct": 0.89
   },
   {
     "reservoirId": "RIOGRANDE2",
@@ -10062,8 +10048,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 115.43,
-    "forecastUsefulVolumePct": 0.85
+    "forecastUsefulVolumeMass": 122.99,
+    "forecastUsefulVolumePct": 0.89
   },
   {
     "reservoirId": "RIOGRANDE2",
@@ -10076,8 +10062,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 115.59,
-    "forecastUsefulVolumePct": 0.86
+    "forecastUsefulVolumeMass": 123.27,
+    "forecastUsefulVolumePct": 0.89
   },
   {
     "reservoirId": "RIOGRANDE2",
@@ -10090,22 +10076,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 115.01,
-    "forecastUsefulVolumePct": 0.86
+    "forecastUsefulVolumeMass": 123.63,
+    "forecastUsefulVolumePct": 0.9
   },
   {
-    "reservoirId": "SALVAJINA",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 462.25,
-    "usefulVolumePct": 0.65,
+    "reservoirId": "RIOGRANDE2",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 715.77,
-    "turbineVolume": 19.94,
-    "observedPrecipitation": 2.07,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 462.25,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 122.74,
+    "forecastUsefulVolumePct": 0.89
   },
   {
     "reservoirId": "SALVAJINA",
@@ -10410,7 +10396,7 @@
     "dischargeVolume": null,
     "capacityVolume": 715.77,
     "turbineVolume": 13.59,
-    "observedPrecipitation": 4.14,
+    "observedPrecipitation": 6.41,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 419.16,
     "forecastUsefulVolumePct": 0.59
@@ -10480,7 +10466,7 @@
     "dischargeVolume": null,
     "capacityVolume": 715.77,
     "turbineVolume": 13.65,
-    "observedPrecipitation": 15.72,
+    "observedPrecipitation": 12.54,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 412.74,
     "forecastUsefulVolumePct": 0.58
@@ -10494,7 +10480,7 @@
     "dischargeVolume": null,
     "capacityVolume": 715.77,
     "turbineVolume": 13.66,
-    "observedPrecipitation": 2.17,
+    "observedPrecipitation": 4.41,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 411.28,
     "forecastUsefulVolumePct": 0.57
@@ -10508,7 +10494,7 @@
     "dischargeVolume": null,
     "capacityVolume": 715.77,
     "turbineVolume": 11.39,
-    "observedPrecipitation": 13.04,
+    "observedPrecipitation": 12.68,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 413.66,
     "forecastUsefulVolumePct": 0.58
@@ -10516,15 +10502,15 @@
   {
     "reservoirId": "SALVAJINA",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 413.66,
+    "usefulVolumePct": 0.58,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
-    "observedPrecipitation": 1.83,
-    "forecastPrecipitation": 0.0,
-    "forecastUsefulVolumeMass": 414.34,
+    "capacityVolume": 715.77,
+    "turbineVolume": 11.39,
+    "observedPrecipitation": 2.76,
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 413.66,
     "forecastUsefulVolumePct": 0.58
   },
   {
@@ -10536,9 +10522,9 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 19.82,
-    "forecastUsefulVolumeMass": 413.76,
+    "observedPrecipitation": 1.06,
+    "forecastPrecipitation": 0.01,
+    "forecastUsefulVolumeMass": 412.75,
     "forecastUsefulVolumePct": 0.58
   },
   {
@@ -10551,8 +10537,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 22.65,
-    "forecastUsefulVolumeMass": 414.42,
+    "forecastPrecipitation": 8.57,
+    "forecastUsefulVolumeMass": 411.48,
     "forecastUsefulVolumePct": 0.58
   },
   {
@@ -10565,8 +10551,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 11.97,
-    "forecastUsefulVolumeMass": 411.03,
+    "forecastPrecipitation": 15.05,
+    "forecastUsefulVolumeMass": 412.08,
     "forecastUsefulVolumePct": 0.58
   },
   {
@@ -10579,9 +10565,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 14.81,
-    "forecastUsefulVolumeMass": 408.02,
-    "forecastUsefulVolumePct": 0.57
+    "forecastPrecipitation": 19.96,
+    "forecastUsefulVolumeMass": 411.57,
+    "forecastUsefulVolumePct": 0.58
   },
   {
     "reservoirId": "SALVAJINA",
@@ -10593,9 +10579,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 9.25,
-    "forecastUsefulVolumeMass": 405.33,
-    "forecastUsefulVolumePct": 0.57
+    "forecastPrecipitation": 16.65,
+    "forecastUsefulVolumeMass": 409.38,
+    "forecastUsefulVolumePct": 0.58
   },
   {
     "reservoirId": "SALVAJINA",
@@ -10607,8 +10593,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 3.86,
-    "forecastUsefulVolumeMass": 405.42,
+    "forecastPrecipitation": 3.91,
+    "forecastUsefulVolumeMass": 405.23,
     "forecastUsefulVolumePct": 0.57
   },
   {
@@ -10621,23 +10607,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 402.82,
-    "forecastUsefulVolumePct": 0.58
+    "forecastPrecipitation": 8.82,
+    "forecastUsefulVolumeMass": 405.41,
+    "forecastUsefulVolumePct": 0.57
   },
   {
-    "reservoirId": "SAN LORENZO",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 133.54,
-    "usefulVolumePct": 0.83,
+    "reservoirId": "SALVAJINA",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 161.51,
-    "turbineVolume": 3.57,
+    "capacityVolume": null,
+    "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 133.54,
-    "forecastUsefulVolumePct": 0.83
+    "forecastUsefulVolumeMass": 402.47,
+    "forecastUsefulVolumePct": 0.56
   },
   {
     "reservoirId": "SAN LORENZO",
@@ -11048,16 +11034,16 @@
   {
     "reservoirId": "SAN LORENZO",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 108.71,
+    "usefulVolumePct": 0.67,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 161.51,
+    "turbineVolume": 0.43,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 107.49,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 108.71,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "SAN LORENZO",
@@ -11070,8 +11056,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 106.27,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 108.94,
+    "forecastUsefulVolumePct": 0.68
   },
   {
     "reservoirId": "SAN LORENZO",
@@ -11084,8 +11070,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 105.61,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 108.98,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "SAN LORENZO",
@@ -11098,8 +11084,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 106.45,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 109.4,
+    "forecastUsefulVolumePct": 0.68
   },
   {
     "reservoirId": "SAN LORENZO",
@@ -11112,8 +11098,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 106.52,
-    "forecastUsefulVolumePct": 0.66
+    "forecastUsefulVolumeMass": 108.56,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "SAN LORENZO",
@@ -11126,8 +11112,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 106.63,
-    "forecastUsefulVolumePct": 0.66
+    "forecastUsefulVolumeMass": 107.67,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "SAN LORENZO",
@@ -11140,8 +11126,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 105.94,
-    "forecastUsefulVolumePct": 0.64
+    "forecastUsefulVolumeMass": 106.81,
+    "forecastUsefulVolumePct": 0.66
   },
   {
     "reservoirId": "SAN LORENZO",
@@ -11154,22 +11140,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 105.73,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 108.98,
+    "forecastUsefulVolumePct": 0.68
   },
   {
-    "reservoirId": "TOPOCORO",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 2551.24,
-    "usefulVolumePct": 0.96,
+    "reservoirId": "SAN LORENZO",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 2650.65,
-    "turbineVolume": 49.34,
-    "observedPrecipitation": 3.8,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 2551.24,
-    "forecastUsefulVolumePct": 0.96
+    "forecastUsefulVolumeMass": 109.83,
+    "forecastUsefulVolumePct": 0.7
   },
   {
     "reservoirId": "TOPOCORO",
@@ -11460,7 +11446,7 @@
     "dischargeVolume": null,
     "capacityVolume": 2650.65,
     "turbineVolume": 50.33,
-    "observedPrecipitation": 1.82,
+    "observedPrecipitation": 1.8,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 2294.7,
     "forecastUsefulVolumePct": 0.87
@@ -11474,7 +11460,7 @@
     "dischargeVolume": null,
     "capacityVolume": 2650.65,
     "turbineVolume": 49.91,
-    "observedPrecipitation": 3.02,
+    "observedPrecipitation": 3.11,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 2272.67,
     "forecastUsefulVolumePct": 0.86
@@ -11558,7 +11544,7 @@
     "dischargeVolume": null,
     "capacityVolume": 2650.65,
     "turbineVolume": 51.5,
-    "observedPrecipitation": 1.15,
+    "observedPrecipitation": 1.14,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 2170.53,
     "forecastUsefulVolumePct": 0.82
@@ -11572,7 +11558,7 @@
     "dischargeVolume": null,
     "capacityVolume": 2650.65,
     "turbineVolume": 51.35,
-    "observedPrecipitation": 6.04,
+    "observedPrecipitation": 6.02,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 2161.2,
     "forecastUsefulVolumePct": 0.82
@@ -11580,16 +11566,16 @@
   {
     "reservoirId": "TOPOCORO",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 2142.06,
+    "usefulVolumePct": 0.81,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
-    "observedPrecipitation": 2.1,
-    "forecastPrecipitation": 0.62,
-    "forecastUsefulVolumeMass": 2158.97,
-    "forecastUsefulVolumePct": 0.82
+    "capacityVolume": 2650.65,
+    "turbineVolume": 51.02,
+    "observedPrecipitation": 2.08,
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 2142.06,
+    "forecastUsefulVolumePct": 0.81
   },
   {
     "reservoirId": "TOPOCORO",
@@ -11600,10 +11586,10 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 15.52,
-    "forecastUsefulVolumeMass": 2147.36,
-    "forecastUsefulVolumePct": 0.83
+    "observedPrecipitation": 2.09,
+    "forecastPrecipitation": 0.62,
+    "forecastUsefulVolumeMass": 2130.94,
+    "forecastUsefulVolumePct": 0.81
   },
   {
     "reservoirId": "TOPOCORO",
@@ -11615,9 +11601,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 20.14,
-    "forecastUsefulVolumeMass": 2133.1,
-    "forecastUsefulVolumePct": 0.82
+    "forecastPrecipitation": 16.8,
+    "forecastUsefulVolumeMass": 2099.55,
+    "forecastUsefulVolumePct": 0.8
   },
   {
     "reservoirId": "TOPOCORO",
@@ -11629,8 +11615,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 14.28,
-    "forecastUsefulVolumeMass": 2109.03,
+    "forecastPrecipitation": 15.03,
+    "forecastUsefulVolumeMass": 2111.61,
     "forecastUsefulVolumePct": 0.81
   },
   {
@@ -11643,9 +11629,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 13.38,
-    "forecastUsefulVolumeMass": 2115.69,
-    "forecastUsefulVolumePct": 0.82
+    "forecastPrecipitation": 17.84,
+    "forecastUsefulVolumeMass": 2125.08,
+    "forecastUsefulVolumePct": 0.81
   },
   {
     "reservoirId": "TOPOCORO",
@@ -11657,8 +11643,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 12.79,
-    "forecastUsefulVolumeMass": 2115.89,
+    "forecastPrecipitation": 18.31,
+    "forecastUsefulVolumeMass": 2126.62,
     "forecastUsefulVolumePct": 0.81
   },
   {
@@ -11671,8 +11657,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 12.91,
-    "forecastUsefulVolumeMass": 2096.87,
+    "forecastPrecipitation": 11.81,
+    "forecastUsefulVolumeMass": 2108.63,
     "forecastUsefulVolumePct": 0.81
   },
   {
@@ -11685,23 +11671,23 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 2091.6,
+    "forecastPrecipitation": 14.95,
+    "forecastUsefulVolumeMass": 2104.2,
     "forecastUsefulVolumePct": 0.81
   },
   {
-    "reservoirId": "TRONERAS",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 10.29,
-    "usefulVolumePct": 0.54,
+    "reservoirId": "TOPOCORO",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 19.2,
-    "turbineVolume": 1.21,
+    "capacityVolume": null,
+    "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 10.29,
-    "forecastUsefulVolumePct": 0.54
+    "forecastUsefulVolumeMass": 2099.53,
+    "forecastUsefulVolumePct": 0.8
   },
   {
     "reservoirId": "TRONERAS",
@@ -12112,16 +12098,16 @@
   {
     "reservoirId": "TRONERAS",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 13.86,
+    "usefulVolumePct": 0.72,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 19.2,
+    "turbineVolume": 3.29,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 13.06,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 13.86,
+    "forecastUsefulVolumePct": 0.72
   },
   {
     "reservoirId": "TRONERAS",
@@ -12134,8 +12120,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 13.36,
-    "forecastUsefulVolumePct": 0.71
+    "forecastUsefulVolumeMass": 13.81,
+    "forecastUsefulVolumePct": 0.72
   },
   {
     "reservoirId": "TRONERAS",
@@ -12148,8 +12134,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 13.51,
-    "forecastUsefulVolumePct": 0.69
+    "forecastUsefulVolumeMass": 13.45,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "TRONERAS",
@@ -12162,7 +12148,7 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 13.4,
+    "forecastUsefulVolumeMass": 13.52,
     "forecastUsefulVolumePct": 0.68
   },
   {
@@ -12176,8 +12162,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 13.51,
-    "forecastUsefulVolumePct": 0.78
+    "forecastUsefulVolumeMass": 14.45,
+    "forecastUsefulVolumePct": 0.77
   },
   {
     "reservoirId": "TRONERAS",
@@ -12190,8 +12176,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 13.55,
-    "forecastUsefulVolumePct": 0.73
+    "forecastUsefulVolumeMass": 13.34,
+    "forecastUsefulVolumePct": 0.72
   },
   {
     "reservoirId": "TRONERAS",
@@ -12204,8 +12190,8 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 12.5,
-    "forecastUsefulVolumePct": 0.65
+    "forecastUsefulVolumeMass": 12.84,
+    "forecastUsefulVolumePct": 0.72
   },
   {
     "reservoirId": "TRONERAS",
@@ -12218,22 +12204,22 @@
     "turbineVolume": null,
     "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 11.33,
-    "forecastUsefulVolumePct": 0.58
+    "forecastUsefulVolumeMass": 12.35,
+    "forecastUsefulVolumePct": 0.6
   },
   {
-    "reservoirId": "URRA1",
-    "timestamp": "2026-03-04 07:00",
-    "usefulVolumeMass": 1022.86,
-    "usefulVolumePct": 0.84,
+    "reservoirId": "TRONERAS",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": 1213.37,
-    "turbineVolume": 51.3,
-    "observedPrecipitation": 0.03,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 1022.86,
-    "forecastUsefulVolumePct": 0.84
+    "forecastUsefulVolumeMass": 12.07,
+    "forecastUsefulVolumePct": 0.58
   },
   {
     "reservoirId": "URRA1",
@@ -12538,7 +12524,7 @@
     "dischargeVolume": null,
     "capacityVolume": 1213.37,
     "turbineVolume": 17.74,
-    "observedPrecipitation": 4.78,
+    "observedPrecipitation": 4.95,
     "forecastPrecipitation": null,
     "forecastUsefulVolumeMass": 828.99,
     "forecastUsefulVolumePct": 0.68
@@ -12644,16 +12630,16 @@
   {
     "reservoirId": "URRA1",
     "timestamp": "2026-04-03 07:00",
-    "usefulVolumeMass": null,
-    "usefulVolumePct": null,
+    "usefulVolumeMass": 813.5,
+    "usefulVolumePct": 0.67,
     "spillVolume": null,
     "dischargeVolume": null,
-    "capacityVolume": null,
-    "turbineVolume": null,
+    "capacityVolume": 1213.37,
+    "turbineVolume": 15.74,
     "observedPrecipitation": 9.34,
-    "forecastPrecipitation": 0.0,
-    "forecastUsefulVolumeMass": 814.86,
-    "forecastUsefulVolumePct": 0.66
+    "forecastPrecipitation": null,
+    "forecastUsefulVolumeMass": 813.5,
+    "forecastUsefulVolumePct": 0.67
   },
   {
     "reservoirId": "URRA1",
@@ -12664,10 +12650,10 @@
     "dischargeVolume": null,
     "capacityVolume": null,
     "turbineVolume": null,
-    "observedPrecipitation": null,
-    "forecastPrecipitation": 0.5,
-    "forecastUsefulVolumeMass": 809.44,
-    "forecastUsefulVolumePct": 0.67
+    "observedPrecipitation": 2.66,
+    "forecastPrecipitation": 0.0,
+    "forecastUsefulVolumeMass": 807.91,
+    "forecastUsefulVolumePct": 0.66
   },
   {
     "reservoirId": "URRA1",
@@ -12679,8 +12665,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 8.96,
-    "forecastUsefulVolumeMass": 799.33,
+    "forecastPrecipitation": 7.07,
+    "forecastUsefulVolumeMass": 802.77,
     "forecastUsefulVolumePct": 0.66
   },
   {
@@ -12693,8 +12679,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 16.19,
-    "forecastUsefulVolumeMass": 787.53,
+    "forecastPrecipitation": 14.92,
+    "forecastUsefulVolumeMass": 792.34,
     "forecastUsefulVolumePct": 0.66
   },
   {
@@ -12707,8 +12693,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 22.93,
-    "forecastUsefulVolumeMass": 785.14,
+    "forecastPrecipitation": 16.66,
+    "forecastUsefulVolumeMass": 787.4,
     "forecastUsefulVolumePct": 0.66
   },
   {
@@ -12721,9 +12707,9 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 20.92,
-    "forecastUsefulVolumeMass": 788.56,
-    "forecastUsefulVolumePct": 0.64
+    "forecastPrecipitation": 27.5,
+    "forecastUsefulVolumeMass": 784.34,
+    "forecastUsefulVolumePct": 0.65
   },
   {
     "reservoirId": "URRA1",
@@ -12735,8 +12721,8 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
-    "forecastPrecipitation": 16.13,
-    "forecastUsefulVolumeMass": 783.28,
+    "forecastPrecipitation": 19.64,
+    "forecastUsefulVolumeMass": 775.52,
     "forecastUsefulVolumePct": 0.66
   },
   {
@@ -12749,8 +12735,22 @@
     "capacityVolume": null,
     "turbineVolume": null,
     "observedPrecipitation": null,
+    "forecastPrecipitation": 17.04,
+    "forecastUsefulVolumeMass": 766.01,
+    "forecastUsefulVolumePct": 0.67
+  },
+  {
+    "reservoirId": "URRA1",
+    "timestamp": "2026-04-11 07:00",
+    "usefulVolumeMass": null,
+    "usefulVolumePct": null,
+    "spillVolume": null,
+    "dischargeVolume": null,
+    "capacityVolume": null,
+    "turbineVolume": null,
+    "observedPrecipitation": null,
     "forecastPrecipitation": null,
-    "forecastUsefulVolumeMass": 770.92,
+    "forecastUsefulVolumeMass": 757.24,
     "forecastUsefulVolumePct": 0.66
   }
 ]

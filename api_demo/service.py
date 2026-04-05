@@ -360,6 +360,7 @@ class FEWSDemoService:
                     "longitude": station["longitude"],
                     "latitude": station["latitude"],
                     "riverName": station["riverName"],
+                    "forecastSummary": station.get("forecastSummary", [])
                 }
             )
 
