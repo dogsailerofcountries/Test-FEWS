@@ -1,8 +1,13 @@
 export function createStore(provider) {
   let activeProvider = provider;
+  const initialTheme = localStorage.getItem("fews-theme") || "light";
+  const initialFavorites = JSON.parse(localStorage.getItem("fews-favorites") || "[]");
+
   const state = {
     view: "overview",
     language: "es",
+    theme: initialTheme,
+    favorites: initialFavorites,
     loaded: {
       overview: false,
       stations: false,
@@ -29,6 +34,9 @@ export function createStore(provider) {
       department: "",
     },
   };
+
+  // Set initial theme on the document
+  document.documentElement.setAttribute("data-theme", state.theme);
 
   return {
     state,
@@ -60,7 +68,23 @@ export function createStore(provider) {
       state.language = language;
       activeProvider.setLanguage(language);
     },
-    setView(view) { state.view = view; },
+    setTheme(theme) {
+      state.theme = theme;
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("fews-theme", theme);
+    },
+    toggleFavorite(stationId) {
+      const index = state.favorites.indexOf(stationId);
+      if (index === -1) {
+        state.favorites.push(stationId);
+      } else {
+        state.favorites.splice(index, 1);
+      }
+      localStorage.setItem("fews-favorites", JSON.stringify(state.favorites));
+    },
+    setView(view) { 
+      state.view = view; 
+    },
     setSearch(search) { state.search = search; },
     setFilter(key, value) { state.filters[key] = value; },
     setSelectedStation(stationId) { state.selectedStationId = stationId; },

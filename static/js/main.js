@@ -1,7 +1,7 @@
-import { createI18n } from "./i18n-next.js";
+import { createI18n } from "./i18n.js";
 import { BackendProvider, DirectSourceProvider } from "./providers.js";
 import { createStore } from "./store.js";
-import { applyStaticTranslations, renderAlerts, renderMap, renderOverview, renderPurpose, renderReservoirs, renderSources, renderStations, renderStationDetail, renderTopbar, updateVisibleView } from "./renderers-next.js";
+import { applyStaticTranslations, renderAlerts, renderMap, renderOverview, renderPurpose, renderReservoirs, renderSources, renderStations, renderStationDetail, renderTopbar, updateVisibleView } from "./renderers.js";
 
 const i18n = createI18n("es");
 const backendProvider = new BackendProvider("es");
@@ -24,10 +24,21 @@ function renderActiveView() {
   applyStaticTranslations({ state, i18n });
   renderTopbar({ state, i18n });
   updateVisibleView(state);
-  if (state.view === "overview") renderOverview({ state, i18n });
+  
+  const onPinToggle = (stationId) => {
+    store.toggleFavorite(stationId);
+    renderActiveView();
+  };
+
+  if (state.view === "overview") renderOverview({ state, i18n, onPinToggle });
   if (state.view === "purpose") renderPurpose({ i18n });
-  if (state.view === "stations") renderStations({ state, i18n, onStationSelect(stationId) { store.setSelectedStation(stationId); renderView("station-detail"); } });
-  if (state.view === "station-detail") renderStationDetail({ state, i18n });
+  if (state.view === "stations") renderStations({ 
+    state, 
+    i18n, 
+    onStationSelect(stationId) { store.setSelectedStation(stationId); renderView("station-detail"); },
+    onPinToggle
+  });
+  if (state.view === "station-detail") renderStationDetail({ state, i18n, onPinToggle });
   if (state.view === "alerts") renderAlerts({ state, i18n });
   if (state.view === "reservoirs") renderReservoirs({ state, i18n });
   if (state.view === "sources") renderSources({ state, i18n });
@@ -48,12 +59,27 @@ function renderActiveView() {
 }
 
 async function renderView(view) {
+  const loadingBar = document.getElementById("loadingBar");
+  if (loadingBar) loadingBar.classList.add("active");
+  
   store.setView(view);
   await ensureDataForView(view);
+  
+  if (loadingBar) {
+    loadingBar.classList.remove("active");
+    loadingBar.classList.add("done");
+    setTimeout(() => {
+        loadingBar.classList.remove("done");
+    }, 400);
+  }
   renderActiveView();
 }
 
 function bindEvents() {
+  // Sync the theme buttons on load
+  document.querySelectorAll(".theme-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.themeId === store.state.theme);
+  });
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", (event) => {
       const language = event.target.dataset.lang;
@@ -62,6 +88,16 @@ function bindEvents() {
       i18n.setLanguage(language);
       backendProvider.setLanguage(language);
       directProvider.setLanguage(language);
+      renderActiveView();
+    });
+  });
+
+  document.querySelectorAll(".theme-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.themeId === store.state.theme);
+    btn.addEventListener("click", () => {
+      const theme = btn.dataset.themeId;
+      store.setTheme(theme);
+      document.querySelectorAll(".theme-btn").forEach(b => b.classList.toggle("active", b.dataset.themeId === theme));
       renderActiveView();
     });
   });

@@ -18,6 +18,17 @@
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+:root[data-theme="dark"] {
+  --bg: #0f172a;
+  --panel: rgba(30, 41, 59, 0.7);
+  --panel-strong: #1e293b;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --line: rgba(51, 65, 85, 0.5);
+  --shadow: 0 10px 40px -10px rgba(0,0,0,0.3);
+  --shadow-hover: 0 20px 40px -15px rgba(0,0,0,0.4);
+}
+
 * { box-sizing: border-box; }
 
 body {
@@ -474,4 +485,139 @@ tbody tr:hover td:first-child::before { opacity: 1; left: 14px; }
   min-width: 4px;
   border-radius: 2px 2px 0 0;
   transition: height 0.3s ease;
+}
+
+/* Dark Mode Overrides for UI Elements */
+:root[data-theme='dark'] .stat-card,
+:root[data-theme='dark'] .list-item,
+:root[data-theme='dark'] .source-item,
+:root[data-theme='dark'] .detail-section,
+:root[data-theme='dark'] select,
+:root[data-theme='dark'] input[type='search'],
+:root[data-theme='dark'] table {
+  background: var(--panel-strong);
+  color: var(--text);
+  border-color: var(--line);
+}
+
+:root[data-theme='dark'] .meta-card {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: var(--line);
+}
+
+:root[data-theme='dark'] .hero-panel {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  border-color: var(--line);
+}
+
+:root[data-theme='dark'] tbody tr:hover, 
+:root[data-theme='dark'] tbody tr.selected {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+:root[data-theme='dark'] .skeleton {
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+}
+
+/* Pin / Favorite Styles */
+.btn-pin {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  border-radius: 50%;
+  opacity: 0.8;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+.btn-pin:hover {
+  background: rgba(14, 165, 233, 0.2);
+  color: var(--brand);
+  opacity: 1;
+}
+
+.btn-pin.is-active {
+  color: #f59e0b; /* Yellow/Gold */
+  opacity: 1;
+}
+
+.pin-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Global Loading Bar */
+.loading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #38bdf8;
+  z-index: 10000;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  width: 0;
+  opacity: 0;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.loading-bar.active {
+  opacity: 1;
+  width: 30%;
+}
+
+.loading-bar.done {
+  width: 100%;
+  opacity: 0;
+}
+
+/* Theme Toggle styles */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 4px;
+  margin-top: 12px;
+}
+
+.theme-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: rgba(255,255,255,0.6);
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.theme-btn.active {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+.theme-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Glass panel background in dark mode */
+:root[data-theme='dark'] .glass-panel {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
 }

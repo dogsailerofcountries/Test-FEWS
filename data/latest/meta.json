@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-05T01:33:38.607490+00:00",
+  "generatedAt": "2026-04-05T02:31:51.845543+00:00",
   "sourceStatuses": [
     {
       "id": "stations",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/ReporteTablaEstaciones.json",
       "status": "ok",
-      "lastAttemptAt": "2026-04-05T01:33:40.089453+00:00",
-      "lastSuccessAt": "2026-04-05T01:33:40.089456+00:00",
-      "latencyMs": 1481.9,
+      "lastAttemptAt": "2026-04-05T02:31:52.844405+00:00",
+      "lastSuccessAt": "2026-04-05T02:31:52.844408+00:00",
+      "latencyMs": 998.83,
       "snapshotAgeSeconds": 0,
       "error": null
     },
@@ -15,9 +15,9 @@
       "id": "alerts_subzones",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SZH_Alertas_Pobs.json",
       "status": "ok",
-      "lastAttemptAt": "2026-04-05T01:33:54.915854+00:00",
-      "lastSuccessAt": "2026-04-05T01:33:54.915856+00:00",
-      "latencyMs": 14826.39,
+      "lastAttemptAt": "2026-04-05T02:32:05.897984+00:00",
+      "lastSuccessAt": "2026-04-05T02:32:05.897986+00:00",
+      "latencyMs": 13053.56,
       "snapshotAgeSeconds": 0,
       "error": null
     },
@@ -25,9 +25,9 @@
       "id": "forecast_hq",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SeriesPronosticoHQ.csv",
       "status": "ok",
-      "lastAttemptAt": "2026-04-05T01:33:55.903453+00:00",
-      "lastSuccessAt": "2026-04-05T01:33:55.903455+00:00",
-      "latencyMs": 987.59,
+      "lastAttemptAt": "2026-04-05T02:32:06.921135+00:00",
+      "lastSuccessAt": "2026-04-05T02:32:06.921137+00:00",
+      "latencyMs": 1023.14,
       "snapshotAgeSeconds": 0,
       "error": null
     },
@@ -35,9 +35,9 @@
       "id": "reservoirs",
       "name": "https://fews.ideam.gov.co/visorfews/descargas/SeriesEmbalses.csv",
       "status": "ok",
-      "lastAttemptAt": "2026-04-05T01:33:56.398534+00:00",
-      "lastSuccessAt": "2026-04-05T01:33:56.398536+00:00",
-      "latencyMs": 495.07,
+      "lastAttemptAt": "2026-04-05T02:32:07.467086+00:00",
+      "lastSuccessAt": "2026-04-05T02:32:07.467088+00:00",
+      "latencyMs": 545.94,
       "snapshotAgeSeconds": 0,
       "error": null
     },
@@ -45,9 +45,9 @@
       "id": "subzone_pobs",
       "name": "https://fews.ideam.gov.co/visorfews/data/SZH_Pobs.json",
       "status": "ok",
-      "lastAttemptAt": "2026-04-05T01:34:12.093137+00:00",
-      "lastSuccessAt": "2026-04-05T01:34:12.093140+00:00",
-      "latencyMs": 15694.59,
+      "lastAttemptAt": "2026-04-05T02:32:28.651521+00:00",
+      "lastSuccessAt": "2026-04-05T02:32:28.651524+00:00",
+      "latencyMs": 21184.43,
       "snapshotAgeSeconds": 0,
       "error": null
     },
@@ -55,9 +55,9 @@
       "id": "water_shortage",
       "name": "https://fews.ideam.gov.co/visorfews/data/Desabastecimiento.json",
       "status": "ok",
-      "lastAttemptAt": "2026-04-05T01:34:50.984771+00:00",
-      "lastSuccessAt": "2026-04-05T01:34:50.984773+00:00",
-      "latencyMs": 38891.61,
+      "lastAttemptAt": "2026-04-05T02:33:04.799071+00:00",
+      "lastSuccessAt": "2026-04-05T02:33:04.799072+00:00",
+      "latencyMs": 36147.54,
       "snapshotAgeSeconds": 0,
       "error": null
     }
