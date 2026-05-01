@@ -12,7 +12,7 @@ function alertFillColor(status) {
   switch (status) {
     case "red": return "#ef4444";
     case "orange": return "#f97316";
-    case "yellow": return "#eab308";
+    case "yellow": return "#f59e0b";
     case "normal": return "#ffffff";
     default: return "#94a3b8";
   }
@@ -22,7 +22,7 @@ function stationFillColor(status) {
   switch (status) {
     case "red": return "#ef4444";
     case "orange": return "#f97316";
-    case "yellow": return "#eab308";
+    case "yellow": return "#f59e0b";
     case "normal": return "#10b981";
     default: return "#94a3b8";
   }
@@ -48,45 +48,39 @@ function ensureMap(target) {
     zoom: 5,
     minZoom: 4,
     maxZoom: 12,
+    zoomControl: false // Custom position later or just leave out for cleaner look
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
-    subdomains: 'abcd',
-    maxZoom: 20
+  // Natural "Real World" Theme (Esri World Topo)
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
+    maxZoom: 18
   }).addTo(map);
+
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
 
   mapState.alertsLayer = L.layerGroup().addTo(map);
   
-  // Initialize MarkerCluster
+  // Initialize MarkerCluster with custom styling
   mapState.stationsLayer = L.markerClusterGroup({
     disableClusteringAtZoom: 10,
     maxClusterRadius: 40,
     spiderfyOnMaxZoom: true,
-    showCoverageOnHover: false
+    showCoverageOnHover: false,
+    iconCreateFunction: function(cluster) {
+      const count = cluster.getChildCount();
+      return L.divIcon({
+        html: `<div class="bg-primary/20 backdrop-blur-md border border-primary/40 text-primary rounded-full w-10 h-10 flex items-center justify-center font-black text-xs shadow-lg shadow-primary/20">${count}</div>`,
+        className: 'cluster-icon',
+        iconSize: [40, 40]
+      });
+    }
   }).addTo(map);
   
   mapState.mapInstance = map;
   mapState.target = target;
   mapState.extraLayerMap = new Map();
   
-  // Set up filter buttons
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const el = e.currentTarget;
-      const color = el.getAttribute('data-color');
-      if (el.classList.contains('active')) {
-        el.classList.remove('active');
-        mapState.activeFilters.delete(color);
-      } else {
-        el.classList.add('active');
-        mapState.activeFilters.add(color);
-      }
-      // Re-trigger render logic via custom event or just recall drawStations if we stored stations
-      window.dispatchEvent(new CustomEvent('mapFiltersChanged'));
-    });
-  });
-
   return Promise.resolve(map);
 }
 
@@ -104,73 +98,83 @@ function drawAlerts(alerts, layerGroup) {
     
     const poly = L.polygon(latLngs, {
       color: color,
-      weight: 1.5,
-      opacity: 0.8,
+      weight: 2,
+      opacity: 0.6,
       fillColor: color,
-      fillOpacity: 0.35,
+      fillOpacity: 0.15,
       className: 'map-alert'
     });
 
     const tooltipContent = `
-      <div style="font-family: 'Inter', sans-serif;">
-        <strong>${alert.subzoneName || '--'}</strong><br/>
-        <span style="color:#64748b; font-size:0.85em;">Zone: ${alert.zoneName || '--'}</span><br/>
-        <span style="font-weight:600; text-transform:uppercase; font-size:0.8em; color:${color}">${alert.severity || 'No Data'}</span>
+      <div class="glass-card p-3 rounded-xl border border-white/20 text-slate-900 dark:text-white min-w-[150px]">
+        <div class="text-[9px] font-black uppercase tracking-widest text-slate-500 dark:text-white/50 mb-1">Alerta Subzona</div>
+        <strong class="font-outfit block mb-1">${alert.subzoneName || '--'}</strong>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full" style="background-color: ${color}"></span>
+          <span class="text-[10px] font-bold uppercase tracking-tighter" style="color: ${color}">${alert.severity || 'No Data'}</span>
+        </div>
       </div>
     `;
     
-    poly.bindTooltip(tooltipContent);
+    poly.bindTooltip(tooltipContent, { sticky: true, className: 'map-glass-tooltip', direction: 'top', offset: [0, -10] });
     poly.addTo(layerGroup);
   });
 }
 
 function generateSparklineHTML(forecasts) {
   if (!forecasts || forecasts.length === 0) return '';
-  // simple absolute heights based on array values relative to max
   const levels = forecasts.map(f => f.forecastLevel || 0);
   const max = Math.max(...levels) || 1;
   const bars = levels.map(val => {
     const heightPct = Math.max(10, (val / max) * 100);
-    return `<div class="sparkline-bar" style="height: ${heightPct}%"></div>`;
+    return `<div class="w-1 bg-primary/40 rounded-full" style="height: ${heightPct}%"></div>`;
   }).join('');
   
-  return `<div style="font-size: 0.75rem; font-weight: 600; margin-top: 6px; color: #475569;">Nivel (Pronóstico)</div>
-          <div class="sparkline-container">${bars}</div>`;
+  return `
+    <div class="mt-3 pt-3 border-t border-slate-200 dark:border-white/10">
+      <div class="text-[8px] font-black uppercase text-slate-400 dark:text-white/40 mb-2">Pronóstico 72h</div>
+      <div class="flex items-end gap-0.5 h-8">${bars}</div>
+    </div>
+  `;
 }
 
 function drawStations(stations, layerGroup) {
   layerGroup.clearLayers();
   
-  // Filter stations client-side
   const filtered = stations.filter(s => mapState.activeFilters.has(s.status || 'no_data'));
 
   filtered.forEach(station => {
     if (station.longitude == null || station.latitude == null) return;
     
     const color = stationFillColor(station.status || "no_data");
+    const isNormal = station.status === "normal";
     
     const circle = L.circleMarker([station.latitude, station.longitude], {
-      radius: station.status === "normal" ? 5 : 7,
+      radius: isNormal ? 5 : 7,
       fillColor: color,
-      color: '#ffffff',
+      color: isNormal ? 'transparent' : '#ffffff',
       weight: 1.5,
-      opacity: 0.9,
-      fillOpacity: 0.9,
-      className: 'map-point'
+      opacity: 1,
+      fillOpacity: 1,
+      className: `map-point status-${station.status}`
     });
 
     const sparklineHtml = generateSparklineHTML(station.forecastSummary);
 
     const tooltipContent = `
-      <div style="font-family: 'Inter', sans-serif; min-width: 120px;">
-        <strong>${station.stationName || '--'}</strong><br/>
-        <span style="color:#64748b; font-size:0.85em;">River: ${station.riverName || '--'}</span><br/>
-        <span style="font-weight:600; text-transform:uppercase; font-size:0.8em; color:${color}">${station.status || 'No Data'}</span>
+      <div class="glass-card p-4 rounded-2xl border border-white/20 text-slate-900 dark:text-white min-w-[180px]">
+        <div class="text-[9px] font-black uppercase tracking-widest text-slate-500 dark:text-white/50 mb-1">${station.stationId}</div>
+        <strong class="font-outfit text-base block mb-1">${station.stationName || '--'}</strong>
+        <div class="flex items-center justify-between">
+           <span class="text-[10px] font-medium text-slate-500 dark:text-white/70">${station.riverName || '--'}</span>
+           <span class="pill status-${station.status} text-[8px] py-0.5 px-2">${station.status}</span>
+        </div>
         ${sparklineHtml}
+        <div class="mt-3 text-[9px] text-primary font-bold">Clic para más detalles →</div>
       </div>
     `;
     
-    circle.bindTooltip(tooltipContent, { className: 'custom-tooltip' });
+    circle.bindTooltip(tooltipContent, { className: 'map-glass-tooltip', direction: 'top', offset: [0, -5] });
     circle.on('click', () => {
       window.dispatchEvent(new CustomEvent('stationSelect', { detail: station.stationId }));
     });
@@ -178,22 +182,17 @@ function drawStations(stations, layerGroup) {
   });
 }
 
-// Keep a local ref to latest stations for filtering
 let currentStations = [];
 
 export async function renderLightMap({ mapSummary, target, t, layerVisibility = { alerts: true, stations: true } }) {
   const stations = mapSummary?.stations || [];
   const alerts = mapSummary?.alerts || [];
   
-  currentStations = stations; // stash it
+  currentStations = stations;
 
   if (!stations.length && !alerts.length) {
-    target.innerHTML = `<div class="empty-state">${t("labels.noMapData")}</div>`;
+    target.innerHTML = `<div class="h-full flex items-center justify-center text-slate-400 font-medium">${t("labels.noMapData")}</div>`;
     return;
-  }
-
-  if (target.innerHTML.includes('empty-state')) {
-    target.innerHTML = '';
   }
 
   try {
@@ -202,9 +201,8 @@ export async function renderLightMap({ mapSummary, target, t, layerVisibility = 
 
     setTimeout(() => {
       if (map) map.invalidateSize();
-    }, 200);
+    }, 500);
     
-    // We bind a one-time global listener for the filter change to redraw immediately if map is active
     if (!window._fewsFiltersBound) {
       window.addEventListener('mapFiltersChanged', () => {
         if (mapState.stationsLayer) {
@@ -214,8 +212,8 @@ export async function renderLightMap({ mapSummary, target, t, layerVisibility = 
       window._fewsFiltersBound = true;
     }
 
-    if (arcgisState?.dataSignature !== dataSignature) {
-      if (typeof window.arcgisState !== 'undefined') window.arcgisState.dataSignature = dataSignature;
+    if (mapState.dataSignature !== dataSignature) {
+      mapState.dataSignature = dataSignature;
       drawAlerts(alerts, mapState.alertsLayer);
       drawStations(stations, mapState.stationsLayer);
 
@@ -232,11 +230,10 @@ export async function renderLightMap({ mapSummary, target, t, layerVisibility = 
       });
       
       if (bounds.isValid()) {
-        map.fitBounds(bounds, { padding: [30, 30], maxZoom: 10 });
+        map.fitBounds(bounds, { padding: [50, 50], maxZoom: 10 });
       }
     }
 
-    // Toggle visibility based on layerVisibility proxy state
     if (layerVisibility.alerts === false) {
       map.removeLayer(mapState.alertsLayer);
     } else if (!map.hasLayer(mapState.alertsLayer)) {
@@ -245,15 +242,11 @@ export async function renderLightMap({ mapSummary, target, t, layerVisibility = 
 
     if (layerVisibility.stations === false) {
       map.removeLayer(mapState.stationsLayer);
-      document.querySelector('.map-controls').style.display = 'none';
-    } else {
-      if (!map.hasLayer(mapState.stationsLayer)) map.addLayer(mapState.stationsLayer);
-      document.querySelector('.map-controls').style.display = 'block';
+    } else if (!map.hasLayer(mapState.stationsLayer)) {
+      map.addLayer(mapState.stationsLayer);
     }
   } catch (error) {
     console.warn("Leaflet error:", error);
-    target.innerHTML = `<div class="empty-state">Map Error: ${error.message}</div>`;
+    target.innerHTML = `<div class="h-full flex items-center justify-center text-red-400">Map Error: ${error.message}</div>`;
   }
 }
-
-const arcgisState = { dataSignature: null };

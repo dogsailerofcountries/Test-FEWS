@@ -5,21 +5,22 @@ function severityClass(status) {
 }
 
 function getAlertIcon(status) {
-  if (status === 'red' || status === 'orange' || status === 'yellow') {
-    return `<svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>`;
-  }
-  return '';
+  const icons = {
+    red: 'report',
+    orange: 'warning',
+    yellow: 'error',
+    normal: 'check_circle',
+    no_data: 'help'
+  };
+  return `<span class="material-symbols-outlined text-[14px]" data-icon="${icons[status] || 'info'}">${icons[status] || 'info'}</span>`;
 }
 
 function getFavoriteIcon(isFavorite) {
-  if (isFavorite) {
-    return `<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
-  }
-  return `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>`;
+  return `<span class="material-symbols-outlined ${isFavorite ? 'text-caution' : 'text-slate-300'}" style="font-variation-settings: 'FILL' ${isFavorite ? 1 : 0};">${isFavorite ? 'star' : 'star_outline'}</span>`;
 }
 
 function getPinButton(stationId, isFavorite) {
-  return `<button class="btn-pin ${isFavorite ? 'is-active' : ''}" data-station-id="${stationId}" title="Pin station">
+  return `<button class="p-2 rounded-full hover:bg-slate-100 transition-all btn-pin" data-station-id="${stationId}" title="Pin station">
     ${getFavoriteIcon(isFavorite)}
   </button>`;
 }
@@ -115,42 +116,58 @@ export function renderOverview({ state, i18n, onPinToggle }) {
   const t = i18n.t.bind(i18n);
 
   if (!state.loaded.overview) {
-    document.getElementById("overviewStats").innerHTML = '<article class="stat-card skeleton"></article>'.repeat(6);
-    document.getElementById("highlightedStations").innerHTML = '<div class="list-item skeleton" style="height:86px;"></div>'.repeat(3);
-    document.getElementById("overviewAlerts").innerHTML = '<div class="list-item skeleton" style="height:86px;"></div>'.repeat(3);
+    document.getElementById("overviewStats").innerHTML = '<article class="glass-card rounded-2xl p-6 h-24 animate-pulse"></article>'.repeat(6);
+    document.getElementById("highlightedStations").innerHTML = '<div class="h-20 bg-slate-50 rounded-xl animate-pulse"></div>'.repeat(3);
+    document.getElementById("overviewAlerts").innerHTML = '<div class="h-20 bg-slate-50 rounded-xl animate-pulse"></div>'.repeat(3);
     return;
   }
 
   document.getElementById("severityLegend").innerHTML = ["red", "orange", "yellow", "normal", "no_data"]
-    .map((status) => `<span class="pill ${severityClass(status)}">${getAlertIcon(status)}${t(`statLabels.${status}`)}</span>`)
+    .map((status) => `<span class="pill ${severityClass(status)} bg-white/20 backdrop-blur-md border-white/30 text-white">${getAlertIcon(status)} ${t(`statLabels.${status}`)}</span>`)
     .join("");
 
   const stats = state.overview?.stationCounts ?? {};
   const cards = [
-    ["red", stats.red ?? 0],
-    ["orange", stats.orange ?? 0],
-    ["yellow", stats.yellow ?? 0],
-    ["normal", stats.normal ?? 0],
-    ["total", state.overview?.stationTotal ?? 0],
-    ["reservoirs", state.overview?.reservoirTotal ?? 0]
+    { key: "red", value: stats.red ?? 0, icon: "warning", color: "text-error" },
+    { key: "orange", value: stats.orange ?? 0, icon: "error", color: "text-warning" },
+    { key: "yellow", value: stats.yellow ?? 0, icon: "report", color: "text-caution" },
+    { key: "normal", value: stats.normal ?? 0, icon: "check_circle", color: "text-success" },
+    { key: "total", value: state.overview?.stationTotal ?? 0, icon: "lan", color: "text-primary" },
+    { key: "reservoirs", value: state.overview?.reservoirTotal ?? 0, icon: "water_full", color: "text-sky-400" }
   ];
 
   document.getElementById("overviewStats").innerHTML = cards
-    .map(([key, value]) => `<article class="stat-card"><div class="small-note">${t(`statLabels.${key}`)}</div><div class="value">${i18n.formatNumber(value, 0)}</div></article>`)
+    .map((card) => `
+      <article class="glass-card rounded-2xl p-6 flex flex-col items-center text-center group hover:scale-105 transition-all">
+        <span class="material-symbols-outlined ${card.color} text-2xl mb-2" data-icon="${card.icon}">${card.icon}</span>
+        <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">${t(`statLabels.${card.key}`)}</div>
+        <div class="text-2xl font-black font-outfit text-slate-900">${i18n.formatNumber(card.value, 0)}</div>
+      </article>
+    `)
     .join("");
 
-  // Split highlighted stations: pinned first
   const pins = state.favorites || [];
   const stations = state.overview?.highlightedStations || [];
-  const pinnedStations = stations.filter(s => pins.includes(s.stationId));
-  const otherStations = stations.filter(s => !pins.includes(s.stationId));
-  const sortedHighlighted = [...pinnedStations, ...otherStations];
+  const sortedHighlighted = [...stations].sort((a, b) => (pins.includes(b.stationId) ? 1 : 0) - (pins.includes(a.stationId) ? 1 : 0));
 
   const highlightedEl = document.getElementById("highlightedStations");
   highlightedEl.innerHTML = sortedHighlighted
     .map((station) => {
       const isFav = pins.includes(station.stationId);
-      return `<article class="list-item"><div class="panel-head"><h4>${safeText(station.stationName)}</h4><div class="pin-container">${getPinButton(station.stationId, isFav)}<span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)}${station.statusLabel || t(`statLabels.${station.status}`)}</span></div></div><div class="list-meta">${safeText(station.riverName)} · ${safeText(station.municipality)}, ${safeText(station.department)}</div></article>`;
+      return `
+        <article class="flex items-center gap-4 p-4 rounded-2xl border border-slate-100 hover:bg-slate-50 transition-all group">
+          <div class="flex-1">
+            <div class="flex justify-between items-start mb-1">
+              <h4 class="font-outfit font-bold text-slate-900">${safeText(station.stationName)}</h4>
+              <span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)} ${station.statusLabel || t(`statLabels.${station.status}`)}</span>
+            </div>
+            <p class="text-xs text-slate-400">${safeText(station.riverName)} · ${safeText(station.municipality)}, ${safeText(station.department)}</p>
+          </div>
+          <div class="flex flex-col gap-2">
+            ${getPinButton(station.stationId, isFav)}
+          </div>
+        </article>
+      `;
     })
     .join("");
 
@@ -162,7 +179,23 @@ export function renderOverview({ state, i18n, onPinToggle }) {
   });
 
   document.getElementById("overviewAlerts").innerHTML = (state.overview?.activeAlerts || [])
-    .map((alert) => `<article class="list-item"><div class="panel-head"><h4>${safeText(alert.subzoneName)}</h4><span class="pill ${severityClass(alert.severity)}">${getAlertIcon(alert.severity)}${alert.severityLabel || t(`statLabels.${alert.severity}`)}</span></div><div class="list-meta">${safeText(alert.zoneName)} · ${i18n.formatDate(alert.issuedAt)}</div></article>`)
+    .map((alert) => `
+      <article class="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+        <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm">
+          <span class="material-symbols-outlined ${severityClass(alert.severity).replace('status-', 'text-')}" data-icon="report">${severityClass(alert.severity) === 'status-normal' ? 'check_circle' : 'report'}</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex justify-between items-start">
+            <h4 class="font-bold text-sm text-slate-900">${safeText(alert.subzoneName)}</h4>
+            <span class="text-[9px] font-black text-slate-400 uppercase">${i18n.formatDate(alert.issuedAt)}</span>
+          </div>
+          <p class="text-xs text-slate-500 mt-1">${safeText(alert.zoneName)}</p>
+          <div class="mt-2">
+            <span class="pill ${severityClass(alert.severity)}">${alert.severityLabel || t(`statLabels.${alert.severity}`)}</span>
+          </div>
+        </div>
+      </article>
+    `)
     .join("");
 }
 
@@ -181,7 +214,7 @@ export function renderStations({ state, i18n, onStationSelect, onPinToggle }) {
 
   if (!state.loaded.stations) {
     document.getElementById("stationsCount").textContent = "...";
-    document.getElementById("stationsTableBody").innerHTML = '<tr><td colspan="4" class="skeleton" style="height:60px;"></td></tr>'.repeat(10);
+    document.getElementById("stationsTableBody").innerHTML = '<tr><td colspan="5" class="p-8"><div class="h-12 bg-slate-50 animate-pulse rounded-xl"></div></td></tr>'.repeat(5);
     return;
   }
 
@@ -221,12 +254,12 @@ export function renderStations({ state, i18n, onStationSelect, onPinToggle }) {
   body.innerHTML = stations
     .map((station) => {
        const isFav = pins.includes(station.stationId);
-       return `<tr data-station-id="${station.stationId}" class="${state.selectedStationId === station.stationId ? "selected" : ""}">
-         <td style="width: 48px; border-right: none;">${getPinButton(station.stationId, isFav)}</td>
-         <td style="padding-left: 0;"><strong>${safeText(station.stationName)}</strong><br /><span class="small-note">${safeText(station.stationId)}</span></td>
-         <td>${safeText(station.riverName)}</td>
-         <td>${safeText(station.municipality)}, ${safeText(station.department)}</td>
-         <td><span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)}${station.statusLabel || t(`statLabels.${station.status}`)}</span></td>
+       return `<tr data-station-id="${station.stationId}" class="group cursor-pointer hover:bg-slate-50 transition-all ${state.selectedStationId === station.stationId ? "selected bg-primary/5" : ""}">
+         <td class="p-6">${getPinButton(station.stationId, isFav)}</td>
+         <td class="p-6"><strong class="text-slate-900 font-bold block mb-1">${safeText(station.stationName)}</strong><span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">${safeText(station.stationId)}</span></td>
+         <td class="p-6 text-sm text-slate-500">${safeText(station.riverName)}</td>
+         <td class="p-6 text-sm text-slate-500">${safeText(station.municipality)}, ${safeText(station.department)}</td>
+         <td class="p-6"><span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)} ${station.statusLabel || t(`statLabels.${station.status}`)}</span></td>
        </tr>`;
     })
     .join("");
@@ -245,6 +278,7 @@ export function renderStations({ state, i18n, onStationSelect, onPinToggle }) {
 
   if (!station) {
     empty.classList.remove("hidden");
+    empty.querySelector("p").textContent = t("stationDetailEmpty");
     detail.classList.add("hidden");
     return;
   }
@@ -254,7 +288,62 @@ export function renderStations({ state, i18n, onStationSelect, onPinToggle }) {
 
   const isFav = (state.favorites || []).includes(station.stationId);
 
-  detail.innerHTML = `<section class="detail-section"><div class="panel-head"><h4>${safeText(station.stationName)}</h4><div class="pin-container">${getPinButton(station.stationId, isFav)}<span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)}${station.statusLabel || t(`statLabels.${station.status}`)}</span></div></div><div class="detail-grid"><div><div class="detail-key">${t("labels.river")}</div><div class="detail-value">${safeText(station.riverName)}</div></div><div><div class="detail-key">${t("labels.subzone")}</div><div class="detail-value">${safeText(station.subzoneName)}</div></div><div><div class="detail-key">${t("labels.zone")}</div><div class="detail-value">${safeText(station.zoneName)}</div></div><div><div class="detail-key">${t("labels.municipality")}</div><div class="detail-value">${safeText(station.municipality)}</div></div><div><div class="detail-key">${t("labels.department")}</div><div class="detail-value">${safeText(station.department)}</div></div><div><div class="detail-key">${t("labels.altitude")}</div><div class="detail-value">${i18n.formatNumber(station.altitude, 0)}</div></div><div><div class="detail-key">${t("labels.category")}</div><div class="detail-value">${safeText(station.category)}</div></div><div><div class="detail-key">ID</div><div class="detail-value">${safeText(station.stationId)}</div></div></div></section><section class="detail-section"><h4>${t("labels.source")}</h4><div class="detail-grid"><div><div class="detail-key">${t("labels.currentObserved")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelObserved)}</div></div><div><div class="detail-key">${t("labels.currentSensor")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelSensor)}</div></div></div></section><section class="detail-section"><h4>${t("labels.thresholds")}</h4><div class="detail-grid"><div><div class="detail-key">${t("statLabels.yellow")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.yellow)}</div></div><div><div class="detail-key">${t("statLabels.orange")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.orange)}</div></div><div><div class="detail-key">${t("statLabels.red")}</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.red)}</div></div><div><div class="detail-key">Bajos</div><div class="detail-value">${i18n.formatNumber(station.thresholds?.low)}</div></div></div></section>`;
+  detail.innerHTML = `
+    <section class="glass-card rounded-3xl p-8 space-y-6">
+      <div class="flex justify-between items-start">
+        <div>
+          <h4 class="font-outfit text-2xl font-black text-slate-900">${safeText(station.stationName)}</h4>
+          <p class="text-xs text-slate-500 font-medium">${safeText(station.riverName)}</p>
+        </div>
+        ${getPinButton(station.stationId, isFav)}
+      </div>
+      
+      <div class="flex gap-2">
+        <span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)} ${station.statusLabel || t(`statLabels.${station.status}`)}</span>
+        <span class="pill bg-slate-100 text-slate-500">${safeText(station.category)}</span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+          <div class="text-[9px] uppercase font-black text-slate-400 tracking-widest mb-1">${t("labels.currentObserved")}</div>
+          <div class="text-lg font-black text-slate-900 font-outfit">${i18n.formatNumber(station.currentLevelObserved)} <small class="text-[10px] font-bold text-slate-400 uppercase">m</small></div>
+        </div>
+        <div class="p-4 bg-slate-50 rounded-2xl border border-slate-100">
+          <div class="text-[9px] uppercase font-black text-slate-400 tracking-widest mb-1">${t("labels.currentSensor")}</div>
+          <div class="text-lg font-black text-slate-900 font-outfit">${i18n.formatNumber(station.currentLevelSensor)} <small class="text-[10px] font-bold text-slate-400 uppercase">m</small></div>
+        </div>
+      </div>
+
+      <div class="space-y-3">
+        <h5 class="text-[10px] font-black text-slate-400 uppercase tracking-widest">${t("labels.thresholds")}</h5>
+        <div class="grid grid-cols-3 gap-2">
+          <div class="p-3 bg-red-500/5 rounded-xl border border-red-500/10 text-center">
+            <div class="text-[8px] font-black text-red-500/60 uppercase mb-1">Rojo</div>
+            <div class="text-xs font-bold text-red-600">${i18n.formatNumber(station.thresholds?.red)}</div>
+          </div>
+          <div class="p-3 bg-orange-500/5 rounded-xl border border-orange-500/10 text-center">
+            <div class="text-[8px] font-black text-orange-500/60 uppercase mb-1">Naranja</div>
+            <div class="text-xs font-bold text-orange-600">${i18n.formatNumber(station.thresholds?.orange)}</div>
+          </div>
+          <div class="p-3 bg-amber-500/5 rounded-xl border border-amber-500/10 text-center">
+            <div class="text-[8px] font-black text-amber-500/60 uppercase mb-1">Amarillo</div>
+            <div class="text-xs font-bold text-amber-600">${i18n.formatNumber(station.thresholds?.yellow)}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-slate-100 space-y-4">
+        <div class="grid grid-cols-2 gap-4">
+          <div><div class="text-[9px] uppercase font-black text-slate-400 tracking-widest mb-1">${t("labels.municipality")}</div><div class="text-xs font-bold text-slate-700">${safeText(station.municipality)}</div></div>
+          <div><div class="text-[9px] uppercase font-black text-slate-400 tracking-widest mb-1">${t("labels.department")}</div><div class="text-xs font-bold text-slate-700">${safeText(station.department)}</div></div>
+        </div>
+        <button class="w-full py-3 px-4 bg-slate-900 text-white rounded-xl font-bold text-xs hover:bg-slate-800 transition-all flex items-center justify-center gap-2" onclick="window.dispatchEvent(new CustomEvent('stationSelect', { detail: '${station.stationId}' }))">
+          <span class="material-symbols-outlined text-sm" data-icon="analytics">analytics</span>
+          Ver análisis detallado
+        </button>
+      </div>
+    </section>
+  `;
 
   detail.querySelector(".btn-pin").addEventListener("click", (e) => {
     e.stopPropagation();
@@ -267,13 +356,11 @@ let activeChart = null;
 export function renderStationDetail({ state, i18n }) {
   const t = i18n.t.bind(i18n);
   const station = state.stations.find((item) => item.stationId === state.selectedStationId);
-  const empty = document.getElementById("stationDetailPageEmpty");
   const detail = document.getElementById("stationDetailPageInfo");
   const chartCanvas = document.getElementById("stationChart");
 
   if (!station) {
-    empty.classList.remove("hidden");
-    detail.classList.add("hidden");
+    detail.innerHTML = `<div class="glass-card rounded-3xl p-12 text-center text-slate-400 font-medium">${t("stationDetailEmpty")}</div>`;
     if (activeChart) {
       activeChart.destroy();
       activeChart = null;
@@ -281,11 +368,77 @@ export function renderStationDetail({ state, i18n }) {
     return;
   }
 
-  empty.classList.add("hidden");
-  detail.classList.remove("hidden");
+  detail.innerHTML = `
+    <section class="glass-card rounded-3xl p-8 space-y-8">
+      <div class="flex justify-between items-start">
+        <div>
+          <div class="bg-primary/10 text-primary text-[10px] font-black px-3 py-1 rounded-full inline-block mb-3 border border-primary/20 tracking-widest uppercase">Análisis detallado</div>
+          <h2 class="font-outfit text-4xl font-black text-slate-900">${safeText(station.stationName)}</h2>
+          <p class="text-sm text-slate-500 font-medium">${safeText(station.riverName)} · ${safeText(station.municipality)}, ${safeText(station.department)}</p>
+        </div>
+        <span class="pill ${severityClass(station.status)} text-sm px-4 py-2">${getAlertIcon(station.status)} ${station.statusLabel || t(`statLabels.${station.status}`)}</span>
+      </div>
 
-  // Format detail text heavily mirroring the old one but expanded
-  detail.innerHTML = `<section class="detail-section"><div class="panel-head"><h4>${safeText(station.stationName)}</h4><span class="pill ${severityClass(station.status)}">${getAlertIcon(station.status)}${station.statusLabel || t(`statLabels.${station.status}`)}</span></div><div class="detail-grid"><div><div class="detail-key">${t("labels.river")}</div><div class="detail-value">${safeText(station.riverName)}</div></div><div><div class="detail-key">${t("labels.municipality")}</div><div class="detail-value">${safeText(station.municipality)}</div></div><div><div class="detail-key">${t("labels.department")}</div><div class="detail-value">${safeText(station.department)}</div></div><div><div class="detail-key">ID</div><div class="detail-value">${safeText(station.stationId)}</div></div></div></section><section class="detail-section"><h4>${t("labels.source")}</h4><div class="detail-grid"><div><div class="detail-key">${t("labels.currentObserved")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelObserved)}</div></div><div><div class="detail-key">${t("labels.currentSensor")}</div><div class="detail-value">${i18n.formatNumber(station.currentLevelSensor)}</div></div></div></section>`;
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="p-6 bg-slate-900 rounded-3xl text-white relative overflow-hidden group">
+          <div class="relative z-10">
+            <div class="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">${t("labels.currentObserved")}</div>
+            <div class="text-3xl font-black font-outfit">${i18n.formatNumber(station.currentLevelObserved)} <small class="text-xs text-sky-400 font-bold uppercase">m</small></div>
+          </div>
+          <span class="material-symbols-outlined absolute -bottom-4 -right-4 text-[100px] text-white/5" data-icon="waves">waves</span>
+        </div>
+        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col justify-center">
+          <div class="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">${t("labels.currentSensor")}</div>
+          <div class="text-xl font-black font-outfit text-slate-900">${i18n.formatNumber(station.currentLevelSensor)} <small class="text-[10px] text-slate-400 font-bold uppercase">m</small></div>
+        </div>
+        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col justify-center">
+          <div class="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">Altitud</div>
+          <div class="text-xl font-black font-outfit text-slate-900">${i18n.formatNumber(station.altitude, 0)} <small class="text-[10px] text-slate-400 font-bold uppercase">msnm</small></div>
+        </div>
+        <div class="p-6 bg-slate-50 rounded-3xl border border-slate-100 flex flex-col justify-center">
+          <div class="text-slate-400 text-[9px] font-black uppercase tracking-widest mb-1">ID</div>
+          <div class="text-xl font-black font-outfit text-slate-900 truncate">${safeText(station.stationId)}</div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <h3 class="font-outfit text-lg font-bold text-slate-900">${t("labels.thresholds")}</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-red-500/5 border border-red-500/10">
+            <div class="text-[9px] font-black text-red-500/60 uppercase mb-1">Rojo (Crítico)</div>
+            <div class="text-lg font-black text-red-600 font-outfit">${i18n.formatNumber(station.thresholds?.red)}</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-orange-500/5 border border-orange-500/10">
+            <div class="text-[9px] font-black text-orange-500/60 uppercase mb-1">Naranja</div>
+            <div class="text-lg font-black text-orange-600 font-outfit">${i18n.formatNumber(station.thresholds?.orange)}</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-amber-500/5 border border-amber-500/10">
+            <div class="text-[9px] font-black text-amber-500/60 uppercase mb-1">Amarillo</div>
+            <div class="text-lg font-black text-amber-600 font-outfit">${i18n.formatNumber(station.thresholds?.yellow)}</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+            <div class="text-[9px] font-black text-slate-400 uppercase mb-1">Bajos</div>
+            <div class="text-lg font-black text-slate-900 font-outfit">${i18n.formatNumber(station.thresholds?.low)}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-slate-100 grid md:grid-cols-3 gap-6">
+        <div>
+          <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Corriente</div>
+          <div class="text-sm font-bold text-slate-700">${safeText(station.riverName)}</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Subzona</div>
+          <div class="text-sm font-bold text-slate-700">${safeText(station.subzoneName)}</div>
+        </div>
+        <div>
+          <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1">Zona</div>
+          <div class="text-sm font-bold text-slate-700">${safeText(station.zoneName)}</div>
+        </div>
+      </div>
+    </section>
+  `;
 
   // Build Graphic (Chart)
   if (activeChart) {
@@ -340,21 +493,83 @@ export function renderStationDetail({ state, i18n }) {
 export function renderAlerts({ state, i18n }) {
   const t = i18n.t.bind(i18n);
   document.getElementById("alertsList").innerHTML = state.alerts
-    .map((alert) => `<article class="list-item"><div class="panel-head"><h4>${safeText(alert.subzoneName)}</h4><span class="pill ${severityClass(alert.severity)}">${getAlertIcon(alert.severity)}${alert.severityLabel || t(`statLabels.${alert.severity}`)}</span></div><div class="list-meta">${safeText(alert.zoneName)} · ${safeText(alert.macroAreaName)}</div><div class="small-note">${t("labels.issuedAt")}: ${i18n.formatDate(alert.issuedAt)} · ${t("labels.metric")}: ${i18n.formatNumber(alert.observedMetric, 0)}</div></article>`)
+    .map((alert) => `
+      <article class="glass-card rounded-2xl p-6 space-y-4 hover:translate-y-[-4px] transition-all group">
+        <div class="flex justify-between items-start">
+          <div class="w-12 h-12 rounded-2xl ${severityClass(alert.severity).replace('status-', 'bg-')}/10 flex items-center justify-center">
+            <span class="material-symbols-outlined ${severityClass(alert.severity).replace('status-', 'text-')} text-2xl" data-icon="notification_important">notification_important</span>
+          </div>
+          <span class="pill ${severityClass(alert.severity)}">${getAlertIcon(alert.severity)} ${alert.severityLabel || t(`statLabels.${alert.severity}`)}</span>
+        </div>
+        <div>
+          <h4 class="font-outfit text-lg font-bold text-slate-900 mb-1 group-hover:text-primary transition-colors">${safeText(alert.subzoneName)}</h4>
+          <p class="text-xs text-slate-500 font-medium">${safeText(alert.zoneName)} · ${safeText(alert.macroAreaName)}</p>
+        </div>
+        <div class="pt-4 border-t border-slate-100 flex justify-between items-center text-[10px] font-black text-slate-400 uppercase tracking-widest">
+          <span>${t("labels.issuedAt")}: ${i18n.formatDate(alert.issuedAt)}</span>
+          <span>SZH: ${i18n.formatNumber(alert.observedMetric, 0)}</span>
+        </div>
+      </article>
+    `)
     .join("");
 }
 
 export function renderReservoirs({ state, i18n }) {
   document.getElementById("reservoirsTableBody").innerHTML = state.reservoirs
     .slice(0, 50)
-    .map((item) => `<tr><td><strong>${safeText(item.reservoirId)}</strong><br /><span class="small-note">${i18n.formatDate(item.timestamp)}</span></td><td>${i18n.formatNumber(item.usefulVolumeMass)}</td><td>${i18n.formatNumber(item.usefulVolumePct)}</td><td>${i18n.formatNumber(item.observedPrecipitation)}</td><td>${i18n.formatNumber(item.forecastPrecipitation)}</td></tr>`)
+    .map((item) => `
+      <tr class="hover:bg-slate-50 transition-all">
+        <td class="p-6">
+          <strong class="text-slate-900 font-bold block mb-1 font-outfit">${safeText(item.reservoirId)}</strong>
+          <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">${i18n.formatDate(item.timestamp)}</span>
+        </td>
+        <td class="p-6 font-outfit font-bold text-slate-700">${i18n.formatNumber(item.usefulVolumeMass)}</td>
+        <td class="p-6">
+          <div class="flex items-center gap-2">
+            <div class="w-24 h-2 bg-slate-100 rounded-full overflow-hidden">
+               <div class="h-full bg-primary" style="width: ${item.usefulVolumePct}%"></div>
+            </div>
+            <span class="text-xs font-bold text-primary">${i18n.formatNumber(item.usefulVolumePct)}%</span>
+          </div>
+        </td>
+        <td class="p-6 text-sm text-slate-500">${i18n.formatNumber(item.observedPrecipitation)}</td>
+        <td class="p-6 text-sm text-slate-500">${i18n.formatNumber(item.forecastPrecipitation)}</td>
+      </tr>
+    `)
     .join("");
 }
 
 export function renderSources({ state, i18n }) {
   const t = i18n.t.bind(i18n);
   document.getElementById("sourcesList").innerHTML = state.sources
-    .map((source) => `<article class="source-item"><div class="panel-head"><h4>${source.id}</h4><span class="pill ${severityClass(source.status === "ok" ? "normal" : source.status === "degraded" ? "orange" : "red")}">${t(`sourceHealth.${source.status}`) || source.status}</span></div><div class="source-url">${safeText(source.name)}</div><div class="small-note">${t("labels.sourceLastSuccess")}: ${i18n.formatDate(source.lastSuccessAt)}</div><div class="small-note">${t("labels.sourceLatency")}: ${i18n.formatNumber(source.latencyMs, 0)} ms</div>${source.error ? `<div class="small-note">${t("labels.sourceError")}: ${source.error}</div>` : ""}</article>`)
+    .map((source) => {
+      const health = source.status === "ok" ? "normal" : source.status === "degraded" ? "orange" : "red";
+      return `
+        <article class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="flex justify-between items-center">
+            <div class="h-10 w-10 rounded-xl bg-slate-100 flex items-center justify-center">
+              <span class="material-symbols-outlined text-slate-400" data-icon="database">database</span>
+            </div>
+            <span class="pill ${severityClass(health)}">${t(`sourceHealth.${source.status}`) || source.status}</span>
+          </div>
+          <div>
+            <h4 class="font-outfit text-lg font-bold text-slate-900 mb-1">${source.id}</h4>
+            <p class="text-[10px] text-slate-400 font-bold uppercase truncate">${safeText(source.name)}</p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <div class="flex justify-between text-[10px] font-black text-slate-400 uppercase tracking-widest">
+              <span>${t("labels.sourceLastSuccess")}</span>
+              <span class="text-slate-900">${i18n.formatDate(source.lastSuccessAt)}</span>
+            </div>
+            <div class="flex justify-between text-[10px] font-black text-slate-400 uppercase tracking-widest">
+              <span>${t("labels.sourceLatency")}</span>
+              <span class="text-primary">${i18n.formatNumber(source.latencyMs, 0)} ms</span>
+            </div>
+            ${source.error ? `<div class="p-2 bg-red-50 text-[10px] text-red-600 rounded-lg mt-2">${source.error}</div>` : ""}
+          </div>
+        </article>
+      `;
+    })
     .join("");
 }
 

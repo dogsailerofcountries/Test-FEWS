@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FEWS Intelligence - Live Station Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "dark-surface-variant": "#1e293b",
+                    "tertiary-container": "#de8712",
+                    "surface-dim": "#d6dae0",
+                    "secondary-container": "#2170e4",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "dark-on-surface": "#f8fafc",
+                    "on-background": "#171c20",
+                    "on-primary-container": "#003751",
+                    "primary-container": "linear-gradient(135deg, #0ea5e9, #3b82f6)",
+                    "secondary-fixed": "#d8e2ff",
+                    "on-secondary-container": "#fefcff",
+                    "surface-bright": "#f6faff",
+                    "background": "#eef2f6",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#ffffff",
+                    "on-sidebar": "rgba(255, 255, 255, 0.9)",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#001a42",
+                    "on-tertiary-container": "#4d2b00",
+                    "tertiary-fixed-dim": "#ffb86e",
+                    "on-primary-fixed": "#001e2f",
+                    "dark-on-background": "#f8fafc",
+                    "on-tertiary-fixed": "#2c1600",
+                    "on-tertiary": "#ffffff",
+                    "dark-background": "#0f172a",
+                    "surface-container-low": "#f0f4fa",
+                    "info": "#38bdf8",
+                    "inverse-on-surface": "#edf1f7",
+                    "on-tertiary-fixed-variant": "#693c00",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#89ceff",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "tertiary": "#8a5100",
+                    "on-surface": "#171c20",
+                    "surface-container-high": "#e4e8ee",
+                    "secondary": "#0058be",
+                    "primary-fixed": "#c9e6ff",
+                    "sidebar-surface": "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)",
+                    "dark-outline": "rgba(51, 65, 85, 0.5)",
+                    "dark-surface": "rgba(30, 41, 59, 0.7)",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-surface-variant": "#3e4850",
+                    "on-secondary-fixed-variant": "#004395",
+                    "error": "#ef4444",
+                    "surface-container-highest": "#dee3e9",
+                    "warning": "#f97316",
+                    "error-container": "#ffdad6",
+                    "surface": "rgba(255, 255, 255, 0.75)",
+                    "outline": "rgba(226, 232, 240, 0.8)",
+                    "surface-tint": "#006591",
+                    "primary": "#006591",
+                    "inverse-surface": "#2c3135",
+                    "tertiary-fixed": "#ffdcbd",
+                    "surface-container": "#eaeef4",
+                    "caution": "#f59e0b",
+                    "outline-variant": "#bec8d2",
+                    "on-error-container": "#93000a",
+                    "success": "#10b981"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-padding": "32px",
+                    "inline-sm": "8px",
+                    "grid-gap": "16px",
+                    "card-gap": "24px",
+                    "unit": "8px",
+                    "inline-md": "16px",
+                    "inline-lg": "24px",
+                    "inline-xs": "4px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Outfit"],
+                    "label-xs": ["Inter"],
+                    "headline-md": ["Outfit"],
+                    "body-md": ["Inter"],
+                    "title-sm": ["Outfit"]
+            },
+            "fontSize": {
+                    "display-lg": ["2.2rem", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-xs": ["0.7rem", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-md": ["1.8rem", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "body-md": ["0.95rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "title-sm": ["1.1rem", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .glass-card {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+      .dark .glass-card {
+        background: rgba(30, 41, 59, 0.7);
+        border: 1px solid rgba(51, 65, 85, 0.5);
+      }
+      .map-bg {
+        background-color: #0f172a;
+        background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.05) 1px, transparent 0);
+        background-size: 32px 32px;
+      }
+      .status-pulse {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(1.2); }
+      }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-hidden">
+<!-- Side Navigation Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col z-50 h-screen w-64 border-r border-white/10 bg-slate-950/90 backdrop-blur-xl shadow-2xl">
+<div class="p-6">
+<div class="font-outfit text-xl font-black text-white tracking-widest uppercase">FEWS Intelligence</div>
+<div class="text-slate-400 text-xs mt-1 font-semibold uppercase tracking-wider">Hydro-Analysis Suite</div>
+</div>
+<nav class="flex-1 mt-4">
+<a class="text-slate-400 hover:text-slate-100 py-3 px-6 flex items-center gap-3 transition-all duration-200 hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-outfit font-semibold tracking-tight text-sm">Dashboard</span>
+</a>
+<a class="bg-gradient-to-r from-sky-600/20 to-transparent text-sky-400 border-l-4 border-sky-500 py-3 px-6 flex items-center gap-3 transition-transform translate-x-1" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-outfit font-semibold tracking-tight text-sm">Station Map</span>
+</a>
+<a class="text-slate-400 hover:text-slate-100 py-3 px-6 flex items-center gap-3 transition-all duration-200 hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+<span class="font-outfit font-semibold tracking-tight text-sm">Risk Analysis</span>
+</a>
+<a class="text-slate-400 hover:text-slate-100 py-3 px-6 flex items-center gap-3 transition-all duration-200 hover:bg-white/5" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-outfit font-semibold tracking-tight text-sm">Settings</span>
+</a>
+</nav>
+<div class="p-6 border-t border-white/5">
+<button class="w-full bg-gradient-to-r from-sky-600 to-sky-500 text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="description">description</span>
+        Generate Report
+      </button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 relative h-screen">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 right-0 left-64 flex justify-between items-center px-8 z-40 w-full h-16 border-b border-slate-200/50 dark:border-slate-800/50 bg-white/70 backdrop-blur-lg shadow-sm">
+<div class="flex items-center gap-4">
+<h1 class="font-outfit text-lg font-bold text-slate-900">Live Station Network</h1>
+<div class="h-4 w-px bg-slate-300"></div>
+<div class="flex items-center gap-2 text-success">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
+</span>
+<span class="text-xs font-bold uppercase tracking-wider">Live System Data</span>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-sm" data-icon="search">search</span>
+<input class="pl-10 pr-4 py-1.5 rounded-full border-none bg-slate-100 text-sm w-64 focus:ring-2 focus:ring-sky-500/50 transition-all" placeholder="Quick find station..." type="text"/>
+</div>
+<div class="flex items-center gap-3">
+<button class="text-slate-500 hover:text-sky-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-slate-500 hover:text-sky-500 transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<div class="h-8 w-8 rounded-full bg-slate-200 border border-slate-300 flex items-center justify-center overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="A professional headshot of a hydrological analyst in their late 30s with a focused expression. The background is a clean, minimalist office with subtle blue lighting. High-end, corporate photography style with soft depth of field and a cool, clinical color temperature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD54_NfTqZHpNK7u7ceKvBcEP8cFyrd2n8Mh3dZBxFFNJtGZc_nMbGjWGU_Pd_Frd9aagv60qYLAPqS3ahp6k_s08SoC0byoLqxwPwbd0eLZDkr82GpQGYs7MI4G95ztvN_givW4wSbULKXSc4OTnWImH2llM_MJLWhwOAFji2lHJTa1XM8yk5aF8PRtP8udEmmaVLCcCCHq5ahIB94iuXs0pqKVIsfU9bl4WP4hss-3MEjYMFozdIJb1q-4JAJRX6vYds4n45JBO93"/>
+</div>
+</div>
+</div>
+</header>
+<!-- Simulated Map Container -->
+<div class="absolute inset-0 z-0 map-bg overflow-hidden pt-16">
+<!-- Simulated High-Contrast Map Graphics -->
+<div class="relative w-full h-full opacity-40">
+<img class="w-full h-full object-cover grayscale invert contrast-125" data-alt="A high-contrast, dark-mode satellite map of a large river delta system from an aerial perspective. The water bodies are rendered in deep blacks and indigo, while landforms are subtle dark grays. Glowing cyan and emerald veins represent hydrological flow patterns. The aesthetic is ultra-modern, technical, and data-centric." data-location="The Mekong Delta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-CRLfnc_ymvZgflJJSRGRktC0wcwawwDnMcvz_uSE24GlWHVWeoFpBcRjNuRbneWgbB_1LGReOZHlM14HTPxA-A_X0hybH2TpVOlFGpKwTy831F3QxALbwT4N5ZLvFma5X1gcFeev2-KhWCVJD89rigl-vfU4Z3_B3grvsWgYkK2eXbTkyXtzct31tUYm0AeQbBBjVz7eewLQnyWCg79yeCZezGBFLBMuUs2DxfmjXaWqECMsNNgzUOnf8qrUUaUS5SX3ZR4meyUB"/>
+</div>
+<!-- Station Pips (Simulated Interactive Points) -->
+<div class="absolute inset-0 pointer-events-none">
+<!-- Station 1 (Critical) -->
+<div class="absolute top-[35%] left-[42%] pointer-events-auto cursor-pointer group">
+<div class="w-4 h-4 bg-error rounded-full shadow-[0_0_15px_rgba(239,68,68,0.8)] status-pulse border-2 border-white"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">STATION: MK-092 (CRITICAL)</div>
+</div>
+<!-- Station 2 (Stable) -->
+<div class="absolute top-[60%] left-[25%] pointer-events-auto cursor-pointer group">
+<div class="w-3 h-3 bg-success rounded-full shadow-[0_0_10px_rgba(16,185,129,0.8)] border-2 border-white"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">STATION: MK-115 (STABLE)</div>
+</div>
+<!-- Station 3 (Warning) -->
+<div class="absolute top-[48%] left-[65%] pointer-events-auto cursor-pointer group">
+<div class="w-3.5 h-3.5 bg-warning rounded-full shadow-[0_0_12px_rgba(249,115,22,0.8)] border-2 border-white"></div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">STATION: MK-041 (WARNING)</div>
+</div>
+<!-- Station 4 (Stable) -->
+<div class="absolute top-[22%] left-[78%] pointer-events-auto cursor-pointer group">
+<div class="w-3 h-3 bg-success rounded-full shadow-[0_0_10px_rgba(16,185,129,0.8)] border-2 border-white"></div>
+</div>
+</div>
+<!-- Map Floating Controls -->
+<div class="absolute bottom-8 left-8 flex flex-col gap-3">
+<button class="w-12 h-12 glass-card rounded-xl flex items-center justify-center text-slate-700 hover:text-sky-600 shadow-xl transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 glass-card rounded-xl flex items-center justify-center text-slate-700 hover:text-sky-600 shadow-xl transition-all">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<div class="h-px w-8 bg-slate-300 mx-auto"></div>
+<button class="w-12 h-12 glass-card rounded-xl flex items-center justify-center text-slate-700 hover:text-sky-600 shadow-xl transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">layers</span>
+</button>
+</div>
+</div>
+<!-- UI Overlay: Top Filter Bar -->
+<div class="absolute top-20 left-8 right-8 pointer-events-none">
+<div class="flex gap-4 pointer-events-auto">
+<div class="glass-card flex items-center gap-4 px-6 py-3 rounded-2xl shadow-xl">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Basin</span>
+<select class="bg-transparent border-none text-sm font-bold text-slate-900 p-0 focus:ring-0">
+<option>Lower Mekong Basin</option>
+<option>Tonle Sap Region</option>
+<option>Central Plateau</option>
+</select>
+</div>
+<div class="w-px h-8 bg-slate-300"></div>
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-slate-500 tracking-wider">Risk Level</span>
+<select class="bg-transparent border-none text-sm font-bold text-slate-900 p-0 focus:ring-0">
+<option>All Stations</option>
+<option>Critical Only</option>
+<option>Warning Only</option>
+</select>
+</div>
+<div class="w-px h-8 bg-slate-300"></div>
+<button class="flex items-center gap-2 bg-slate-900 text-white px-4 py-2 rounded-xl text-xs font-bold hover:bg-sky-600 transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+            Apply Filters
+          </button>
+</div>
+</div>
+</div>
+<!-- UI Overlay: Selected Station Detail Panel -->
+<div class="absolute top-20 right-8 bottom-8 w-96 pointer-events-none">
+<div class="glass-card h-full rounded-3xl p-6 shadow-2xl pointer-events-auto flex flex-col gap-6 overflow-y-auto">
+<!-- Header -->
+<div class="flex justify-between items-start">
+<div>
+<div class="bg-error/10 text-error text-[10px] font-black px-2 py-0.5 rounded-full inline-block mb-2 border border-error/20">CRITICAL LEVEL</div>
+<h2 class="font-display-lg text-headline-md text-slate-900">Station MK-092</h2>
+<p class="text-sm text-slate-500">Kratie Province, Cambodia</p>
+</div>
+<button class="text-slate-400 hover:text-slate-900">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Primary Metric -->
+<div class="bg-slate-900 rounded-2xl p-6 text-white relative overflow-hidden">
+<div class="relative z-10">
+<div class="text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Current Water Level</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display-lg text-[2.8rem] leading-none text-white">22.48</span>
+<span class="text-xl text-sky-400 font-bold">m</span>
+</div>
+<div class="flex items-center gap-2 mt-4 text-error">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span class="text-xs font-bold">+1.2m since 06:00 AM</span>
+</div>
+</div>
+<!-- Decorative Background Wave -->
+<div class="absolute -bottom-4 -right-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="waves">waves</span>
+</div>
+</div>
+<!-- Trend Graph (Simulated) -->
+<div>
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-outfit text-sm font-bold text-slate-900">24h Trend Analysis</h3>
+<span class="text-[10px] text-slate-400 font-bold uppercase">Real-time Telemetry</span>
+</div>
+<div class="h-32 w-full flex items-end gap-1">
+<div class="bg-sky-400/20 w-full h-[40%] rounded-t-sm"></div>
+<div class="bg-sky-400/20 w-full h-[45%] rounded-t-sm"></div>
+<div class="bg-sky-400/20 w-full h-[42%] rounded-t-sm"></div>
+<div class="bg-sky-400/30 w-full h-[55%] rounded-t-sm"></div>
+<div class="bg-sky-400/40 w-full h-[65%] rounded-t-sm"></div>
+<div class="bg-sky-400/50 w-full h-[70%] rounded-t-sm"></div>
+<div class="bg-sky-500 w-full h-[85%] rounded-t-sm relative">
+<div class="absolute -top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-white rounded-full"></div>
+</div>
+<div class="bg-sky-400/60 w-full h-[80%] rounded-t-sm"></div>
+<div class="bg-sky-400/40 w-full h-[60%] rounded-t-sm"></div>
+<div class="bg-sky-400/30 w-full h-[40%] rounded-t-sm"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] font-bold text-slate-400">
+<span>24H AGO</span>
+<span>CURRENT</span>
+</div>
+</div>
+<!-- Metadata Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+<div class="text-[10px] uppercase font-bold text-slate-500 mb-1">Flow Rate</div>
+<div class="font-outfit text-slate-900 font-bold">14,200 m³/s</div>
+</div>
+<div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+<div class="text-[10px] uppercase font-bold text-slate-500 mb-1">Warning Level</div>
+<div class="font-outfit text-slate-900 font-bold">21.50 m</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-auto space-y-3">
+<button class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-sm">notifications_active</span>
+            Set Threshold Alert
+          </button>
+<button class="w-full border border-slate-300 text-slate-600 py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-sm">database</span>
+            View Historical Data
+          </button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

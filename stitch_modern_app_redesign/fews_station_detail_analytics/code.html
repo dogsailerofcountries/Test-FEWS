@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Station Analytics | FEWS Intelligence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "dark-surface-variant": "#1e293b",
+                        "tertiary-container": "#de8712",
+                        "surface-dim": "#d6dae0",
+                        "secondary-container": "#2170e4",
+                        "on-primary-fixed-variant": "#004c6e",
+                        "dark-on-surface": "#f8fafc",
+                        "on-background": "#171c20",
+                        "on-primary-container": "#003751",
+                        "primary-container": "linear-gradient(135deg, #0ea5e9, #3b82f6)",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-secondary-container": "#fefcff",
+                        "surface-bright": "#f6faff",
+                        "background": "#eef2f6",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#ffffff",
+                        "on-sidebar": "rgba(255, 255, 255, 0.9)",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#001a42",
+                        "on-tertiary-container": "#4d2b00",
+                        "tertiary-fixed-dim": "#ffb86e",
+                        "on-primary-fixed": "#001e2f",
+                        "dark-on-background": "#f8fafc",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-tertiary": "#ffffff",
+                        "dark-background": "#0f172a",
+                        "surface-container-low": "#f0f4fa",
+                        "info": "#38bdf8",
+                        "inverse-on-surface": "#edf1f7",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#89ceff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "tertiary": "#8a5100",
+                        "on-surface": "#171c20",
+                        "surface-container-high": "#e4e8ee",
+                        "secondary": "#0058be",
+                        "primary-fixed": "#c9e6ff",
+                        "sidebar-surface": "linear-gradient(180deg, #0f172a 0%, #1e293b 100%)",
+                        "dark-outline": "rgba(51, 65, 85, 0.5)",
+                        "dark-surface": "rgba(30, 41, 59, 0.7)",
+                        "primary-fixed-dim": "#89ceff",
+                        "on-surface-variant": "#3e4850",
+                        "on-secondary-fixed-variant": "#004395",
+                        "error": "#ef4444",
+                        "surface-container-highest": "#dee3e9",
+                        "warning": "#f97316",
+                        "error-container": "#ffdad6",
+                        "surface": "rgba(255, 255, 255, 0.75)",
+                        "outline": "rgba(226, 232, 240, 0.8)",
+                        "surface-tint": "#006591",
+                        "primary": "#006591",
+                        "inverse-surface": "#2c3135",
+                        "tertiary-fixed": "#ffdcbd",
+                        "surface-container": "#eaeef4",
+                        "caution": "#f59e0b",
+                        "outline-variant": "#bec8d2",
+                        "on-error-container": "#93000a",
+                        "success": "#10b981"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-padding": "32px",
+                        "inline-sm": "8px",
+                        "grid-gap": "16px",
+                        "card-gap": "24px",
+                        "unit": "8px",
+                        "inline-md": "16px",
+                        "inline-lg": "24px",
+                        "inline-xs": "4px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Outfit"],
+                        "label-xs": ["Inter"],
+                        "headline-md": ["Outfit"],
+                        "body-md": ["Inter"],
+                        "title-sm": ["Outfit"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["2.2rem", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-xs": ["0.7rem", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "headline-md": ["1.8rem", {"lineHeight": "1.3", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["0.95rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "title-sm": ["1.1rem", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+        }
+        .sidebar-gradient {
+            background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col z-50 h-screen w-64 border-r border-slate-800 bg-slate-950/90 backdrop-blur-xl shadow-2xl">
+<div class="p-8">
+<span class="font-outfit text-xl font-black text-white tracking-widest uppercase">FEWS Intelligence</span>
+<p class="text-slate-400 text-xs mt-1 font-outfit font-semibold tracking-tight">Hydro-Analysis Suite</p>
+</div>
+<nav class="flex-1 px-4 space-y-2">
+<a class="text-slate-400 hover:text-slate-100 py-3 px-6 flex items-center gap-3 transition-colors hover:bg-white/5 rounded-xl" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-outfit font-semibold tracking-tight text-sm">Dashboard</span>
+</a>
+<a class="bg-gradient-to-r from-sky-600/20 to-transparent text-sky-400 border-l-4 border-sky-500 py-3 px-6 flex items-center gap-3 translate-x-1 transition-transform rounded-r-xl" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-outfit font-semibold tracking-tight text-sm">Station Map</span>
+</a>
+<a class="text-slate-400 hover:text-slate-100 py-3 px-6 flex items-center gap-3 transition-colors hover:bg-white/5 rounded-xl" href="#">
+<span class="material-symbols-outlined">warning</span>
+<span class="font-outfit font-semibold tracking-tight text-sm">Risk Analysis</span>
+</a>
+<a class="text-slate-400 hover:text-slate-100 py-3 px-6 flex items-center gap-3 transition-colors hover:bg-white/5 rounded-xl" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-outfit font-semibold tracking-tight text-sm">Settings</span>
+</a>
+</nav>
+<div class="p-6">
+<button class="w-full py-3 bg-sky-600 hover:bg-sky-500 text-white font-outfit font-bold text-sm rounded-xl transition-all shadow-lg shadow-sky-900/20">
+                Generate Report
+            </button>
+</div>
+</aside>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-64 flex justify-between items-center px-8 z-40 w-full h-16 border-b border-slate-200/50 bg-white/70 backdrop-blur-lg shadow-sm">
+<div class="flex items-center gap-4">
+<span class="hidden md:block font-outfit text-lg font-bold text-slate-900">FEWS</span>
+<div class="h-4 w-[1px] bg-slate-300 mx-2"></div>
+<nav class="flex gap-6">
+<span class="text-sky-600 font-bold font-inter text-sm cursor-pointer">Live Stream</span>
+<span class="text-slate-500 hover:text-sky-500 transition-colors font-inter text-sm cursor-pointer">Archive</span>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-sm">search</span>
+<input class="bg-slate-100 border-none rounded-full pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-sky-500/50 transition-all" placeholder="Search telemetry..." type="text"/>
+</div>
+<div class="flex gap-4 text-slate-500">
+<span class="material-symbols-outlined cursor-pointer hover:text-sky-600 transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-sky-600 transition-colors">help_outline</span>
+</div>
+<img alt="User Avatar" class="w-8 h-8 rounded-full ring-2 ring-white shadow-sm" data-alt="A professional hydrological analyst headshot, set against a blurred background of a technical monitoring station. The analyst is wearing modern professional attire, conveying technical expertise and reliability. The lighting is bright and clear, matching the clean, light-mode aesthetic of the FEWS dashboard system." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvOZZEvIDQ5KOgbvDoaITY5oSWgX0SzMA99DW2pZWaKCeFqJZutmzB_mMfAcpFSi4X1q-qrKI031aBU1rDWnDHbU21Pz8UQk40bfT32arpLPzujq0FUd2IfGyTxWi9oHP8HkbjZR2AyljKeSqb6UtjhsE8ENMMO-j7ZygkRMGyd3ODc_c6QrI1QHbzRe89lKlwYs6g8Ctfrsd5uiOhS1yhC51QKtAEZRSnA3HEf567BFkqN4xlSxtM67G_VVLZGlQqqp89dRTrSJR5"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pl-64 pt-16 min-h-screen">
+<div class="p-container-padding max-w-[1600px] mx-auto space-y-card-gap">
+<!-- Header Section -->
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<div class="flex items-center gap-3">
+<span class="px-2 py-1 bg-sky-100 text-sky-700 text-[10px] font-bold rounded uppercase tracking-wider">Active Station</span>
+<span class="text-slate-400 text-sm font-medium">ID: HYDRO-7742-ALPHA</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-slate-900">Rio Grande Basin - Sector 04</h1>
+<div class="flex items-center gap-4 text-slate-500 text-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span>29.2315° N, 103.4845° W</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">waves</span>
+<span>Surface Elevation: 245.2m</span>
+</div>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center gap-2 px-4 py-2 glass-card rounded-xl text-slate-700 font-semibold hover:bg-slate-50 transition-all">
+<span class="material-symbols-outlined text-sm">download</span>
+<span>Export CSV</span>
+</button>
+<button class="flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-sky-600 to-blue-600 text-white font-bold rounded-xl shadow-lg shadow-sky-500/20 hover:scale-[1.02] transition-all">
+<span class="material-symbols-outlined text-sm">analytics</span>
+<span>Full Audit</span>
+</button>
+</div>
+</div>
+<!-- Bento Layout Content -->
+<div class="grid grid-cols-12 gap-card-gap">
+<!-- Primary Chart -->
+<div class="col-span-12 lg:col-span-8 glass-card rounded-xl p-6 relative overflow-hidden">
+<div class="flex justify-between items-center mb-8">
+<div>
+<h3 class="font-title-sm text-title-sm text-slate-900">24-Hour Water Level Telemetry</h3>
+<p class="text-sm text-slate-500">Real-time ultrasonic sensor feedback</p>
+</div>
+<div class="flex bg-slate-100 p-1 rounded-lg">
+<button class="px-3 py-1 bg-white shadow-sm text-xs font-bold rounded-md text-sky-600">LIVE</button>
+<button class="px-3 py-1 text-xs font-medium text-slate-500">24H</button>
+<button class="px-3 py-1 text-xs font-medium text-slate-500">7D</button>
+</div>
+</div>
+<div class="h-[350px] w-full flex items-end gap-2 relative">
+<!-- Simulated High Precision Graph -->
+<div class="absolute inset-0 flex flex-col justify-between py-2 text-[10px] text-slate-400 font-mono">
+<span>4.50m</span>
+<span>4.00m</span>
+<span>3.50m</span>
+<span>3.00m</span>
+<span>2.50m</span>
+</div>
+<div class="ml-10 flex-1 h-full relative overflow-hidden group">
+<!-- SVG Path for the graph line -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,80 Q10,75 20,60 T40,65 T60,40 T80,30 T100,35" fill="none" stroke="url(#line-gradient)" stroke-width="2.5" vector-effect="non-scaling-stroke"></path>
+<path d="M0,80 Q10,75 20,60 T40,65 T60,40 T80,30 T100,35 V100 H0 Z" fill="url(#area-gradient)" vector-effect="non-scaling-stroke"></path>
+<defs>
+<lineargradient id="line-gradient" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#0ea5e9"></stop>
+<stop offset="100%" stop-color="#3b82f6"></stop>
+</lineargradient>
+<lineargradient id="area-gradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.1"></stop>
+<stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Forecast Dotted Line -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0,82 L20,65 L40,68 L60,45 L80,35 L100,40" fill="none" stroke="#94a3b8" stroke-dasharray="4" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+</svg>
+</div>
+</div>
+<div class="ml-16 flex justify-between mt-4 text-[10px] font-mono text-slate-400">
+<span>00:00</span>
+<span>04:00</span>
+<span>08:00</span>
+<span>12:00</span>
+<span>16:00</span>
+<span>20:00</span>
+</div>
+</div>
+<!-- Stats Panel -->
+<div class="col-span-12 lg:col-span-4 space-y-grid-gap">
+<!-- Current Status Card -->
+<div class="glass-card rounded-xl p-6 border-l-4 border-success">
+<div class="flex justify-between items-start mb-4">
+<span class="font-title-sm text-title-sm text-slate-900">Current Level</span>
+<span class="flex items-center gap-1 text-success text-xs font-bold bg-success/10 px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+                                +2.4%
+                            </span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-extrabold text-slate-900 font-outfit">3.82</span>
+<span class="text-slate-500 font-medium">meters</span>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 flex justify-between text-xs font-medium">
+<span class="text-slate-500 uppercase tracking-wider">Status</span>
+<span class="text-success uppercase tracking-wider">Nominal Flow</span>
+</div>
+</div>
+<!-- Prediction Accuracy -->
+<div class="glass-card rounded-xl p-6 bg-slate-900 text-white overflow-hidden relative">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-sky-500/10 rounded-full blur-3xl"></div>
+<span class="text-xs font-bold text-sky-400 uppercase tracking-widest block mb-4">ML Prediction</span>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-sm font-medium text-slate-300">Accuracy Score</span>
+<span class="text-sm font-bold">98.2%</span>
+</div>
+<div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-sky-500 h-full w-[98.2%]"></div>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed">System predicts a peak of 4.12m within the next 6 hours based on upstream sensor delta.</p>
+</div>
+</div>
+</div>
+<!-- Secondary Data Row -->
+<div class="col-span-12 md:col-span-6 lg:col-span-4 glass-card rounded-xl p-6">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-lg bg-sky-50 flex items-center justify-center text-sky-600">
+<span class="material-symbols-outlined">history</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-slate-900">Historical Trends</h3>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center pb-3 border-b border-slate-100">
+<span class="text-sm text-slate-500">Annual Peak</span>
+<span class="font-mono font-bold text-slate-900">4.89m</span>
+</div>
+<div class="flex justify-between items-center pb-3 border-b border-slate-100">
+<span class="text-sm text-slate-500">Station Average</span>
+<span class="font-mono font-bold text-slate-900">3.12m</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-slate-500">Extreme Low</span>
+<span class="font-mono font-bold text-slate-900">1.44m</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 lg:col-span-4 glass-card rounded-xl p-0 overflow-hidden group">
+<div class="p-6">
+<h3 class="font-title-sm text-title-sm text-slate-900 mb-4">Location Precision</h3>
+<div class="relative h-40 w-full rounded-lg overflow-hidden border border-slate-200">
+<img alt="Satellite view of station location" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A high-resolution satellite imagery map showing a detailed top-down view of a river basin area with a hydrological monitoring station. The terrain is arid with visible geological features and a winding blue river. The aesthetic is scientific and high-contrast, fitting for a technical geospatial analysis dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwx3ajoyICjjoM3HX6xv9s5EqJAgTZvQBmGogZNzQzU1OTwZH0OjGPMjIqjlwa6dieYz0H9LvBL6PBBJwDCNouek5LNY_NIxdnlhOchTjetT4PQtP3XoO71QiCgJQt3cpr7-OkbG1XQ6OG5o6WmqO3unaDQlg_-mmdJj4qLxzaxyUkBQ4e4ykBTggVbWSRj3xZD0NdKZzg1TYdwDjImaTfYVQNE5bYdPDDmufACy0Btn6odPJ0bFM7yH3CoBHtQWDHm4FdgGnCeB7e"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-8 h-8 bg-sky-500/20 rounded-full flex items-center justify-center border-2 border-sky-500 animate-pulse">
+<div class="w-2 h-2 bg-sky-500 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 px-6 py-3 flex justify-between text-[11px] font-mono text-slate-500 uppercase tracking-wider">
+<span>LAT: 29.2315</span>
+<span>LONG: -103.4845</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 glass-card rounded-xl p-6 flex flex-col justify-between bg-gradient-to-br from-white to-sky-50/50">
+<div>
+<h3 class="font-title-sm text-title-sm text-slate-900 mb-2">Sensor Health</h3>
+<p class="text-sm text-slate-500 mb-6">Internal diagnostics from the ultrasonic array.</p>
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="text-xs font-bold text-slate-400">BATTERY</span>
+<span class="text-xs font-bold text-success">92%</span>
+</div>
+<div class="h-1.5 w-full bg-slate-100 rounded-full">
+<div class="h-full bg-success rounded-full w-[92%]"></div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="text-xs font-bold text-slate-400">SIGNAL STRENGTH</span>
+<span class="text-xs font-bold text-sky-500">-58 dBm</span>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full py-2.5 rounded-xl border border-sky-200 text-sky-600 text-sm font-bold hover:bg-sky-50 transition-colors">
+                        Run Calibration
+                    </button>
+</div>
+</div>
+</div>
+</main>
+</body></html>

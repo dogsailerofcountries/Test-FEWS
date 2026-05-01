@@ -11,7 +11,7 @@ const store = createStore(backendProvider);
 async function ensureDataForView(view) {
   if (view === "overview") return Promise.all([store.ensureOverview(), store.ensureSources()]);
   if (view === "purpose") return Promise.resolve();
-  if (view === "stations" || view === "station-detail") return store.ensureStations();
+  if (view === "stations" || view === "stationDetail") return store.ensureStations();
   if (view === "alerts") return store.ensureAlerts();
   if (view === "reservoirs") return store.ensureReservoirs();
   if (view === "sources") return store.ensureSources();
@@ -35,10 +35,13 @@ function renderActiveView() {
   if (state.view === "stations") renderStations({ 
     state, 
     i18n, 
-    onStationSelect(stationId) { store.setSelectedStation(stationId); renderView("station-detail"); },
+    onStationSelect(stationId) { 
+      store.setSelectedStation(stationId); 
+      renderActiveView(); 
+    },
     onPinToggle
   });
-  if (state.view === "station-detail") renderStationDetail({ state, i18n, onPinToggle });
+  if (state.view === "stationDetail") renderStationDetail({ state, i18n, onPinToggle });
   if (state.view === "alerts") renderAlerts({ state, i18n });
   if (state.view === "reservoirs") renderReservoirs({ state, i18n });
   if (state.view === "sources") renderSources({ state, i18n });
@@ -81,29 +84,30 @@ function bindEvents() {
     btn.classList.toggle("active", btn.dataset.themeId === store.state.theme);
   });
   document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", (event) => {
-      const language = event.target.dataset.lang;
-      document.querySelectorAll(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === language));
+    btn.addEventListener("click", () => {
+      const language = btn.dataset.lang;
       store.setLanguage(language);
       i18n.setLanguage(language);
       backendProvider.setLanguage(language);
       directProvider.setLanguage(language);
+      
+      document.querySelectorAll(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === language));
       renderActiveView();
     });
   });
 
   document.querySelectorAll(".theme-btn").forEach((btn) => {
-    btn.classList.toggle("active", btn.dataset.themeId === store.state.theme);
     btn.addEventListener("click", () => {
       const theme = btn.dataset.themeId;
       store.setTheme(theme);
+      document.documentElement.classList.toggle("dark", theme === "dark");
       document.querySelectorAll(".theme-btn").forEach(b => b.classList.toggle("active", b.dataset.themeId === theme));
       renderActiveView();
     });
   });
   window.addEventListener('stationSelect', (event) => {
     store.setSelectedStation(event.detail);
-    renderView("station-detail");
+    renderView("stationDetail");
   });
   document.getElementById("btnBackToStations").addEventListener("click", () => renderView("stations"));
   document.querySelectorAll(".nav-link").forEach((button) => button.addEventListener("click", async () => { await renderView(button.dataset.view); }));

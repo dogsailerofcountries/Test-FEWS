@@ -1,171 +1,309 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="es" class="light">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>FEWS Web Nuevo</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FEWS Intelligence</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico?v=2" />
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0ea5e9",
+              background: "#eef2f6",
+              "on-background": "#1a202c",
+            },
+            fontFamily: {
+              outfit: ["Outfit", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              xl: "16px",
+              "2xl": "20px",
+              "3xl": "24px",
+            },
+          },
+        },
+      };
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="app-shell">
-      <aside class="sidebar">
-        <div class="brand">
-          <div class="brand-kicker">IDEAM / FEWS</div>
-          <h1>FEWS Web Nuevo</h1>
-          <p id="brandDescription"></p>
-        </div>
-        <nav class="nav">
-          <button class="nav-link active" data-view="overview" id="navOverview"></button>
-          <button class="nav-link" data-view="stations" id="navStations"></button>
-          <button class="nav-link" data-view="alerts" id="navAlerts"></button>
-          <button class="nav-link" data-view="map" id="navMap"></button>
-          <button class="nav-link" data-view="reservoirs" id="navReservoirs"></button>
-          <button class="nav-link" data-view="sources" id="navSources"></button>
-        </nav>
-        <div class="sidebar-footer">
-          <label class="control-label" id="langLabel" for="languageSelect"></label>
-          <select id="languageSelect">
-            <option value="es">Español</option>
-            <option value="en">English</option>
-          </select>
-        </div>
-      </aside>
+  <body class="bg-[#eef2f6] dark:bg-[#0f172a] font-inter text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
+    <!-- Global Loading Bar -->
+    <div id="loadingBar" class="loading-bar"></div>
 
-      <main class="main-content">
-        <header class="topbar">
-          <div>
-            <div class="eyebrow" id="topbarEyebrow"></div>
-            <h2 id="viewTitle"></h2>
-          </div>
-          <div class="topbar-meta">
-            <div class="meta-card">
-              <span id="lastUpdateLabel"></span>
-              <strong id="lastUpdateValue">-</strong>
+    <div class="flex">
+      <!-- Main Content Container -->
+      <main class="flex-1 min-h-screen relative main-content">
+        <!-- Floating TopNavBar (Squircle style) -->
+        <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-3rem)] max-w-[1600px] h-20 px-8 flex justify-between items-center bg-white/70 dark:bg-slate-900/70 backdrop-blur-2xl border border-white/20 dark:border-slate-800/50 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all">
+          <!-- Topbar Left: Brand -->
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ideam_%28Colombia%29_logo.png/500px-Ideam_%28Colombia%29_logo.png" alt="IDEAM Logo" class="h-8 object-contain" />
+              <div class="hidden lg:block">
+                <h1 class="font-outfit text-lg font-black text-slate-900 dark:text-white tracking-tight leading-none">FEWS</h1>
+              </div>
             </div>
-            <div class="meta-card">
-              <span id="sourceHealthLabel"></span>
-              <strong id="sourceHealthValue">-</strong>
+            <div class="h-8 w-px bg-slate-200 dark:bg-slate-800 hidden lg:block"></div>
+            <div>
+              <div class="text-[9px] uppercase font-black text-slate-400 tracking-widest leading-none mb-1" id="topbarEyebrow"></div>
+              <h2 class="font-outfit text-sm font-bold text-slate-900 dark:text-white leading-none" id="viewTitle"></h2>
+            </div>
+          </div>
+
+          <!-- Topbar Middle: Navigation -->
+          <nav class="hidden xl:flex items-center gap-1 bg-slate-100/50 dark:bg-black/20 p-1.5 rounded-2xl border border-slate-200/50 dark:border-white/5">
+            <button class="nav-link px-4 py-2 rounded-xl font-outfit font-bold text-xs transition-all flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white" data-view="overview" id="navOverview">
+              <span class="material-symbols-outlined text-lg">dashboard</span>
+              <span>Resumen</span>
+            </button>
+            <button class="nav-link px-4 py-2 rounded-xl font-outfit font-bold text-xs transition-all flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white" data-view="stations" id="navStations">
+              <span class="material-symbols-outlined text-lg">lan</span>
+              <span>Estaciones</span>
+            </button>
+            <button class="nav-link px-4 py-2 rounded-xl font-outfit font-bold text-xs transition-all flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white" data-view="alerts" id="navAlerts">
+              <span class="material-symbols-outlined text-lg">notifications_active</span>
+              <span>Alertas</span>
+            </button>
+            <button class="nav-link px-4 py-2 rounded-xl font-outfit font-bold text-xs transition-all flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white" data-view="map" id="navMap">
+              <span class="material-symbols-outlined text-lg">map</span>
+              <span>Mapa</span>
+            </button>
+            <button class="nav-link px-4 py-2 rounded-xl font-outfit font-bold text-xs transition-all flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white" data-view="reservoirs" id="navReservoirs">
+              <span class="material-symbols-outlined text-lg">water_full</span>
+              <span>Embalses</span>
+            </button>
+            <button class="nav-link px-4 py-2 rounded-xl font-outfit font-bold text-xs transition-all flex items-center gap-2 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white" data-view="sources" id="navSources">
+              <span class="material-symbols-outlined text-lg">dns</span>
+              <span>Fuentes</span>
+            </button>
+          </nav>
+          
+          <!-- Topbar Right: Stats & Profile -->
+          <div class="flex items-center gap-4">
+            <div class="hidden md:flex gap-3">
+              <div class="px-4 py-2 rounded-2xl bg-slate-100/50 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50 flex flex-col items-center min-w-[120px]">
+                <span class="text-[8px] uppercase font-bold text-slate-500 tracking-wider mb-0.5" id="lastUpdateLabel"></span>
+                <strong class="text-[10px] text-primary font-bold font-outfit" id="lastUpdateValue">-</strong>
+              </div>
+              <div class="px-4 py-2 rounded-2xl bg-slate-100/50 dark:bg-slate-800/50 border border-slate-200/50 dark:border-slate-700/50 flex flex-col items-center min-w-[120px]">
+                <span class="text-[8px] uppercase font-bold text-slate-500 tracking-wider mb-0.5" id="sourceHealthLabel"></span>
+                <strong class="text-[10px] text-primary font-bold font-outfit" id="sourceHealthValue">-</strong>
+              </div>
+            </div>
+            
+            <div class="h-10 w-10 rounded-full border-2 border-primary/20 p-0.5 overflow-hidden shadow-lg shadow-primary/10 cursor-pointer hover:scale-105 transition-transform">
+               <img src="https://lh3.googleusercontent.com/a/ACg8ocL_yX8_X3_8_X8_X8_X8_X8_X8_X8_X8_X8_X8=s96-c" alt="Profile" class="w-full h-full rounded-full object-cover" />
             </div>
           </div>
         </header>
 
-        <section class="view active" id="view-overview">
-          <div class="hero-panel">
-            <div>
-              <div class="eyebrow" id="overviewHeroEyebrow"></div>
-              <h3 id="overviewHeroTitle"></h3>
-              <p id="overviewHeroBody"></p>
-            </div>
-            <div class="legend" id="severityLegend"></div>
-          </div>
-          <div class="stats-grid" id="overviewStats"></div>
-          <div class="content-grid two-columns">
-            <section class="panel">
-              <div class="panel-head">
-                <h3 id="overviewHighlightedTitle"></h3>
-              </div>
-              <div id="highlightedStations" class="list-stack"></div>
-            </section>
-            <section class="panel">
-              <div class="panel-head">
-                <h3 id="overviewAlertsTitle"></h3>
-              </div>
-              <div id="overviewAlerts" class="list-stack"></div>
-            </section>
-          </div>
-        </section>
+        <!-- Spacer for Floating Topbar -->
+        <div class="h-32"></div>
 
-        <section class="view" id="view-stations">
-          <section class="panel">
-            <div class="panel-head">
-              <h3 id="stationFiltersTitle"></h3>
+        <!-- View Content Container -->
+        <div class="p-8 max-w-[1600px] mx-auto space-y-8">
+          
+          <!-- View: Overview -->
+          <section class="view hidden space-y-8" id="view-overview">
+            <div class="relative rounded-3xl overflow-hidden h-72 shadow-2xl group">
+              <div class="absolute inset-0 bg-slate-900">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAR6FiIoreK8bLaBLucZG1YcZL9Ypo_pd1EOVCK8EjRe0o5baAenv7O91wCmO_uGmwW4xxst1dJ5y3i3heE8utYKlOzw9pi2pbVltoA8vpKnB72-I9_Gmsp_LLuQYqGJ5YdMQkb0ro4uXCWoEDUo6cfPGBQygUiDITQzQLxqO9LcqSQuhz1ZvCH9XbOzdfT-RogITea5jGhuIDfajTwtj28wDlu8oLbvMJMA0ktTwQd5YsFxvk0k2LR_tvC9ujj293AGL8uy3lqdAP" class="w-full h-full object-cover opacity-60 transition-transform duration-700 group-hover:scale-105" alt="Basin" />
+                <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/40 to-transparent"></div>
+              </div>
+              <div class="relative z-10 h-full flex flex-col justify-center px-12 text-white">
+                <span class="bg-primary/20 backdrop-blur-md border border-primary/30 text-primary text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full w-fit mb-4" id="overviewHeroEyebrow"></span>
+                <h3 class="font-outfit text-4xl font-black max-w-xl mb-4 leading-tight" id="overviewHeroTitle"></h3>
+                <p class="text-slate-300 max-w-lg text-sm leading-relaxed" id="overviewHeroBody"></p>
+                <div class="mt-8 flex gap-2" id="severityLegend"></div>
+              </div>
             </div>
-            <div class="filters-grid">
-              <input id="searchInput" type="search" />
-              <select id="statusFilter"></select>
-              <select id="departmentFilter"></select>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4" id="overviewStats"></div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="glass-card rounded-3xl p-8 space-y-6">
+                <h3 class="font-outfit text-xl font-bold text-slate-900 dark:text-white" id="overviewHighlightedTitle"></h3>
+                <div id="highlightedStations" class="space-y-4"></div>
+              </div>
+              <div class="glass-card rounded-3xl p-8 space-y-6">
+                <h3 class="font-outfit text-xl font-bold text-slate-900 dark:text-white" id="overviewAlertsTitle"></h3>
+                <div id="overviewAlerts" class="space-y-4"></div>
+              </div>
             </div>
           </section>
-          <div class="content-grid two-columns">
-            <section class="panel">
-              <div class="panel-head">
-                <h3 id="stationsTableTitle"></h3>
-                <span id="stationsCount"></span>
+
+          <!-- View: Stations -->
+          <section class="view hidden space-y-8" id="view-stations">
+            <div class="glass-card rounded-3xl p-6 flex flex-wrap gap-4 items-center">
+              <div class="flex-1 min-w-[300px] relative">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                <input id="searchInput" type="search" class="w-full pl-12 pr-4 py-3 bg-slate-50 dark:bg-slate-800 border-none rounded-2xl focus:ring-2 focus:ring-primary/20 transition-all text-sm" />
               </div>
-              <div class="table-wrap">
-                <table>
-                  <thead>
-                    <tr>
-                      <th id="colStation"></th>
-                      <th id="colRiver"></th>
-                      <th id="colLocation"></th>
-                      <th id="colStatus"></th>
+              <select id="statusFilter" class="bg-slate-50 dark:bg-slate-800 border-none rounded-2xl py-3 px-6 text-sm focus:ring-2 focus:ring-primary/20 transition-all min-w-[180px]"></select>
+              <select id="departmentFilter" class="bg-slate-50 dark:bg-slate-800 border-none rounded-2xl py-3 px-6 text-sm focus:ring-2 focus:ring-primary/20 transition-all min-w-[180px]"></select>
+            </div>
+
+            <div class="grid lg:grid-cols-[1fr,450px] gap-8">
+              <div class="glass-card rounded-3xl overflow-hidden flex flex-col min-h-[600px]">
+                <div class="p-6 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center">
+                   <h3 class="font-outfit text-xl font-bold text-slate-900 dark:text-white" id="stationsTableTitle"></h3>
+                   <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full" id="stationsCount"></span>
+                </div>
+                <div class="flex-1 overflow-auto">
+                  <table class="w-full text-left">
+                    <thead class="sticky top-0 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md z-10">
+                      <tr class="border-b border-slate-100 dark:border-slate-800">
+                        <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" style="width: 60px;">Pin</th>
+                        <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colStation"></th>
+                        <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colRiver"></th>
+                        <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colLocation"></th>
+                        <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colStatus"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="stationsTableBody" class="divide-y divide-slate-50 dark:divide-slate-800"></tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <div class="space-y-8">
+                <div id="stationDetailEmpty" class="glass-card rounded-3xl p-12 text-center space-y-4">
+                  <div class="w-20 h-20 bg-slate-50 dark:bg-slate-800 rounded-full flex items-center justify-center mx-auto">
+                    <span class="material-symbols-outlined text-4xl text-slate-300">search_insights</span>
+                  </div>
+                  <p class="text-slate-400 text-sm font-medium"></p>
+                </div>
+                <div id="stationDetail" class="hidden space-y-6"></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- View: Station Detail (Page) -->
+          <section class="view hidden space-y-8" id="view-stationDetail">
+            <div class="flex items-center gap-4 mb-4">
+              <button id="btnBackToStations" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-600 dark:text-slate-300 hover:bg-slate-50 transition-all">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>
+                <span>Volver a estaciones</span>
+              </button>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+               <div id="stationDetailPageInfo" class="space-y-6"></div>
+               <div class="glass-card rounded-3xl p-8 space-y-6 h-fit sticky top-24">
+                  <h3 class="font-outfit text-xl font-bold text-slate-900 dark:text-white">Pronóstico HQ</h3>
+                  <div class="h-80 w-full relative">
+                    <canvas id="stationChart"></canvas>
+                  </div>
+               </div>
+            </div>
+          </section>
+
+          <!-- View: Alerts -->
+          <section class="view hidden space-y-8" id="view-alerts">
+            <div class="glass-card rounded-3xl p-8 space-y-8">
+              <h3 class="font-outfit text-2xl font-black text-slate-900 dark:text-white" id="alertsTitle"></h3>
+              <div id="alertsList" class="grid md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+            </div>
+          </section>
+
+          <!-- View: Map -->
+          <section class="view hidden" id="view-map">
+            <div class="fixed inset-0 z-0 bg-slate-100 dark:bg-slate-900" id="mapCanvas"></div>
+            <div id="mapLayersPanel" class="map-layers-panel"></div>
+          </section>
+
+          <!-- View: Reservoirs -->
+          <section class="view hidden space-y-8" id="view-reservoirs">
+            <div class="glass-card rounded-3xl overflow-hidden shadow-2xl">
+              <div class="p-8 border-b border-slate-100 dark:border-slate-800">
+                <h3 class="font-outfit text-2xl font-black text-slate-900 dark:text-white" id="reservoirsTitle"></h3>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                  <thead class="bg-slate-50 dark:bg-slate-800">
+                    <tr class="border-b border-slate-100 dark:border-slate-800">
+                      <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colReservoir"></th>
+                      <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colUsefulVolume"></th>
+                      <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colUsefulPct"></th>
+                      <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colRainObs"></th>
+                      <th class="p-6 text-[10px] font-black text-slate-400 uppercase tracking-widest" id="colRainForecast"></th>
                     </tr>
                   </thead>
-                  <tbody id="stationsTableBody"></tbody>
+                  <tbody id="reservoirsTableBody" class="divide-y divide-slate-50 dark:divide-slate-800"></tbody>
                 </table>
               </div>
-            </section>
-            <section class="panel detail-panel">
-              <div class="panel-head">
-                <h3 id="stationDetailTitle"></h3>
+            </div>
+          </section>
+
+          <!-- View: Sources -->
+          <section class="view hidden space-y-8" id="view-sources">
+            <div class="glass-card rounded-3xl p-8 space-y-8">
+              <h3 class="font-outfit text-2xl font-black text-slate-900 dark:text-white" id="sourcesTitle"></h3>
+              <div id="sourcesList" class="grid md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+            </div>
+          </section>
+
+          <!-- View: Purpose -->
+          <section class="view hidden space-y-8" id="view-purpose">
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="glass-card rounded-3xl p-8 space-y-6">
+                <h3 class="font-outfit text-xl font-bold text-slate-900 dark:text-white" id="purposeIntroTitle"></h3>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed" id="purposeIntroBody"></p>
               </div>
-              <div id="stationDetailEmpty" class="empty-state"></div>
-              <div id="stationDetail" class="detail-stack hidden"></div>
-            </section>
-          </div>
-        </section>
-
-        <section class="view" id="view-alerts">
-          <section class="panel">
-            <div class="panel-head">
-              <h3 id="alertsTitle"></h3>
+              <div class="glass-card rounded-3xl p-8 space-y-6">
+                <h3 class="font-outfit text-xl font-bold text-slate-900 dark:text-white" id="purposeGoalsTitle"></h3>
+                <ul id="purposeGoalsList" class="space-y-4"></ul>
+              </div>
             </div>
-            <div id="alertsList" class="list-stack"></div>
-          </section>
-        </section>
-
-        <section class="view" id="view-map">
-          <section class="panel">
-            <div class="panel-head">
-              <h3 id="mapTitle"></h3>
-            </div>
-            <div id="mapCanvas" class="map-canvas"></div>
-          </section>
-        </section>
-
-        <section class="view" id="view-reservoirs">
-          <section class="panel">
-            <div class="panel-head">
-              <h3 id="reservoirsTitle"></h3>
-            </div>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th id="colReservoir"></th>
-                    <th id="colUsefulVolume"></th>
-                    <th id="colUsefulPct"></th>
-                    <th id="colRainObs"></th>
-                    <th id="colRainForecast"></th>
-                  </tr>
-                </thead>
-                <tbody id="reservoirsTableBody"></tbody>
-              </table>
+            <div class="glass-card rounded-3xl p-8 space-y-6">
+              <h3 class="font-outfit text-xl font-bold text-slate-900 dark:text-white" id="purposeHowTitle"></h3>
+              <ul id="purposeHowList" class="grid md:grid-cols-2 gap-6"></ul>
             </div>
           </section>
-        </section>
 
-        <section class="view" id="view-sources">
-          <section class="panel">
-            <div class="panel-head">
-              <h3 id="sourcesTitle"></h3>
-            </div>
-            <div id="sourcesList" class="list-stack"></div>
-          </section>
-        </section>
+        </div>
       </main>
+    <!-- Floating Utility Controls -->
+    <div class="fixed bottom-8 left-8 z-50 flex flex-col gap-4">
+      <div class="glass-card rounded-2xl p-2 flex flex-col gap-2 shadow-2xl border border-white/20 dark:border-slate-800/50">
+        <div class="language-toggle-modern bg-slate-100 dark:bg-black/20 p-1 rounded-xl flex gap-1">
+          <button class="lang-btn flex-1 px-3 py-1.5 text-[10px] font-black rounded-lg transition-all text-slate-400 active" data-lang="es">ES</button>
+          <button class="lang-btn flex-1 px-3 py-1.5 text-[10px] font-black rounded-lg transition-all text-slate-400" data-lang="en">EN</button>
+        </div>
+        
+        <div class="theme-toggle-modern bg-slate-100 dark:bg-black/20 p-1 rounded-xl flex gap-1">
+          <button class="theme-btn flex-1 py-1.5 flex items-center justify-center rounded-lg transition-all text-slate-400 active" data-theme-id="light">
+            <span class="material-symbols-outlined text-sm">light_mode</span>
+          </button>
+          <button class="theme-btn flex-1 py-1.5 flex items-center justify-center rounded-lg transition-all text-slate-400" data-theme-id="dark">
+            <span class="material-symbols-outlined text-sm">dark_mode</span>
+          </button>
+        </div>
+      </div>
     </div>
-    <script src="/js/app_old.js"></script>
+
+    <!-- Dependencies -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="js/main.js?v=1.0.1"></script>
   </body>
 </html>
